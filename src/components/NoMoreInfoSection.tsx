@@ -11,14 +11,14 @@ const NoMoreInfoSection = () => {
           You need a partner who has been where you are,<br />
           knows what it takes, and will build it with you.
         </p>
-        <img
-          src={mountainArt}
-          alt="Mountain path illustration"
-          className="max-w-md mx-auto w-full"
-        />
+        
+
+
+
+        
       </div>
-    </section>
-  );
+    </section>);
+
 };
 
 export default NoMoreInfoSection;
