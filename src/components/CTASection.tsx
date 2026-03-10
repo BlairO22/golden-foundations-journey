@@ -6,8 +6,8 @@ const CTASection = () => {
           Ready to build?
         </h2>
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-          <a href="#" className="btn-gold">Book a Strategy Call →</a>
-          <a href="#" className="btn-outline-light">Take the Founder Freedom Score First →</a>
+          <a href="#" className="btn-gold">Take the Founder Freedom Score →</a>
+          <a href="#" className="btn-outline-light">Learn About the Program →</a>
         </div>
       </div>
     </section>
