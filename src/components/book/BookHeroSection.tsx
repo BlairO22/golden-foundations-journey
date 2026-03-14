@@ -3,7 +3,7 @@ const BookHeroSection = () => (
     <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-16 items-center w-full">
       <div>
         <h1 className="heading-display text-5xl md:text-7xl text-primary-foreground mb-8">
-          Let's talk.
+          Let's talk about what you're building next.
         </h1>
         <div className="font-body text-base text-primary-foreground/70 leading-relaxed space-y-6">
           <p>
