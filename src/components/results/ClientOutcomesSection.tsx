@@ -31,7 +31,7 @@ const ClientOutcomesSection = () => {
         className={`max-w-5xl mx-auto transition-all duration-700 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}`}
       >
         <h2 className="heading-display text-4xl md:text-5xl text-navy text-center mb-20">
-          Client outcomes.
+          What happens when experienced professionals become founders.
         </h2>
         <div className="space-y-24">
           {outcomes.map((o, i) => (

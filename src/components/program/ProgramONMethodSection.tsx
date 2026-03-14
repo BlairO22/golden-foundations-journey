@@ -184,9 +184,15 @@ const ProgramONMethodSection = () => {
           <p className="font-body text-sm font-semibold tracking-[0.3em] text-gold uppercase mb-6">
             The ON Method™
           </p>
+          <p className="font-body text-sm font-semibold tracking-[0.3em] text-gold uppercase mb-6">
+            The ON Method™
+          </p>
           <h2 className="heading-display text-4xl md:text-5xl text-navy mb-6">
             The four phases of the Founder ON™ partnership.
           </h2>
+          <p className="font-body text-base md:text-lg text-navy/70 max-w-2xl mx-auto leading-relaxed">
+            The ON Method™ is the structured process that turns experienced professionals into thriving founders.
+          </p>
           {/* Phase indicator */}
           <div className="flex items-center justify-center gap-3 mt-10">
             {["EMPOWER", "BUILD", "OPERATE", "THRIVE"].map((name, i) => (

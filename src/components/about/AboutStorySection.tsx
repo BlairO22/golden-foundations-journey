@@ -29,7 +29,7 @@ const AboutStorySection = () => {
             Thriving Founder™ is where both sides of Aaron's experience come together. The business expertise means your brand, website, and systems actually get built — to a professional standard, on a real timeline. The coaching depth means the internal work that determines whether the business thrives or stalls doesn't get ignored.
           </p>
           <p className="font-medium text-charcoal">
-            This isn't just about building a business. It's about becoming the person who can sustain one.
+            This isn't just about building a business. It's about becoming the founder who can sustain one.
           </p>
         </div>
       </div>

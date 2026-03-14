@@ -7,7 +7,7 @@ const ProgramHeroSection = () => (
       Build the business.
     </h1>
     <h2 className="heading-display text-5xl md:text-7xl lg:text-8xl text-primary-foreground mb-10">
-      Reclaim your life.
+      Reclaim your freedom.
     </h2>
     <p className="font-body text-base md:text-lg text-primary-foreground/70 max-w-2xl mb-12 leading-relaxed">
       A 24-week partnership that combines deep founder coaching with done-with-you production — so you don't just plan your business, you launch it.
