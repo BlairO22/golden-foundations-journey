@@ -12,7 +12,7 @@ const Navbar = () => {
         <a href="/program" className="hover:text-primary-foreground transition-colors">The Program</a>
         <a href="#" className="hover:text-primary-foreground transition-colors">Results</a>
       </div>
-      <a href="#" className="btn-gold text-xs px-6 py-3">Take the Founder Freedom Score →</a>
+      <a href="/founder-freedom-score" className="btn-gold text-xs px-6 py-3">Take the Founder Freedom Score →</a>
     </nav>
   );
 };
