@@ -9,7 +9,7 @@ const KnowingSection = () => {
             Knowing isn't<br />the problem.
           </h2>
           <p className="font-body text-base md:text-lg text-charcoal/80 leading-relaxed">
-            You've spent 15, 20, maybe 25 years building expertise. You know your industry. You know what you're good at. You might even know what business you want to build. But knowing and doing are different things.
+            You may already know the business you want to build. But if you're a mid-career professional stepping into entrepreneurship, knowing what to do and actually building it are two very different things.
           </p>
         </div>
         <div>

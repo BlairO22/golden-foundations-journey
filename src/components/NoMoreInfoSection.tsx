@@ -8,8 +8,7 @@ const NoMoreInfoSection = () => {
           You don't need<br />more information.
         </h2>
         <p className="font-body text-lg md:text-xl text-primary-foreground/70 max-w-2xl mx-auto mb-16 leading-relaxed">
-          You need a partner who has been where you are,<br />
-          knows what it takes, and will build it with you.
+          What you need isn't more information. It's the right support, the right structure, and a partner who builds with you.
         </p>
         
 
