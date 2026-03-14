@@ -15,10 +15,10 @@ const Footer = () => {
 
           {/* Navigation */}
           <div className="flex flex-col gap-3">
-            <a href="#" className="font-body text-sm text-primary-foreground/70 hover:text-primary-foreground transition-colors">Home</a>
-            <a href="#" className="font-body text-sm text-primary-foreground/70 hover:text-primary-foreground transition-colors">About Us</a>
-            <a href="#" className="font-body text-sm text-primary-foreground/70 hover:text-primary-foreground transition-colors">Our Process</a>
-            <a href="#" className="font-body text-sm text-primary-foreground/70 hover:text-primary-foreground transition-colors">Results</a>
+            <a href="/" className="font-body text-sm text-primary-foreground/70 hover:text-primary-foreground transition-colors">Home</a>
+            <a href="/about" className="font-body text-sm text-primary-foreground/70 hover:text-primary-foreground transition-colors">About Us</a>
+            <a href="/program" className="font-body text-sm text-primary-foreground/70 hover:text-primary-foreground transition-colors">The Program</a>
+            <a href="/results" className="font-body text-sm text-primary-foreground/70 hover:text-primary-foreground transition-colors">Results</a>
           </div>
 
           {/* Social */}
