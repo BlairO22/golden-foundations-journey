@@ -12,9 +12,12 @@ const WhereDoYouStandSection = () => {
           />
         </div>
         <div className="text-left">
-          <h2 className="heading-display text-4xl md:text-5xl text-primary-foreground mb-8">
-            Where do you stand?
+          <h2 className="heading-display text-4xl md:text-5xl text-primary-foreground mb-4">
+            How strong is your foundation as an entrepreneur?
           </h2>
+          <p className="font-body text-base text-primary-foreground/60 leading-relaxed mb-6">
+            Find out where you stand as an entrepreneur.
+          </p>
           <p className="font-body text-base md:text-lg text-primary-foreground/70 leading-relaxed mb-4">
             The Founder Freedom Score™ is a free assessment that measures your readiness across the 4 Foundations — Clarity, Capacity, Cashflow, and Confidence.
           </p>

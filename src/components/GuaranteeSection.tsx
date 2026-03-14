@@ -21,17 +21,9 @@ const GuaranteeSection = () => {
 
         {/* Bilateral commitment */}
         <div className="border-t border-gold/30 pt-16 text-center">
-          <h2 className="heading-display text-3xl md:text-5xl text-navy mb-4">
-            This is a bilateral commitment.
-          </h2>
-          <h3 className="heading-display text-3xl md:text-5xl text-navy mb-4">
-            We deliver. You do the work.
-          </h3>
-          <div className="mt-12">
-            <h3 className="heading-display text-4xl md:text-6xl text-gold">
-              The results follow.
-            </h3>
-          </div>
+          <p className="font-body text-lg md:text-xl text-navy/80 max-w-3xl mx-auto leading-relaxed">
+            We do this together. We bring the guidance, structure, and production support. You bring your experience, commitment, and willingness to step forward.
+          </p>
         </div>
       </div>
     </section>

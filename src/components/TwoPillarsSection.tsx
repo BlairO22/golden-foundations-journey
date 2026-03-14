@@ -12,7 +12,7 @@ const TwoPillarsSection = () => {
           {/* Coaching */}
           <div>
             <img alt="Aaron McLean" className="w-full aspect-[3/2] object-cover object-top mb-8" src="/lovable-uploads/3c0590e8-23b2-4e12-917d-0fec9db2be67.png" />
-            <h3 className="heading-display text-2xl text-navy mb-2">Transformational Coaching</h3>
+            <h3 className="heading-display text-2xl text-navy mb-2">Strategic Advisory + Transformational Coaching</h3>
             <p className="font-body text-sm font-semibold text-gold mb-4 tracking-wide">Led by Aaron McLean</p>
             <p className="font-body text-base text-charcoal/80 leading-relaxed">
               Weekly 90-minute one-on-one sessions that go beyond business strategy. Aaron works with you on the decisions, the doubts, the identity shift, and the vision — building the internal operating system that determines whether your business thrives or stalls.

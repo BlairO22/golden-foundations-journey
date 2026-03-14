@@ -40,9 +40,12 @@ const ONMethodSection = () => {
           <h2 className="heading-display text-4xl md:text-5xl text-navy mb-4">
             4 phases. 24 weeks.
           </h2>
-          <h3 className="heading-display text-3xl md:text-4xl text-navy">
-            A business that works.
+          <h3 className="heading-display text-3xl md:text-4xl text-navy mb-6">
+            A business that thrives.
           </h3>
+          <p className="font-body text-base text-navy/70 max-w-md leading-relaxed">
+            The ON Method™ is the structured process that guides every client through the transition from experienced professional to thriving founder.
+          </p>
         </div>
 
         {/* Right - Horizontal scroll journey */}
