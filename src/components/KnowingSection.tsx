@@ -1,4 +1,4 @@
-import founderPortrait from "@/assets/pexels-arina-krasnikova-5951377.jpg";
+import founderPortrait from "@/assets/michael-t-_1Pmhe5ozNA-unsplash.jpg";
 
 const KnowingSection = () => {
   return (

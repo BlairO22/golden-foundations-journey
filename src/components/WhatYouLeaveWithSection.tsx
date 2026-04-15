@@ -1,4 +1,4 @@
-import photoImg from "@/assets/founder-portrait.png";
+import photoImg from "@/assets/getty-images-h6QbnXWrtN8-unsplash.jpg";
 
 const WhatYouLeaveWithSection = () => {
   return (

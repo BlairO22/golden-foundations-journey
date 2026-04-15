@@ -1,3 +1,5 @@
+import createsImg from "@/assets/logan-weaver-lgnwvr-qmFLpVS9tRM-unsplash.jpg";
+
 const outcomes = [
   "A business with strategic clarity and commercial credibility",
   "Positioning and messaging that command premium attention",
@@ -11,12 +13,10 @@ const FounderONCreatesSection = () => {
     <section className="bg-card pt-12 md:pt-16 pb-24 md:pb-32 px-6">
       <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-16 items-center">
         <div>
-          <video
-            src="/hero-bg-2.mp4"
-            autoPlay
-            loop
-            muted
-            playsInline
+          <img
+            src={createsImg}
+            alt="A founder built to lead"
+            loading="lazy"
             className="w-full object-cover aspect-square"
           />
         </div>

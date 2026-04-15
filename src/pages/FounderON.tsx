@@ -1,12 +1,12 @@
 import { useState } from "react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
-import aaronWorkingImg from "@/assets/aaron-working.jpg";
-import blairPortraitImg from "@/assets/blair-portrait.jpg";
-import foundersDuoImg from "@/assets/founders-duo.png";
-import pillarStrategyImg from "@/assets/pillar-strategy-v2.jpg";
-import pillarFounderImg from "@/assets/pillar-founder-v2.jpg";
-import pillarExecutionImg from "@/assets/pillar-execution-v2.jpg";
+import aaronWorkingImg from "@/assets/angelina-sarycheva-a_DSYLkr9tc-unsplash.jpg";
+import blairPortraitImg from "@/assets/brooke-cagle-Ffh5_aiqUT0-unsplash.jpg";
+import foundersDuoImg from "@/assets/daiga-ellaby-yJ2KtO6Gwkk-unsplash.jpg";
+import pillarStrategyImg from "@/assets/getty-images-VMDKeRO351c-unsplash.jpg";
+import pillarFounderImg from "@/assets/rodrigo-rodrigues-wolf-r-t-_hvCRGeNrFo-unsplash.jpg";
+import pillarExecutionImg from "@/assets/paolo-resteghini-ZTooTRx5B_k-unsplash.jpg";
 
 const Bullet = ({ children }: { children: React.ReactNode }) => (
   <div className="flex items-start gap-4">
@@ -430,6 +430,7 @@ const FounderON = () => {
               alt="Founder at work"
               loading="lazy"
               className="w-full object-cover aspect-[4/5]"
+              style={{ transform: "scaleX(-1)" }}
             />
           </div>
 

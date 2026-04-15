@@ -1,6 +1,6 @@
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
-import whyImg from "@/assets/artpop-stand.jpg";
+import whyImg from "@/assets/spenser-sembrat-BBtlAlhUeT4-unsplash.jpg";
 
 const Bullet = ({ children }: { children: React.ReactNode }) => (
   <div className="flex items-start gap-4">

@@ -1,4 +1,4 @@
-import section3Img from "@/assets/pexels-alan-garzon-180446366-13590229.jpg";
+import section3Img from "@/assets/getty-images-ibIpjC0pbqo-unsplash.jpg";
 
 const PhotoVideoSection = () => {
   return (

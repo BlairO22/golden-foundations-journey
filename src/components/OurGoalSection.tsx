@@ -1,4 +1,4 @@
-import bgImg from "@/assets/aaron-working.jpg";
+import bgImg from "@/assets/tuvalum-kwlcKkMoPZU-unsplash.jpg";
 
 const OurGoalSection = () => {
   return (
