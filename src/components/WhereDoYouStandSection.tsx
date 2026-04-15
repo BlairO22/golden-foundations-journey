@@ -18,10 +18,10 @@ const WhereDoYouStandSection = () => {
           <p className="font-body text-base text-primary-foreground/60 leading-relaxed mb-6">
             Find out where you stand as an entrepreneur.
           </p>
-          <p className="font-body text-base md:text-lg text-primary-foreground/70 leading-relaxed mb-4">
+          <p className="font-body text-lg md:text-xl text-primary-foreground/70 leading-relaxed mb-4">
             The Founder Freedom Score™ is a free assessment that measures your readiness across the 4 Foundations — Clarity, Capacity, Cashflow, and Confidence.
           </p>
-          <p className="font-body text-base md:text-lg text-primary-foreground/70 leading-relaxed mb-10">
+          <p className="font-body text-lg md:text-xl text-primary-foreground/70 leading-relaxed mb-10">
             In under 5 minutes, you'll know exactly where you are, what's holding you back, and the most important next step.
           </p>
           <a href="#" className="btn-gold mb-4 inline-block">Take the Founder Freedom Score →</a>

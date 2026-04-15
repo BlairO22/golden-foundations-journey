@@ -49,7 +49,7 @@ const PartnershipIncludesSection = () => {
           <h3 className="heading-display text-3xl md:text-4xl text-navy mb-6">
             Nothing that wastes your time.
           </h3>
-          <p className="font-body text-base md:text-lg text-charcoal/70 leading-relaxed">
+          <p className="font-body text-lg md:text-xl text-charcoal/70 leading-relaxed">
             Founder ON™ combines weekly strategic advisory, transformational coaching, and done-with-you business production.
           </p>
         </div>

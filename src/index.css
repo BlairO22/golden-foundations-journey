@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Inter:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Figtree:wght@400;500;600;700&family=Jost:wght@400;500;600;700&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -63,7 +63,8 @@
   }
 
   h1, h2, h3, h4, h5, h6 {
-    font-family: 'Playfair Display', serif;
+    font-family: 'Jost', sans-serif;
+    line-height: 1.2;
   }
 }
 
@@ -93,13 +94,21 @@
   }
 
   .btn-gold {
-    @apply inline-flex items-center justify-center px-8 py-4 font-body font-semibold text-sm tracking-widest uppercase transition-all duration-300;
-    background-color: hsl(var(--gold));
-    color: hsl(var(--navy));
+    @apply inline-flex items-center justify-center px-6 py-2.5 font-body font-semibold text-sm uppercase transition-all duration-300;
+    letter-spacing: 1.1px;
+    color: hsl(222, 84%, 4.9%);
+    border-radius: 4px;
+    border: 2px solid transparent;
+    background-color: #C9A84C;
+    background-image: linear-gradient(#C9A84C, #C9A84C), url('/gold-button-bg.png');
+    background-origin: border-box;
+    background-clip: padding-box, border-box;
+    background-size: auto, cover;
+    background-position: center, center;
   }
 
   .btn-gold:hover {
-    background-color: hsl(var(--gold-light));
+    opacity: 0.9;
   }
 
   .btn-outline-light {
@@ -113,9 +122,9 @@
   }
 
   .heading-display {
-    font-family: 'Playfair Display', serif;
+    font-family: 'Jost', sans-serif;
     font-weight: 700;
-    line-height: 1.1;
+    line-height: 1.2;
   }
 
   .gold-icon {

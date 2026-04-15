@@ -9,7 +9,7 @@ const AboutStorySection = () => {
         ref={ref}
         className={`max-w-3xl mx-auto transition-all duration-700 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}`}
       >
-        <div className="font-body text-base md:text-lg text-charcoal/80 leading-[1.9] space-y-8">
+        <div className="font-body text-lg md:text-xl text-charcoal/80 leading-[1.9] space-y-8">
           <p>
             That loss — the partnership dissolution, the financial collapse, the rebuilding from zero — changed everything. Not because it broke him, but because it showed him what actually matters when everything else falls away.
           </p>

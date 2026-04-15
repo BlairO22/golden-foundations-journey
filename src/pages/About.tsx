@@ -1,21 +1,207 @@
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
-import AboutHeroSection from "@/components/about/AboutHeroSection";
-import AboutStorySection from "@/components/about/AboutStorySection";
-import AboutCredentialsSection from "@/components/about/AboutCredentialsSection";
-import AboutBlairSection from "@/components/about/AboutBlairSection";
-import AboutCTASection from "@/components/about/AboutCTASection";
+import whyImg from "@/assets/artpop-stand.jpg";
 
-const About = () => (
-  <div className="min-h-screen">
-    <Navbar />
-    <AboutHeroSection />
-    <AboutStorySection />
-    <AboutCredentialsSection />
-    <AboutBlairSection />
-    <AboutCTASection />
-    <Footer />
+const Bullet = ({ children }: { children: React.ReactNode }) => (
+  <div className="flex items-start gap-4">
+    <span
+      aria-hidden
+      className="flex-shrink-0 flex items-center justify-center rounded-full"
+      style={{
+        width: "1rem",
+        height: "1rem",
+        marginTop: "0.45rem",
+        border: "1.5px solid hsl(var(--gold))",
+      }}
+    >
+      <span
+        className="rounded-full"
+        style={{
+          width: "0.4rem",
+          height: "0.4rem",
+          backgroundColor: "hsl(var(--gold))",
+        }}
+      />
+    </span>
+    <p className="font-body text-lg md:text-xl text-charcoal/80 leading-relaxed">
+      {children}
+    </p>
   </div>
 );
+
+const beliefs = [
+  "Business should support life, not dominate it",
+  "Structure should create freedom, not bureaucracy",
+  "Wealth and meaning do not have to be enemies",
+  "Ambition does not have to destroy aliveness",
+  "Execution and human depth belong together",
+  "Premium work should feel both precise and alive",
+];
+
+const About = () => {
+  return (
+    <div className="min-h-screen">
+      <Navbar />
+
+      {/* Hero */}
+      <section className="section-navy pt-40 pb-24 md:pt-48 md:pb-32 px-6">
+        <div className="max-w-5xl mx-auto text-center">
+          <h1 className="heading-display text-6xl md:text-8xl lg:text-9xl text-primary-foreground leading-[1.05] mb-8">
+            Thriving Founder
+            <span className="align-super text-2xl md:text-3xl">™</span>
+          </h1>
+          <p className="font-body text-lg md:text-xl text-primary-foreground/85 leading-relaxed max-w-3xl mx-auto">
+            A brand built on the belief that business should create more life, not less.
+          </p>
+        </div>
+      </section>
+
+      {/* Intro statement */}
+      <section className="bg-card pt-24 md:pt-32 pb-12 md:pb-16 px-6">
+        <div className="max-w-3xl mx-auto text-center">
+          <p className="font-body text-xl md:text-2xl text-charcoal leading-relaxed">
+            Thriving Founder exists for professionals who want to build with ambition, integrity, and greater freedom — without recreating the pressure, fragmentation, or emptiness they wanted to leave behind.
+          </p>
+        </div>
+      </section>
+
+      {/* Why Thriving Founder Exists */}
+      <section className="bg-card pt-12 md:pt-16 pb-24 md:pb-32 px-6">
+        <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-12 md:gap-16 items-center">
+          <div className="w-full">
+            <img
+              src={whyImg}
+              alt="A different standard for building"
+              loading="lazy"
+              className="w-full object-cover aspect-[4/5]"
+            />
+          </div>
+          <div>
+            <p className="inline-block font-body text-sm tracking-[0.12em] uppercase text-gold border border-gold/60 bg-gold/10 rounded-md px-3 py-1 mb-6">
+              Why Thriving Founder Exists
+            </p>
+            <h2 className="heading-display text-4xl md:text-5xl text-navy mb-10">
+              There are many ways to build a business.
+            </h2>
+            <p className="font-body text-lg md:text-xl text-charcoal/80 leading-relaxed mb-6">
+              Some produce money but cost people their health. Some produce movement but not substance. Some sound inspiring but never become real.
+            </p>
+            <p className="font-body text-lg md:text-xl font-bold text-charcoal leading-relaxed mb-6">
+              Thriving Founder was created to hold a different standard.
+            </p>
+            <p className="font-body text-lg md:text-xl text-charcoal/80 leading-relaxed">
+              One where business growth and personal depth are not treated as separate worlds. One where strategy and execution still leave room for humanity. One where success is measured not only by commercial traction, but by the quality of the life it makes possible.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* Founder Story / Origin */}
+      <section className="section-offwhite py-24 md:py-32 px-6">
+        <div className="max-w-4xl mx-auto">
+          <p className="inline-block font-body text-sm tracking-[0.12em] uppercase text-gold border border-gold/60 bg-gold/10 rounded-md px-3 py-1 mb-6">
+            Origin
+          </p>
+          <h2 className="heading-display text-4xl md:text-5xl text-navy mb-10">
+            A long path through building, leading, and becoming.
+          </h2>
+          <p className="font-body text-lg md:text-xl text-charcoal/80 leading-relaxed mb-6">
+            Thriving Founder emerges from a long path through business-building, creative leadership, reinvention, challenge, and personal transformation.
+          </p>
+          <p className="font-body text-lg md:text-xl text-charcoal/80 leading-relaxed mb-6">
+            It is grounded in lived experience across product, branding, innovation, execution, entrepreneurship, and human development — including the hard-won understanding that building something successful and building something sustainable are not the same thing. That lesson was not learned from a book. It was learned by living through the gap between the two.
+          </p>
+          <p className="font-body text-lg md:text-xl text-charcoal/80 leading-relaxed">
+            The philosophy of Freedom and Mastery was not created as a tagline. It was earned through years of seeing what happens when ambition is not matched by alignment — and what becomes possible when people build from a more integrated place.
+          </p>
+        </div>
+      </section>
+
+      {/* Freedom and Mastery */}
+      <section className="section-navy py-24 md:py-32 px-6">
+        <div className="max-w-5xl mx-auto">
+          <p className="inline-block font-body text-sm tracking-[0.12em] uppercase text-gold border border-gold/60 bg-gold/10 rounded-md px-3 py-1 mb-6">
+            Freedom and Mastery
+          </p>
+          <h2 className="heading-display text-4xl md:text-5xl text-primary-foreground mb-12">
+            The standard behind the brand.
+          </h2>
+
+          <div className="grid md:grid-cols-2 gap-10 md:gap-16">
+            <div className="border-t-2 border-gold pt-6">
+              <h3 className="heading-display text-3xl md:text-4xl text-primary-foreground mb-4">
+                Freedom
+              </h3>
+              <p className="font-body text-lg md:text-xl text-primary-foreground/80 leading-relaxed">
+                Not the absence of responsibility. The capacity to direct your work and life with greater ownership, flexibility, and truth.
+              </p>
+            </div>
+            <div className="border-t-2 border-gold pt-6">
+              <h3 className="heading-display text-3xl md:text-4xl text-primary-foreground mb-4">
+                Mastery
+              </h3>
+              <p className="font-body text-lg md:text-xl text-primary-foreground/80 leading-relaxed">
+                Not self-optimization for its own sake. The steady cultivation of capability, integrity, and depth.
+              </p>
+            </div>
+          </div>
+
+          <p className="font-body text-lg md:text-xl text-primary-foreground/80 leading-relaxed mt-12 max-w-3xl">
+            Together, they describe the kind of founder we believe is worth becoming — and the kind of business we believe is worth building.
+          </p>
+        </div>
+      </section>
+
+      {/* What We Believe */}
+      <section className="bg-card py-24 md:py-32 px-6">
+        <div className="max-w-4xl mx-auto">
+          <p className="inline-block font-body text-sm tracking-[0.12em] uppercase text-gold border border-gold/60 bg-gold/10 rounded-md px-3 py-1 mb-6">
+            What We Believe
+          </p>
+          <h2 className="heading-display text-4xl md:text-5xl text-navy mb-12">
+            We believe:
+          </h2>
+          <div className="flex flex-col gap-5">
+            {beliefs.map((t, i) => (
+              <Bullet key={i}>{t}</Bullet>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Why This Matters in Practice */}
+      <section className="section-offwhite py-24 md:py-32 px-6">
+        <div className="max-w-4xl mx-auto">
+          <p className="inline-block font-body text-sm tracking-[0.12em] uppercase text-gold border border-gold/60 bg-gold/10 rounded-md px-3 py-1 mb-6">
+            Why This Matters in Practice
+          </p>
+          <h2 className="heading-display text-4xl md:text-5xl text-navy mb-10">
+            This philosophy is not abstract.
+          </h2>
+          <p className="font-body text-lg md:text-xl text-charcoal/80 leading-relaxed mb-6">
+            It shapes how we build, how we guide, what we prioritize, and what we refuse to glamorize.
+          </p>
+          <p className="font-body text-lg md:text-xl font-bold text-charcoal leading-relaxed">
+            We are not here to help you chase growth that hollows you out. We are here to help you build something stronger, cleaner, more aligned, and more sustaining.
+          </p>
+        </div>
+      </section>
+
+      {/* Final CTA */}
+      <section className="section-navy py-24 md:py-32 px-6 text-center">
+        <div className="max-w-3xl mx-auto">
+          <h2 className="heading-display text-4xl md:text-5xl lg:text-6xl text-primary-foreground mb-8">
+            If this feels aligned, begin with the Founder Freedom Score.
+          </h2>
+          <a href="/founder-freedom-score" className="btn-gold">
+            Discover Your Founder Freedom Score →
+          </a>
+        </div>
+      </section>
+
+      <Footer />
+    </div>
+  );
+};
 
 export default About;

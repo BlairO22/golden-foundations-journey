@@ -6,7 +6,7 @@ const ResultsHeroSection = () => (
     <h1 className="heading-display text-5xl md:text-7xl text-primary-foreground mb-8">
       The work speaks for itself.
     </h1>
-    <p className="font-body text-base md:text-lg text-primary-foreground/70 max-w-2xl leading-relaxed">
+    <p className="font-body text-lg md:text-xl text-primary-foreground/70 max-w-2xl leading-relaxed">
       Real transformations from founders who committed to the process.
     </p>
   </section>

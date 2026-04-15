@@ -25,7 +25,7 @@ const BuildingMoreSection = () => {
         <div className="space-y-8">
           {items.map((item, i) => (
             <div key={i} className="border-l-2 border-gold pl-6">
-              <p className="font-body text-base md:text-lg font-semibold text-charcoal">
+              <p className="font-body text-lg md:text-xl font-semibold text-charcoal">
                 {item.text}
               </p>
               <p className="font-body text-base text-charcoal/60 mt-1">{item.sub}</p>

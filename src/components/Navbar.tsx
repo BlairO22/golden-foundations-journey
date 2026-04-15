@@ -9,7 +9,8 @@ const Navbar = () => {
       <div className="hidden md:flex items-center gap-10 font-body text-sm tracking-wide text-primary-foreground/80">
         <a href="/" className="hover:text-primary-foreground transition-colors">Home</a>
         <a href="/about" className="hover:text-primary-foreground transition-colors">About Us</a>
-        <a href="/program" className="hover:text-primary-foreground transition-colors">The Program</a>
+        <a href="/founder-on" className="hover:text-primary-foreground transition-colors">Founder ON</a>
+        <a href="/founder-freedom-score" className="hover:text-primary-foreground transition-colors">Founder Freedom Score</a>
         <a href="/results" className="hover:text-primary-foreground transition-colors">Results</a>
       </div>
       <a href="/founder-freedom-score" className="btn-gold text-xs px-6 py-3">Take the Founder Freedom Score →</a>

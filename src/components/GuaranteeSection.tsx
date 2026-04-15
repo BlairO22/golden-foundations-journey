@@ -10,7 +10,7 @@ const GuaranteeSection = () => {
             <h2 className="heading-display text-4xl md:text-5xl text-navy mb-8">
               We stand behind the work.
             </h2>
-            <p className="font-body text-base md:text-lg text-charcoal/80 leading-relaxed">
+            <p className="font-body text-lg md:text-xl text-charcoal/80 leading-relaxed">
               If your brand and website are not live by Week 12 and you have not enrolled your first client by Week 20, Thriving Founder provides up to 8 additional weeks of production support and bi-weekly coaching check-ins at no cost — until your first client is enrolled.
             </p>
           </div>

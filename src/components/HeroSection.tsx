@@ -1,19 +1,140 @@
+import { useEffect, useRef, useState } from "react";
+
+const slides = [
+  { text: "YOUR BUSINESS", video: "/hero-bg.mp4" },
+  { text: "YOUR FREEDOM", video: "/hero-bg-2.mp4" },
+  { text: "BUILT WITH YOU", video: "/hero-bg-3.mp4" },
+];
+
 const HeroSection = () => {
+  const contentRef = useRef<HTMLDivElement>(null);
+  const [currentSlide, setCurrentSlide] = useState(0);
+  const [phase, setPhase] = useState<"in" | "hold" | "out">("in");
+  const videoRefs = useRef<(HTMLVideoElement | null)[]>([]);
+
+  useEffect(() => {
+    let rafId: number;
+    const handleScroll = () => {
+      rafId = requestAnimationFrame(() => {
+        const scrollY = window.scrollY;
+        if (contentRef.current) {
+          contentRef.current.style.transform = `translateY(${scrollY * 0.1}px)`;
+        }
+      });
+    };
+    window.addEventListener("scroll", handleScroll, { passive: true });
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+      cancelAnimationFrame(rafId);
+    };
+  }, []);
+
+  useEffect(() => {
+    let timeout: ReturnType<typeof setTimeout>;
+
+    if (phase === "in") {
+      timeout = setTimeout(() => setPhase("hold"), 600);
+    } else if (phase === "hold") {
+      timeout = setTimeout(() => setPhase("out"), 2000);
+    } else if (phase === "out") {
+      timeout = setTimeout(() => {
+        setCurrentSlide((prev) => (prev + 1) % slides.length);
+        setPhase("in");
+      }, 300);
+    }
+
+    return () => clearTimeout(timeout);
+  }, [phase, currentSlide]);
+
   return (
-    <section className="section-navy min-h-screen flex flex-col items-center justify-center text-center px-6 pt-32 pb-20">
-      <h1 className="heading-display text-5xl md:text-7xl lg:text-8xl text-primary-foreground mb-8">
-        Become the Founder
-      </h1>
-      <p className="font-body text-base md:text-lg text-primary-foreground/70 max-w-2xl mb-6 leading-relaxed">
-        Thriving Founder is a one-on-one partnership that combines transformational coaching with done-with-you business production, so you don't just plan your next chapter — we build it.
-      </p>
-      <p className="font-body text-sm text-primary-foreground/60 max-w-xl mb-10">
-        See how strong your entrepreneurial foundation really is.
-      </p>
-      <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-        <a href="#" className="btn-gold">Take the Founder Freedom Score →</a>
-      </div>
-    </section>
+    <>
+      <style>{`
+        @keyframes rollIn {
+          from { transform: translateY(-100%); opacity: 0; }
+          to { transform: translateY(0); opacity: 1; }
+        }
+        @keyframes rollOut {
+          from { transform: translateY(0); opacity: 1; }
+          to { transform: translateY(100%); opacity: 0; }
+        }
+      `}</style>
+      <section className="relative">
+        <div className="relative w-full overflow-hidden" style={{ height: "115vh" }}>
+          {slides.map((slide, i) => (
+            <video
+              key={slide.video}
+              ref={(el) => { videoRefs.current[i] = el; }}
+              className="absolute inset-0 h-full w-full object-cover"
+              style={{
+                opacity: i === currentSlide ? 1 : 0,
+                transition: "opacity 0.5s ease-in-out",
+              }}
+              src={slide.video}
+              autoPlay
+              loop
+              muted
+              playsInline
+            />
+          ))}
+          <div
+            className="absolute inset-0 z-10"
+            style={{ backgroundColor: "hsla(220, 16%, 12%, 0.7)" }}
+          />
+          <div
+            ref={contentRef}
+            className="relative z-20 flex w-full items-center justify-center will-change-transform"
+            style={{ height: "100vh" }}
+          >
+            <div className="text-center px-[4%]">
+              <div
+                style={{
+                  overflow: "hidden",
+                  height: "5.5rem",
+                  display: "flex",
+                  alignItems: "center",
+                  justifyContent: "center",
+                }}
+              >
+                <h1
+                  key={`${currentSlide}-${phase}`}
+                  style={{
+                    fontSize: "4.5rem",
+                    lineHeight: 1.2,
+                    color: "hsl(0, 0%, 100%)",
+                    fontFamily: "'Jost', sans-serif",
+                    fontWeight: 600,
+                    margin: 0,
+                    animation:
+                      phase === "out"
+                        ? "rollOut 0.5s ease-in forwards"
+                        : phase === "in"
+                        ? "rollIn 0.6s ease-out forwards"
+                        : "none",
+                  }}
+                >
+                  {slides[currentSlide].text}
+                </h1>
+              </div>
+              <p
+                className="mt-10 mx-auto"
+                style={{
+                  maxWidth: "45rem",
+                  fontSize: "1.125rem",
+                  fontFamily: "'Figtree', sans-serif",
+                  fontWeight: 300,
+                  color: "hsl(0, 0%, 100%)",
+                }}
+              >
+                Founder ON™ is a proprietary 24-week process for capable professionals ready to turn their expertise into a thriving business, and become the founder required to lead it.
+              </p>
+              <a href="/founder-freedom-score" className="btn-gold mt-8">
+                Discover Your Founder Freedom Score
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </>
   );
 };
 

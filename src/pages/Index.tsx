@@ -1,6 +1,19 @@
 import Navbar from "@/components/Navbar";
 import HeroSection from "@/components/HeroSection";
 import KnowingSection from "@/components/KnowingSection";
+import PhotoVideoSection from "@/components/PhotoVideoSection";
+import ExpertiseRequiresSection from "@/components/ExpertiseRequiresSection";
+import FounderONProcessSection from "@/components/FounderONProcessSection";
+import FounderONDesignedSection from "@/components/FounderONDesignedSection";
+import OurGoalSection from "@/components/OurGoalSection";
+import OurApproachSection from "@/components/OurApproachSection";
+import WhatYouLeaveWithSection from "@/components/WhatYouLeaveWithSection";
+import FounderONCreatesSection from "@/components/FounderONCreatesSection";
+import WhereYouStandCTASection from "@/components/WhereYouStandCTASection";
+import RealWorldTransformationSection from "@/components/RealWorldTransformationSection";
+import FreedomMasterySection from "@/components/FreedomMasterySection";
+import WhoThisIsForSection from "@/components/WhoThisIsForSection";
+import MoreLifeCTASection from "@/components/MoreLifeCTASection";
 import BuildingMoreSection from "@/components/BuildingMoreSection";
 import NoMoreInfoSection from "@/components/NoMoreInfoSection";
 import TwoPillarsSection from "@/components/TwoPillarsSection";
@@ -18,6 +31,19 @@ const Index = () => {
       <Navbar />
       <HeroSection />
       <KnowingSection />
+      <PhotoVideoSection />
+      <ExpertiseRequiresSection />
+      <FounderONProcessSection />
+      <OurGoalSection />
+      <OurApproachSection />
+      <WhatYouLeaveWithSection />
+      <FounderONCreatesSection />
+      <WhereYouStandCTASection />
+      <RealWorldTransformationSection />
+      <FreedomMasterySection />
+      <WhoThisIsForSection />
+      <MoreLifeCTASection />
+      {/* Hidden sections below — restore by uncommenting
       <BuildingMoreSection />
       <NoMoreInfoSection />
       <TwoPillarsSection />
@@ -27,6 +53,7 @@ const Index = () => {
       <TestimonialsSection />
       <GuaranteeSection />
       <CTASection />
+      */}
       <Footer />
     </div>
   );
