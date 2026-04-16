@@ -1,4 +1,4 @@
-import artpopStand from "@/assets/artpop-stand.jpg";
+import artpopStand from "@/assets/artpop-stand.webp";
 
 const WhereDoYouStandSection = () => {
   return (

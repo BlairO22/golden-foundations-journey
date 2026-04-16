@@ -1,4 +1,4 @@
-import founderPortrait from "@/assets/michael-t-_1Pmhe5ozNA-unsplash.jpg";
+import founderPortrait from "@/assets/michael-t-_1Pmhe5ozNA-unsplash.webp";
 import RevealImage from "@/components/RevealImage";
 import RevealText from "@/components/RevealText";
 

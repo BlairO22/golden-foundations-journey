@@ -129,7 +129,7 @@ const HeroSection = () => {
               >
                 Founder ON™ is a proprietary 24-week process for capable professionals ready to turn their expertise into a thriving business, and become the founder required to lead it.
               </p>
-              <a href="/founder-freedom-score" className="btn-gold mt-8">
+              <a href="https://founderfreedomscore.netlify.app/assessment" target="_blank" rel="noopener noreferrer" className="btn-gold mt-8">
                 Discover Your Founder Freedom Score
               </a>
             </div>

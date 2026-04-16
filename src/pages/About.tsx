@@ -1,7 +1,7 @@
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import BottomCTASection from "@/components/BottomCTASection";
-import whyImg from "@/assets/spenser-sembrat-BBtlAlhUeT4-unsplash.jpg";
+import whyImg from "@/assets/spenser-sembrat-BBtlAlhUeT4-unsplash.webp";
 
 const Bullet = ({ children }: { children: React.ReactNode }) => (
   <div className="flex items-start gap-4">
@@ -192,7 +192,7 @@ const About = () => {
         heading="If this feels aligned, begin with the Founder Freedom Score."
         paragraph="A short, honest diagnostic to help you see where you stand — in about 3 minutes."
         ctaText="Discover Your Founder Freedom Score →"
-        ctaHref="/founder-freedom-score"
+        ctaHref="https://founderfreedomscore.netlify.app/assessment"
       />
 
       <Footer />

@@ -2,12 +2,13 @@ import { useState } from "react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import BottomCTASection from "@/components/BottomCTASection";
-import aaronWorkingImg from "@/assets/angelina-sarycheva-a_DSYLkr9tc-unsplash.jpg";
-import blairPortraitImg from "@/assets/brooke-cagle-Ffh5_aiqUT0-unsplash.jpg";
-import foundersDuoImg from "@/assets/daiga-ellaby-yJ2KtO6Gwkk-unsplash.jpg";
-import pillarStrategyImg from "@/assets/getty-images-VMDKeRO351c-unsplash.jpg";
-import pillarFounderImg from "@/assets/rodrigo-rodrigues-wolf-r-t-_hvCRGeNrFo-unsplash.jpg";
-import pillarExecutionImg from "@/assets/paolo-resteghini-ZTooTRx5B_k-unsplash.jpg";
+import aaronWorkingImg from "@/assets/angelina-sarycheva-a_DSYLkr9tc-unsplash.webp";
+import onLogo from "@/assets/on-logo.webp";
+import blairPortraitImg from "@/assets/brooke-cagle-Ffh5_aiqUT0-unsplash.webp";
+import foundersDuoImg from "@/assets/daiga-ellaby-yJ2KtO6Gwkk-unsplash.webp";
+import pillarStrategyImg from "@/assets/getty-images-VMDKeRO351c-unsplash.webp";
+import pillarFounderImg from "@/assets/rodrigo-rodrigues-wolf-r-t-_hvCRGeNrFo-unsplash.webp";
+import pillarExecutionImg from "@/assets/paolo-resteghini-ZTooTRx5B_k-unsplash.webp";
 
 const Bullet = ({ children }: { children: React.ReactNode }) => (
   <div className="flex items-start gap-4">
@@ -390,14 +391,24 @@ const FounderON = () => {
       {/* Hero */}
       <section className="section-navy pt-40 pb-24 md:pt-48 md:pb-32 px-6">
         <div className="max-w-5xl mx-auto text-center">
-          <h1 className="heading-display text-6xl md:text-8xl lg:text-9xl text-primary-foreground leading-[1.05] mb-8">
-            Founder ON<span className="align-super text-2xl md:text-3xl">™</span>
-          </h1>
+          <img
+            src={onLogo}
+            alt="Founder ON™"
+            className="mx-auto mb-8"
+            style={{ height: "clamp(10rem, 18vw, 16rem)" }}
+          />
           <p className="font-body text-lg md:text-xl text-primary-foreground/80 leading-relaxed mb-12">
             Build the business and the founder required to thrive.
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-            <a href="#" className="btn-gold">Apply for Founder ON →</a>
+            <a
+              href="https://founderfreedomscore.netlify.app/assessment"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="btn-gold"
+            >
+              Apply for Founder ON →
+            </a>
             <a href="#" className="btn-outline-light">Book a Strategy Call →</a>
           </div>
         </div>
@@ -779,7 +790,7 @@ const FounderON = () => {
         heading="Ready to build with real support?"
         paragraph="Apply for Founder ON, or begin with the Founder Freedom Score if you want a lower-friction first step."
         ctaText="Apply for Founder ON →"
-        ctaHref="#"
+        ctaHref="https://founderfreedomscore.netlify.app/assessment"
       />
 
       <Footer />

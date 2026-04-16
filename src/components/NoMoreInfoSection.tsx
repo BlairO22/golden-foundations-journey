@@ -1,4 +1,4 @@
-import mountainArt from "@/assets/mountain-art.png";
+import mountainArt from "@/assets/mountain-art.webp";
 
 const NoMoreInfoSection = () => {
   return (

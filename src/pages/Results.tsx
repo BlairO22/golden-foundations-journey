@@ -227,7 +227,7 @@ const Results = () => {
         heading="See where you stand before you decide what to build next."
         paragraph="A clear diagnostic of where you stand as an entrepreneur — in about 3 minutes."
         ctaText="Discover Your Founder Freedom Score →"
-        ctaHref="/founder-freedom-score"
+        ctaHref="https://founderfreedomscore.netlify.app/assessment"
       />
 
       <Footer />

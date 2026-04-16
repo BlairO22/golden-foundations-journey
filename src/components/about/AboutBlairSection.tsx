@@ -1,5 +1,5 @@
 import { useScrollReveal } from "@/hooks/useScrollReveal";
-import blairPortrait from "@/assets/blair-portrait.jpg";
+import blairPortrait from "@/assets/blair-portrait.webp";
 
 const AboutBlairSection = () => {
   const { ref, isVisible } = useScrollReveal();

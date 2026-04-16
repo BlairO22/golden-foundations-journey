@@ -1,4 +1,4 @@
-import section3Img from "@/assets/getty-images-ibIpjC0pbqo-unsplash.jpg";
+import section3Img from "@/assets/getty-images-ibIpjC0pbqo-unsplash.webp";
 import RevealImage from "@/components/RevealImage";
 import RevealText from "@/components/RevealText";
 

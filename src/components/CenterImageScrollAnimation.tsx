@@ -1,6 +1,6 @@
 import { useRef, useEffect, useState } from "react";
-import section2Small from "@/assets/section2-small.jpeg";
-import section3Small from "@/assets/section3-small.jpeg";
+import section2Small from "@/assets/section2-small.webp";
+import section3Small from "@/assets/section3-small.webp";
 
 const clamp = (v: number, lo: number, hi: number) => Math.min(hi, Math.max(lo, v));
 

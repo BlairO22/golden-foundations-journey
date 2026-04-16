@@ -1,4 +1,4 @@
-import aaronWorking from "@/assets/aaron-working.jpg";
+import aaronWorking from "@/assets/aaron-working.webp";
 
 const AboutHeroSection = () => (
   <section className="section-navy min-h-[80vh] flex items-center px-6 pt-32 pb-24">

@@ -77,7 +77,12 @@ const FounderFreedomScore = () => {
           <p className="font-body text-lg md:text-xl text-primary-foreground/75 leading-relaxed mb-12 max-w-3xl mx-auto">
             This is not a gimmicky quiz. It is a practical diagnostic designed to help you see what is supporting your next chapter — and what may still be limiting it.
           </p>
-          <a href="#" className="btn-gold">
+          <a
+            href="https://founderfreedomscore.netlify.app/assessment"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="btn-gold"
+          >
             Take the Founder Freedom Score →
           </a>
         </div>
@@ -177,7 +182,7 @@ const FounderFreedomScore = () => {
         heading="See where you stand. Build from truth."
         paragraph="Your results are immediate, honest, and designed to help you move forward with clarity."
         ctaText="Take the Founder Freedom Score →"
-        ctaHref="#"
+        ctaHref="https://founderfreedomscore.netlify.app/assessment"
       />
 
       <Footer />

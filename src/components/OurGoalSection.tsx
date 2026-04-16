@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from "react";
-import bgImg from "@/assets/tuvalum-kwlcKkMoPZU-unsplash.jpg";
+import bgImg from "@/assets/tuvalum-kwlcKkMoPZU-unsplash.webp";
 
 const OurGoalSection = () => {
   const sectionRef = useRef<HTMLElement>(null);

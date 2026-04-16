@@ -1,10 +1,10 @@
 import { useEffect, useRef, useState } from "react";
-import skyBg from "@/assets/natalia-blauth-QJWcEnP9x10-unsplash.jpg";
-import onLogo from "@/assets/on-logo.png";
-import phase1Img from "@/assets/angelina-sarycheva-a_DSYLkr9tc-unsplash.jpg";
-import phase2Img from "@/assets/paolo-resteghini-ZTooTRx5B_k-unsplash.jpg";
-import phase3Img from "@/assets/brooke-cagle-Ffh5_aiqUT0-unsplash.jpg";
-import phase4Img from "@/assets/spenser-sembrat-BBtlAlhUeT4-unsplash.jpg";
+import skyBg from "@/assets/natalia-blauth-QJWcEnP9x10-unsplash.webp";
+import onLogo from "@/assets/on-logo.webp";
+import phase1Img from "@/assets/angelina-sarycheva-a_DSYLkr9tc-unsplash.webp";
+import phase2Img from "@/assets/paolo-resteghini-ZTooTRx5B_k-unsplash.webp";
+import phase3Img from "@/assets/brooke-cagle-Ffh5_aiqUT0-unsplash.webp";
+import phase4Img from "@/assets/spenser-sembrat-BBtlAlhUeT4-unsplash.webp";
 
 function OnLogoReveal() {
   const ref = useRef<HTMLDivElement>(null);

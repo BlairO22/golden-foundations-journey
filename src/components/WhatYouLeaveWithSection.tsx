@@ -1,4 +1,4 @@
-import photoImg from "@/assets/getty-images-h6QbnXWrtN8-unsplash.jpg";
+import photoImg from "@/assets/getty-images-h6QbnXWrtN8-unsplash.webp";
 import RevealImage from "@/components/RevealImage";
 import RevealText from "@/components/RevealText";
 

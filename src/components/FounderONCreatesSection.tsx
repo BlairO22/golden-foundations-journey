@@ -1,4 +1,4 @@
-import createsImg from "@/assets/logan-weaver-lgnwvr-qmFLpVS9tRM-unsplash.jpg";
+import createsImg from "@/assets/logan-weaver-lgnwvr-qmFLpVS9tRM-unsplash.webp";
 import RevealImage from "@/components/RevealImage";
 import RevealText from "@/components/RevealText";
 

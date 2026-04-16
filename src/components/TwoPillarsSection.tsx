@@ -1,5 +1,5 @@
-import founderPortrait from "@/assets/founder-portrait.png";
-import foundersDuo from "@/assets/founders-duo.png";
+import founderPortrait from "@/assets/founder-portrait.webp";
+import foundersDuo from "@/assets/founders-duo.webp";
 
 const TwoPillarsSection = () => {
   return (
@@ -11,7 +11,7 @@ const TwoPillarsSection = () => {
         <div className="grid md:grid-cols-2 gap-12">
           {/* Coaching */}
           <div>
-            <img loading="lazy" alt="Aaron McLean" className="w-full aspect-[3/2] object-cover object-top mb-8" src="/lovable-uploads/3c0590e8-23b2-4e12-917d-0fec9db2be67.png" />
+            <img loading="lazy" alt="Aaron McLean" className="w-full aspect-[3/2] object-cover object-top mb-8" src="/lovable-uploads/3c0590e8-23b2-4e12-917d-0fec9db2be67.webp" />
             <h3 className="heading-display text-2xl text-navy mb-2">Strategic Advisory + Transformational Coaching</h3>
             <p className="font-body text-sm font-semibold text-gold mb-4 tracking-wide">Led by Aaron McLean</p>
             <p className="font-body text-base text-charcoal/80 leading-relaxed">
@@ -20,7 +20,7 @@ const TwoPillarsSection = () => {
           </div>
           {/* Production */}
           <div>
-            <img loading="lazy" alt="Blair Owens and team" className="w-full aspect-[3/2] object-cover mb-8" src="/lovable-uploads/50a3bf20-eabe-4102-9a84-2f70d150be6c.png" />
+            <img loading="lazy" alt="Blair Owens and team" className="w-full aspect-[3/2] object-cover mb-8" src="/lovable-uploads/50a3bf20-eabe-4102-9a84-2f70d150be6c.webp" />
             <h3 className="heading-display text-2xl text-navy mb-2">Business Production</h3>
             <p className="font-body text-sm font-semibold text-gold mb-4 tracking-wide">Led by Blair Owens, Creative Director</p>
             <p className="font-body text-base text-charcoal/80 leading-relaxed">

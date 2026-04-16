@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from "react";
-import ctaImg from "@/assets/samsung-memory-wz8HHE9kBgo-unsplash.jpg";
+import ctaImg from "@/assets/samsung-memory-wz8HHE9kBgo-unsplash.webp";
 
 const MoreLifeCTASection = () => {
   const photoRef = useRef<HTMLDivElement>(null);
@@ -51,7 +51,12 @@ const MoreLifeCTASection = () => {
           <p className="font-body text-lg md:text-xl text-charcoal/80 leading-relaxed mb-10 max-w-xl">
             It takes 3 minutes. It is clear, useful, and designed to help you move forward with greater honesty.
           </p>
-          <a href="/founder-freedom-score" className="btn-gold self-start">
+          <a
+            href="https://founderfreedomscore.netlify.app/assessment"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="btn-gold self-start"
+          >
             Discover Your Founder Freedom Score →
           </a>
         </div>

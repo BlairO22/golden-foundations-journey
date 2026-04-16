@@ -1,4 +1,4 @@
-import logo from "@/assets/logo.png";
+import logo from "@/assets/logo.webp";
 
 const Navbar = () => {
   return (
@@ -13,7 +13,14 @@ const Navbar = () => {
         <a href="/founder-freedom-score" className="hover:text-primary-foreground transition-colors">Founder Freedom Score</a>
         <a href="/results" className="hover:text-primary-foreground transition-colors">Results</a>
       </div>
-      <a href="/founder-freedom-score" className="btn-gold text-xs px-6 py-3">Take the Founder Freedom Score →</a>
+      <a
+        href="https://founderfreedomscore.netlify.app/assessment"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="btn-gold text-xs px-6 py-3"
+      >
+        Take the Founder Freedom Score →
+      </a>
     </nav>
   );
 };

@@ -1,4 +1,4 @@
-import pathArt from "@/assets/path-art.png";
+import pathArt from "@/assets/path-art.webp";
 
 const GuaranteeSection = () => {
   return (

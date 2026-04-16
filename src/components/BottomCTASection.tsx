@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from "react";
-import defaultImg from "@/assets/samsung-memory-wz8HHE9kBgo-unsplash.jpg";
+import defaultImg from "@/assets/samsung-memory-wz8HHE9kBgo-unsplash.webp";
 
 interface BottomCTASectionProps {
   heading: string;
