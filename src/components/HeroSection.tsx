@@ -1,7 +1,9 @@
 import { useEffect, useRef, useState } from "react";
 
+import heroVideo1 from "@/assets/7567275-hd_1920_1080_25fps.mp4";
+
 const slides = [
-  { text: "YOUR BUSINESS", video: "/hero-bg.mp4" },
+  { text: "YOUR BUSINESS", video: heroVideo1 },
   { text: "YOUR FREEDOM", video: "/hero-bg-2.mp4" },
   { text: "BUILT WITH YOU", video: "/hero-bg-3.mp4" },
 ];

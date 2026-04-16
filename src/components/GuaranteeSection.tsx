@@ -15,7 +15,7 @@ const GuaranteeSection = () => {
             </p>
           </div>
           <div className="flex justify-center">
-            <img src={pathArt} alt="Path to success" className="max-w-xs w-full" />
+            <img loading="lazy" src={pathArt} alt="Path to success" className="max-w-xs w-full" />
           </div>
         </div>
 

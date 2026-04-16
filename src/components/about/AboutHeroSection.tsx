@@ -18,8 +18,7 @@ const AboutHeroSection = () => (
         </div>
       </div>
       <div className="flex justify-center">
-        <img
-          src={aaronWorking}
+        <img loading="lazy"           src={aaronWorking}
           alt="Aaron McLean working"
           className="w-full max-w-md object-cover aspect-[3/4]"
         />

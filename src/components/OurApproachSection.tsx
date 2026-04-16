@@ -51,7 +51,7 @@ const OurApproachSection = () => {
               </span>
               <h3 className="heading-display leading-tight">
                 <span className="block text-3xl md:text-4xl text-navy">Build</span>
-                <span className="block text-2xl md:text-3xl text-gold">
+                <span className="block text-3xl md:text-4xl text-navy">
                   {item.accent}
                 </span>
               </h3>

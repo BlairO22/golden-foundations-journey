@@ -1,5 +1,6 @@
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import BottomCTASection from "@/components/BottomCTASection";
 import whyImg from "@/assets/spenser-sembrat-BBtlAlhUeT4-unsplash.jpg";
 
 const Bullet = ({ children }: { children: React.ReactNode }) => (
@@ -187,17 +188,12 @@ const About = () => {
         </div>
       </section>
 
-      {/* Final CTA */}
-      <section className="section-navy py-24 md:py-32 px-6 text-center">
-        <div className="max-w-3xl mx-auto">
-          <h2 className="heading-display text-4xl md:text-5xl lg:text-6xl text-primary-foreground mb-8">
-            If this feels aligned, begin with the Founder Freedom Score.
-          </h2>
-          <a href="/founder-freedom-score" className="btn-gold">
-            Discover Your Founder Freedom Score →
-          </a>
-        </div>
-      </section>
+      <BottomCTASection
+        heading="If this feels aligned, begin with the Founder Freedom Score."
+        paragraph="A short, honest diagnostic to help you see where you stand — in about 3 minutes."
+        ctaText="Discover Your Founder Freedom Score →"
+        ctaHref="/founder-freedom-score"
+      />
 
       <Footer />
     </div>

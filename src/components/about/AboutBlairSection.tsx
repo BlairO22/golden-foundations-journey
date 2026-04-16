@@ -11,8 +11,7 @@ const AboutBlairSection = () => {
         className={`max-w-6xl mx-auto grid md:grid-cols-2 gap-16 items-center transition-all duration-700 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}`}
       >
         <div className="flex justify-center md:order-2">
-          <img
-            src={blairPortrait}
+          <img loading="lazy"             src={blairPortrait}
             alt="Blair Owens"
             className="w-full max-w-md object-cover aspect-[3/4]"
           />

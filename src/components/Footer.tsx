@@ -1,44 +1,56 @@
+import { Instagram, Linkedin, Facebook } from "lucide-react";
 import logo from "@/assets/logo.png";
 
 const Footer = () => {
   return (
-    <footer className="bg-navy py-16 px-6">
-      <div className="max-w-6xl mx-auto">
-        <div className="grid md:grid-cols-3 gap-12 mb-12">
-          {/* Logo & tagline */}
-          <div>
-            <img src={logo} alt="Thriving Founder" className="h-10 mb-4" />
-            <p className="font-body text-sm text-primary-foreground/60 italic">
-              Clarity. Capacity. Cashflow. Confidence.
-            </p>
-          </div>
-
-          {/* Navigation */}
-          <div className="flex flex-col gap-3">
-            <a href="/" className="font-body text-sm text-primary-foreground/70 hover:text-primary-foreground transition-colors">Home</a>
-            <a href="/about" className="font-body text-sm text-primary-foreground/70 hover:text-primary-foreground transition-colors">About Us</a>
-            <a href="/program" className="font-body text-sm text-primary-foreground/70 hover:text-primary-foreground transition-colors">The Program</a>
-            <a href="/results" className="font-body text-sm text-primary-foreground/70 hover:text-primary-foreground transition-colors">Results</a>
-          </div>
-
-          {/* Social */}
-          <div className="flex flex-col gap-3">
-            <a href="#" className="font-body text-sm text-primary-foreground/70 hover:text-primary-foreground transition-colors">LinkedIn</a>
-            <a href="#" className="font-body text-sm text-primary-foreground/70 hover:text-primary-foreground transition-colors">Instagram</a>
-            <a href="#" className="font-body text-sm text-primary-foreground/70 hover:text-primary-foreground transition-colors">Facebook</a>
-          </div>
+    <footer className="pt-20 pb-10 px-6" style={{ backgroundColor: "#1F3F78" }}>
+      <div className="max-w-6xl mx-auto text-center">
+        {/* Logo */}
+        <div className="flex justify-center mb-10">
+          <img src={logo} alt="Thriving Founder" className="h-32 md:h-40" />
         </div>
 
-        <div className="border-t border-primary-foreground/10 pt-8 flex flex-col md:flex-row items-center justify-between gap-4">
-          <div className="font-body text-xs text-primary-foreground/40">
-            <a href="https://aaronmcleanadvisory.com" className="hover:text-primary-foreground/60 transition-colors">Part of AM Advisory</a>
-          </div>
+        {/* Links */}
+        <nav className="flex flex-wrap justify-center gap-x-8 gap-y-3 mb-10">
+          <a href="/" className="font-body text-sm tracking-[0.15em] uppercase text-primary-foreground/70 hover:text-primary-foreground transition-colors">Home</a>
+          <a href="/about" className="font-body text-sm tracking-[0.15em] uppercase text-primary-foreground/70 hover:text-primary-foreground transition-colors">About</a>
+          <a href="/founder-on" className="font-body text-sm tracking-[0.15em] uppercase text-primary-foreground/70 hover:text-primary-foreground transition-colors">Founder ON</a>
+          <a href="/founder-freedom-score" className="font-body text-sm tracking-[0.15em] uppercase text-primary-foreground/70 hover:text-primary-foreground transition-colors">Founder Freedom Score</a>
+          <a href="/results" className="font-body text-sm tracking-[0.15em] uppercase text-primary-foreground/70 hover:text-primary-foreground transition-colors">Results</a>
+        </nav>
+
+        {/* Socials */}
+        <div className="flex items-center justify-center gap-5 mb-12">
+          <a
+            href="#"
+            aria-label="LinkedIn"
+            className="text-primary-foreground/70 hover:text-primary-foreground transition-colors"
+          >
+            <Linkedin size={22} strokeWidth={1.5} />
+          </a>
+          <a
+            href="#"
+            aria-label="Instagram"
+            className="text-primary-foreground/70 hover:text-primary-foreground transition-colors"
+          >
+            <Instagram size={22} strokeWidth={1.5} />
+          </a>
+          <a
+            href="#"
+            aria-label="Facebook"
+            className="text-primary-foreground/70 hover:text-primary-foreground transition-colors"
+          >
+            <Facebook size={22} strokeWidth={1.5} />
+          </a>
+        </div>
+
+        <div className="border-t border-primary-foreground/10 pt-6 flex flex-col md:flex-row items-center justify-between gap-3">
           <p className="font-body text-xs text-primary-foreground/40">
             © 2026 Thriving Founder™. All rights reserved.
           </p>
-          <div className="flex gap-4 font-body text-xs text-primary-foreground/40">
-            <a href="#" className="hover:text-primary-foreground/60 transition-colors">Privacy Policy</a>
-            <a href="#" className="hover:text-primary-foreground/60 transition-colors">Terms of Service</a>
+          <div className="flex gap-6 font-body text-xs text-primary-foreground/40">
+            <a href="#" className="hover:text-primary-foreground/70 transition-colors">Privacy</a>
+            <a href="#" className="hover:text-primary-foreground/70 transition-colors">Terms</a>
           </div>
         </div>
       </div>

@@ -1,15 +1,17 @@
+import { lazy, Suspense } from "react";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { Toaster } from "@/components/ui/toaster";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import Index from "./pages/Index.tsx";
-import FounderON from "./pages/FounderON.tsx";
-import About from "./pages/About.tsx";
-import FounderFreedomScore from "./pages/FounderFreedomScore.tsx";
-import Results from "./pages/Results.tsx";
-import Book from "./pages/Book.tsx";
-import NotFound from "./pages/NotFound.tsx";
+
+const FounderON = lazy(() => import("./pages/FounderON.tsx"));
+const About = lazy(() => import("./pages/About.tsx"));
+const FounderFreedomScore = lazy(() => import("./pages/FounderFreedomScore.tsx"));
+const Results = lazy(() => import("./pages/Results.tsx"));
+const Book = lazy(() => import("./pages/Book.tsx"));
+const NotFound = lazy(() => import("./pages/NotFound.tsx"));
 
 const queryClient = new QueryClient();
 
@@ -19,17 +21,19 @@ const App = () => (
       <Toaster />
       <Sonner />
       <BrowserRouter>
-        <Routes>
-          <Route path="/" element={<Index />} />
-          <Route path="/founder-on" element={<FounderON />} />
-          <Route path="/program" element={<FounderON />} />
-          <Route path="/about" element={<About />} />
-          <Route path="/founder-freedom-score" element={<FounderFreedomScore />} />
-          <Route path="/results" element={<Results />} />
-          <Route path="/book" element={<Book />} />
-          {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
-          <Route path="*" element={<NotFound />} />
-        </Routes>
+        <Suspense fallback={null}>
+          <Routes>
+            <Route path="/" element={<Index />} />
+            <Route path="/founder-on" element={<FounderON />} />
+            <Route path="/program" element={<FounderON />} />
+            <Route path="/about" element={<About />} />
+            <Route path="/founder-freedom-score" element={<FounderFreedomScore />} />
+            <Route path="/results" element={<Results />} />
+            <Route path="/book" element={<Book />} />
+            {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
+            <Route path="*" element={<NotFound />} />
+          </Routes>
+        </Suspense>
       </BrowserRouter>
     </TooltipProvider>
   </QueryClientProvider>

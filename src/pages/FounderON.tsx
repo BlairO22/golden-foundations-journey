@@ -1,6 +1,7 @@
 import { useState } from "react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import BottomCTASection from "@/components/BottomCTASection";
 import aaronWorkingImg from "@/assets/angelina-sarycheva-a_DSYLkr9tc-unsplash.jpg";
 import blairPortraitImg from "@/assets/brooke-cagle-Ffh5_aiqUT0-unsplash.jpg";
 import foundersDuoImg from "@/assets/daiga-ellaby-yJ2KtO6Gwkk-unsplash.jpg";
@@ -774,21 +775,12 @@ const FounderON = () => {
         </div>
       </section>
 
-      {/* Final CTA */}
-      <section className="section-navy py-24 md:py-32 px-6 text-center">
-        <div className="max-w-3xl mx-auto">
-          <h2 className="heading-display text-4xl md:text-5xl lg:text-6xl text-primary-foreground mb-8">
-            Ready to build with real support?
-          </h2>
-          <p className="font-body text-lg md:text-xl text-primary-foreground/80 leading-relaxed mb-12">
-            Apply for Founder ON, or begin with the Founder Freedom Score if you want a lower-friction first step.
-          </p>
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-            <a href="#" className="btn-gold">Apply for Founder ON →</a>
-            <a href="#" className="btn-outline-light">Discover Your Founder Freedom Score →</a>
-          </div>
-        </div>
-      </section>
+      <BottomCTASection
+        heading="Ready to build with real support?"
+        paragraph="Apply for Founder ON, or begin with the Founder Freedom Score if you want a lower-friction first step."
+        ctaText="Apply for Founder ON →"
+        ctaHref="#"
+      />
 
       <Footer />
     </div>

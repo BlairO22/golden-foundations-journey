@@ -1,5 +1,6 @@
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import BottomCTASection from "@/components/BottomCTASection";
 
 const Bullet = ({ children }: { children: React.ReactNode }) => (
   <div className="flex items-start gap-4">
@@ -172,17 +173,12 @@ const FounderFreedomScore = () => {
         </div>
       </section>
 
-      {/* Final CTA */}
-      <section className="bg-card py-24 md:py-32 px-6 text-center">
-        <div className="max-w-3xl mx-auto">
-          <h2 className="heading-display text-4xl md:text-5xl lg:text-6xl text-navy mb-10">
-            See where you stand. Build from truth.
-          </h2>
-          <a href="#" className="btn-gold">
-            Take the Founder Freedom Score →
-          </a>
-        </div>
-      </section>
+      <BottomCTASection
+        heading="See where you stand. Build from truth."
+        paragraph="Your results are immediate, honest, and designed to help you move forward with clarity."
+        ctaText="Take the Founder Freedom Score →"
+        ctaHref="#"
+      />
 
       <Footer />
     </div>

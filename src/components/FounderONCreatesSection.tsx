@@ -1,4 +1,6 @@
 import createsImg from "@/assets/logan-weaver-lgnwvr-qmFLpVS9tRM-unsplash.jpg";
+import RevealImage from "@/components/RevealImage";
+import RevealText from "@/components/RevealText";
 
 const outcomes = [
   "A business with strategic clarity and commercial credibility",
@@ -12,17 +14,14 @@ const FounderONCreatesSection = () => {
   return (
     <section className="bg-card pt-12 md:pt-16 pb-24 md:pb-32 px-6">
       <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-16 items-center">
-        <div>
-          <img
-            src={createsImg}
-            alt="A founder built to lead"
-            loading="lazy"
-            className="w-full object-cover aspect-square"
-          />
-        </div>
-        <div>
+        <RevealImage
+          src={createsImg}
+          alt="A founder built to lead"
+          className="aspect-square"
+        />
+        <RevealText>
           <h2 className="heading-display text-4xl md:text-5xl text-navy mb-8">
-            That is what Founder ON is designed to create:
+            Founder ON is designed to create:
           </h2>
           <div className="flex flex-col gap-5">
             {outcomes.map((text, i) => (
@@ -52,7 +51,7 @@ const FounderONCreatesSection = () => {
               </div>
             ))}
           </div>
-        </div>
+        </RevealText>
       </div>
     </section>
   );

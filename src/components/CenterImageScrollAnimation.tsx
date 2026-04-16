@@ -122,8 +122,7 @@ const CenterImageScrollAnimation = () => {
               willChange: "transform, opacity",
             }}
           >
-            <img
-              src={section2Small}
+            <img loading="lazy"               src={section2Small}
               alt="You have the expertise"
               style={{
                 position: "absolute",
@@ -135,8 +134,7 @@ const CenterImageScrollAnimation = () => {
                 opacity: 1 - photoSwap,
               }}
             />
-            <img
-              src={section3Small}
+            <img loading="lazy"               src={section3Small}
               alt="You've built a career"
               style={{
                 position: "absolute",
