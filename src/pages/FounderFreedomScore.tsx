@@ -164,7 +164,8 @@ const FoundationCard =({ foundation }: { foundation: { name: string; body: strin
 
 const FounderFreedomScore = () => {
   return (
-    <div className="min-h-screen">
+    <>
+    <div className="min-h-screen relative z-10 bg-background">
       <Navbar bg="#1F3F78" />
 
       {/* Hero */}
@@ -323,10 +324,9 @@ const FounderFreedomScore = () => {
         paragraph="Your results are immediate, honest, and designed to help you move forward with clarity."
         ctaText="Take the Founder Freedom Score →"
         ctaHref="https://founderfreedomscore.netlify.app/assessment"
-      />
-
+      /></div>
       <Footer />
-    </div>
+      </>
   );
 };
 

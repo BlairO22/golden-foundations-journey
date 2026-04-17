@@ -480,20 +480,22 @@ const notForItems = [
 
 const FounderON = () => {
   return (
-    <div className="min-h-screen">
+    <>
+    <div className="min-h-screen relative z-10 bg-background">
       <Navbar />
 
       {/* Hero */}
       <section className="section-navy pt-40 pb-24 md:pt-48 md:pb-32 px-6">
         <div className="max-w-5xl mx-auto text-center">
           <h1
-            className="leading-[1.05] mb-4"
+            className="leading-[1.05] mb-4 select-none"
             style={{
               fontFamily: "'Rubik', sans-serif",
               fontWeight: 700,
               fontSize: "clamp(5rem, 14vw, 12rem)",
               letterSpacing: "-0.04em",
-              color: "#8EBBE3",
+              WebkitTextStroke: "4px hsl(var(--gold))",
+              color: "transparent",
             }}
           >
             ON
@@ -504,7 +506,9 @@ const FounderON = () => {
                 top: "-3.5em",
                 marginLeft: "0.05em",
                 letterSpacing: 0,
-                fontWeight: 500,
+                fontFamily: "'Figtree', sans-serif",
+                fontWeight: 600,
+                WebkitTextStroke: "1px hsl(var(--gold))",
               }}
             >
               ™
@@ -746,7 +750,7 @@ const FounderON = () => {
                 <h3 className="heading-display text-3xl md:text-4xl text-navy mb-3">
                   {p.name}
                 </h3>
-                <p className="font-body text-lg md:text-xl text-charcoal/75 leading-relaxed">
+                <p className="font-body text-lg md:text-xl text-charcoal/75 leading-relaxed" style={{ maxWidth: "33rem" }}>
                   {p.body}
                 </p>
               </div>
@@ -894,10 +898,9 @@ const FounderON = () => {
         paragraph="Apply for ON, or begin with the Founder Freedom Score if you want a lower-friction first step."
         ctaText="Apply for ON →"
         ctaHref="https://founderfreedomscore.netlify.app/assessment"
-      />
-
+      /></div>
       <Footer />
-    </div>
+      </>
   );
 };
 

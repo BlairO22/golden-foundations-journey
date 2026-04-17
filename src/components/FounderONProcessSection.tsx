@@ -34,10 +34,11 @@ function OnLogoReveal() {
         bottom: 0,
         right: "0.5rem",
         display: "block",
-        fontFamily: "'Rubik', sans-serif",
+        fontFamily: "'Figtree', sans-serif",
         fontWeight: 700,
         fontSize: "clamp(7rem, 16vw, 14rem)",
-        color: "#8EBBE3",
+        WebkitTextStroke: "4px hsl(var(--gold))",
+        color: "transparent",
         letterSpacing: "-0.04em",
         opacity: revealed ? 1 : 0,
         transition: "opacity 0.5s ease",
@@ -47,12 +48,14 @@ function OnLogoReveal() {
       <sup
         style={{
           fontSize: "0.18em",
-          fontWeight: 500,
+          fontFamily: "'Figtree', sans-serif",
+          fontWeight: 600,
           position: "relative",
           top: "-2.8em",
           marginLeft: "0.1em",
           letterSpacing: 0,
-          color: "#8EBBE3",
+          WebkitTextStroke: "1px hsl(var(--gold))",
+          color: "transparent",
         }}
       >
         ™
@@ -145,7 +148,7 @@ function PhaseRow({
           <p className="font-body text-xs tracking-[0.3em] uppercase text-gold mb-3">
             {p.label}
           </p>
-          <p className="font-body text-lg md:text-xl text-primary-foreground/80 leading-relaxed max-w-md">
+          <p className="font-body text-lg md:text-xl text-primary-foreground/80 leading-relaxed" style={{ maxWidth: "22rem" }}>
             {p.body}
           </p>
         </div>
@@ -235,12 +238,12 @@ const FounderONProcessSection = () => {
       {/* Big ON introduction */}
       <section
         ref={introRef}
-        className="pt-24 md:pt-32 pb-16 md:pb-20 px-6 overflow-hidden"
+        className="pt-16 md:pt-20 pb-10 md:pb-14 px-6 overflow-hidden"
         style={{ backgroundColor: "#1F3F78" }}
       >
         <div className="max-w-6xl mx-auto text-center">
           <p
-            className="heading-display text-2xl md:text-3xl tracking-[0.3em] uppercase text-white mb-6"
+            className="heading-display text-2xl md:text-3xl tracking-[0.3em] uppercase text-white mb-3"
             style={{
               opacity: introVisible ? 1 : 0,
               transform: `translate3d(0, ${introProgress * -20}px, 0)`,
@@ -253,11 +256,12 @@ const FounderONProcessSection = () => {
           <h2
             className="leading-[1.05] mb-0"
             style={{
-              fontFamily: "'Rubik', sans-serif",
+              fontFamily: "'Figtree', sans-serif",
               fontWeight: 700,
               fontSize: "clamp(8rem, 18vw, 16rem)",
               letterSpacing: "-0.04em",
-              color: "#8EBBE3",
+              WebkitTextStroke: "4px hsl(var(--gold))",
+              color: "transparent",
               opacity: introVisible ? 1 : 0,
               transform: `translate3d(0, ${introProgress * 25}px, 0)`,
               transition: "opacity 1s ease 0.4s",
@@ -272,7 +276,9 @@ const FounderONProcessSection = () => {
                 top: "-4.5em",
                 marginLeft: "0.05em",
                 letterSpacing: 0,
-                fontWeight: 500,
+                fontFamily: "'Figtree', sans-serif",
+                fontWeight: 600,
+                WebkitTextStroke: "1px hsl(var(--gold))",
               }}
             >
               ™
@@ -282,7 +288,7 @@ const FounderONProcessSection = () => {
       </section>
 
       {/* Tagline section */}
-      <section className="bg-white py-4 px-6">
+      <section className="section-offwhite py-4 px-6">
         <div className="max-w-6xl mx-auto">
           <h5 className="heading-display text-2xl md:text-3xl text-navy leading-snug max-w-3xl mx-auto text-center">
             Thriving Founder's proprietary 4-stage founder development and business execution process.
@@ -291,9 +297,9 @@ const FounderONProcessSection = () => {
       </section>
 
       {/* "Designed for capable..." — 2-column section */}
-      <section style={{ backgroundColor: "#9DC4E7" }}>
+      <section style={{ backgroundColor: "#2D2D2D" }}>
         <div className="grid md:grid-cols-2 items-stretch">
-          <div ref={photoRef} className="relative min-h-[420px] md:min-h-[560px] overflow-hidden">
+          <div ref={photoRef} className="relative overflow-hidden" style={{ minHeight: "55vh" }}>
             <img loading="lazy"               src={skyBg}
               alt="A thriving founder at ease"
               className="absolute inset-0 w-full h-full object-cover"
@@ -305,10 +311,10 @@ const FounderONProcessSection = () => {
               }}
             />
 
-            <OnLogoReveal />
+            {/* <OnLogoReveal /> */}
           </div>
           <div className="flex items-end pt-16 md:pt-24 pb-6 md:pb-8 px-8 md:px-16">
-            <p className="font-body text-2xl md:text-3xl text-charcoal leading-relaxed max-w-xl">
+            <p className="font-body text-2xl md:text-3xl text-primary-foreground/90 leading-relaxed max-w-xl">
               Designed for capable professionals who want more than advice, coaching, or disconnected services. ON<span className="text-xs" style={{ verticalAlign: "top", lineHeight: 1 }}>™</span> helps you build a fully operational business and become the founder required to lead it.
             </p>
           </div>

@@ -41,7 +41,8 @@ const beliefs = [
 
 const About = () => {
   return (
-    <div className="min-h-screen">
+    <>
+    <div className="min-h-screen relative z-10 bg-background">
       <Navbar />
 
       {/* Hero */}
@@ -193,10 +194,9 @@ const About = () => {
         paragraph="A short, honest diagnostic to help you see where you stand — in about 3 minutes."
         ctaText="Discover Your Founder Freedom Score →"
         ctaHref="https://founderfreedomscore.netlify.app/assessment"
-      />
-
+      /></div>
       <Footer />
-    </div>
+      </>
   );
 };
 

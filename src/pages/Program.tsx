@@ -10,7 +10,7 @@ import WhoIsForSection from "@/components/program/WhoIsForSection";
 import ProgramFinalCTASection from "@/components/program/ProgramFinalCTASection";
 
 const Program = () => (
-  <div className="min-h-screen">
+  <div className="min-h-screen relative z-10 bg-background">
     <Navbar />
     <ProgramHeroSection />
     <PartnershipIncludesSection />

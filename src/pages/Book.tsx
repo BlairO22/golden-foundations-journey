@@ -4,7 +4,7 @@ import BookHeroSection from "@/components/book/BookHeroSection";
 import BookStepsSection from "@/components/book/BookStepsSection";
 
 const Book = () => (
-  <div className="min-h-screen">
+  <div className="min-h-screen relative z-10 bg-background">
     <Navbar />
     <BookHeroSection />
     <BookStepsSection />

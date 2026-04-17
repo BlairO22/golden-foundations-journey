@@ -83,7 +83,8 @@ const tangibleOutcomes = [
 
 const Results = () => {
   return (
-    <div className="min-h-screen">
+    <>
+    <div className="min-h-screen relative z-10 bg-background">
       <Navbar />
 
       {/* Hero */}
@@ -228,10 +229,9 @@ const Results = () => {
         paragraph="A clear diagnostic of where you stand as an entrepreneur — in about 3 minutes."
         ctaText="Discover Your Founder Freedom Score →"
         ctaHref="https://founderfreedomscore.netlify.app/assessment"
-      />
-
+      /></div>
       <Footer />
-    </div>
+      </>
   );
 };
 
