@@ -490,7 +490,7 @@ const FounderON = () => {
           <h1
             className="leading-[1.05] mb-4 select-none"
             style={{
-              fontFamily: "'Rubik', sans-serif",
+              fontFamily: "'Figtree', sans-serif",
               fontWeight: 700,
               fontSize: "clamp(5rem, 14vw, 12rem)",
               letterSpacing: "-0.04em",
