@@ -50,7 +50,7 @@ const PartnershipIncludesSection = () => {
             Nothing that wastes your time.
           </h3>
           <p className="font-body text-lg md:text-xl text-charcoal/70 leading-relaxed">
-            Founder ON™ combines weekly strategic advisory, transformational coaching, and done-with-you business production.
+            ON™ combines weekly strategic advisory, transformational coaching, and done-with-you business production.
           </p>
         </div>
 

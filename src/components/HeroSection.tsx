@@ -118,18 +118,20 @@ const HeroSection = () => {
                 </h1>
               </div>
               <p
-                className="mt-10 mx-auto"
+                className="mt-10 mx-auto font-body text-xl md:text-2xl leading-snug"
                 style={{
                   maxWidth: "45rem",
-                  fontSize: "1.125rem",
-                  fontFamily: "'Figtree', sans-serif",
-                  fontWeight: 300,
-                  color: "hsl(0, 0%, 100%)",
+                  color: "hsl(0, 0%, 100%, 0.9)",
                 }}
               >
-                Founder ON™ is a proprietary 24-week process for capable professionals ready to turn their expertise into a thriving business, and become the founder required to lead it.
+                ON™ is a proprietary 24-week process for capable professionals ready to turn their expertise into a thriving business, and become the founder required to lead it.
               </p>
-              <a href="https://founderfreedomscore.netlify.app/assessment" target="_blank" rel="noopener noreferrer" className="btn-gold mt-8">
+              <a
+                href="https://founderfreedomscore.netlify.app/assessment"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="btn-gold mt-8"
+              >
                 Discover Your Founder Freedom Score
               </a>
             </div>

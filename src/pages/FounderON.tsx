@@ -1,9 +1,17 @@
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import BottomCTASection from "@/components/BottomCTASection";
 import aaronWorkingImg from "@/assets/angelina-sarycheva-a_DSYLkr9tc-unsplash.webp";
-import onLogo from "@/assets/on-logo.webp";
+import gridPhoto1 from "@/assets/natalia-blauth-QJWcEnP9x10-unsplash.webp";
+import gridPhoto2 from "@/assets/getty-images-dXR_QCJtQII-unsplash.webp";
+import gridPhoto3 from "@/assets/samsung-memory-wz8HHE9kBgo-unsplash.webp";
+import gridPhoto4 from "@/assets/paolo-resteghini-kj_tU5-qcz4-unsplash.webp";
+import gridPhoto5 from "@/assets/getty-images-VMDKeRO351c-unsplash.webp";
+import gridPhoto6 from "@/assets/paolo-resteghini-ZTooTRx5B_k-unsplash.webp";
+import gridPhoto7 from "@/assets/getty-images--Z4GFAQ1HvA-unsplash.webp";
+import gridPhoto8 from "@/assets/a-c-9jHHifbZlvg-unsplash.webp";
+import premiumBgImg from "@/assets/tuvalum-kwlcKkMoPZU-unsplash.webp";
 import blairPortraitImg from "@/assets/brooke-cagle-Ffh5_aiqUT0-unsplash.webp";
 import foundersDuoImg from "@/assets/daiga-ellaby-yJ2KtO6Gwkk-unsplash.webp";
 import pillarStrategyImg from "@/assets/getty-images-VMDKeRO351c-unsplash.webp";
@@ -75,13 +83,100 @@ const radialItems = [
   "your path toward a more autonomous, profitable, and sustainable life",
 ];
 
+const gridPhotos = [
+  gridPhoto1,
+  gridPhoto2,
+  gridPhoto3,
+  gridPhoto4,
+  gridPhoto5,
+  gridPhoto6,
+  gridPhoto7,
+  gridPhoto8,
+];
+
+function PhaseScrollItem({
+  phase,
+  index,
+}: {
+  phase: { label: string; name: string; body: string };
+  index: number;
+}) {
+  const ref = useRef<HTMLDivElement>(null);
+  const [visible, setVisible] = useState(false);
+
+  useEffect(() => {
+    const el = ref.current;
+    if (!el) return;
+    const obs = new IntersectionObserver(
+      ([entry]) => setVisible(entry.isIntersecting),
+      { threshold: 0.4 }
+    );
+    obs.observe(el);
+    return () => obs.disconnect();
+  }, []);
+
+  return (
+    <div
+      ref={ref}
+      className="flex flex-col justify-center min-h-[55vh]"
+      style={{ paddingTop: index === 0 ? "50vh" : "2rem" }}
+    >
+      <div
+        style={{
+          opacity: visible ? 1 : 0.2,
+          transform: visible ? "translateY(0)" : "translateY(24px)",
+          transition: "opacity 0.7s ease, transform 0.7s ease",
+        }}
+      >
+        <p className="font-body text-xs tracking-[0.3em] uppercase text-gold mb-3">
+          {phase.label}
+        </p>
+        <h3 className="heading-display text-4xl md:text-5xl text-navy mb-4">
+          {phase.name}
+        </h3>
+        <p className="font-body text-lg md:text-xl text-charcoal/75 leading-relaxed">
+          {phase.body}
+        </p>
+      </div>
+    </div>
+  );
+}
+
+const HeroPhotoGrid = () => (
+  <section className="w-full">
+    <div className="grid grid-cols-4 md:grid-cols-8">
+      {gridPhotos.map((src, i) => (
+        <img
+          key={i}
+          src={src}
+          alt=""
+          loading="lazy"
+          className="w-full h-full object-cover block"
+          style={{ aspectRatio: "3 / 4", borderRadius: 0 }}
+        />
+      ))}
+    </div>
+  </section>
+);
+
 const BraceIntegrated = () => {
   return (
     <div className="grid md:grid-cols-[auto_auto_1fr] items-center gap-6 md:gap-10 max-w-4xl mx-auto">
       {/* Label */}
       <div className="hidden md:block text-left max-w-xs">
         <p className="heading-display text-2xl md:text-3xl text-navy leading-tight">
-          Founder ON is designed as one integrated system.
+          ON<sup
+            style={{
+              fontSize: "0.4em",
+              position: "relative",
+              top: "-1.1em",
+              marginLeft: "0.08em",
+              verticalAlign: "baseline",
+              lineHeight: 1,
+              fontWeight: 500,
+              letterSpacing: 0,
+            }}
+          >™</sup> is designed as one integrated system.
         </p>
       </div>
 
@@ -108,7 +203,7 @@ const BraceIntegrated = () => {
 
       {/* Mobile label */}
       <p className="md:hidden heading-display text-2xl text-navy leading-tight mb-2">
-        Founder ON is designed as one integrated system.
+        ON is designed as one integrated system.
       </p>
 
       {/* Items */}
@@ -391,13 +486,31 @@ const FounderON = () => {
       {/* Hero */}
       <section className="section-navy pt-40 pb-24 md:pt-48 md:pb-32 px-6">
         <div className="max-w-5xl mx-auto text-center">
-          <img
-            src={onLogo}
-            alt="Founder ON™"
-            className="mx-auto mb-8"
-            style={{ height: "clamp(10rem, 18vw, 16rem)" }}
-          />
-          <p className="font-body text-lg md:text-xl text-primary-foreground/80 leading-relaxed mb-12">
+          <h1
+            className="leading-[1.05] mb-4"
+            style={{
+              fontFamily: "'Rubik', sans-serif",
+              fontWeight: 700,
+              fontSize: "clamp(5rem, 14vw, 12rem)",
+              letterSpacing: "-0.04em",
+              color: "#8EBBE3",
+            }}
+          >
+            ON
+            <sup
+              className="text-2xl md:text-3xl"
+              style={{
+                position: "relative",
+                top: "-3.5em",
+                marginLeft: "0.05em",
+                letterSpacing: 0,
+                fontWeight: 500,
+              }}
+            >
+              ™
+            </sup>
+          </h1>
+          <p className="font-body text-xl md:text-2xl text-primary-foreground/90 leading-snug mb-8">
             Build the business and the founder required to thrive.
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
@@ -407,15 +520,17 @@ const FounderON = () => {
               rel="noopener noreferrer"
               className="btn-gold"
             >
-              Apply for Founder ON →
+              Apply for ON →
             </a>
             <a href="#" className="btn-outline-light">Book a Strategy Call →</a>
           </div>
         </div>
       </section>
 
+      <HeroPhotoGrid />
+
       {/* Program Overview */}
-      <section className="bg-card py-24 md:py-32 px-6">
+      <section className="bg-card pt-24 md:pt-32 pb-12 md:pb-16 px-6">
         <div className="max-w-3xl mx-auto text-center">
           <p className="inline-block font-body text-sm tracking-[0.12em] uppercase text-gold border border-gold/60 bg-gold/10 rounded-md px-3 py-1 mb-6">
             The 24-Week Experience
@@ -427,13 +542,13 @@ const FounderON = () => {
             One integrated path<br />to a thriving business.
           </h2>
           <p className="font-body text-lg md:text-xl text-charcoal/80 leading-relaxed">
-            Founder ON is a proprietary 24-week business-building experience that combines strategic advisory, founder development, and expert-led execution to help you create a thriving business with greater freedom, mastery, and commercial strength.
+            ON is a proprietary 24-week business-building experience that combines strategic advisory, founder development, and expert-led execution to help you create a thriving business with greater freedom, mastery, and commercial strength.
           </p>
         </div>
       </section>
 
-      {/* What Founder ON Is */}
-      <section className="bg-card py-24 md:py-32 px-6">
+      {/* What ON Is */}
+      <section className="bg-card pt-12 md:pt-16 pb-24 md:pb-32 px-6">
         <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-12 md:gap-16 items-start">
           {/* Photo */}
           <div className="w-full">
@@ -449,13 +564,13 @@ const FounderON = () => {
           {/* Content */}
           <div>
             <p className="inline-block font-body text-sm tracking-[0.12em] uppercase text-gold border border-gold/60 bg-gold/10 rounded-md px-3 py-1 mb-6">
-              What Founder ON Is
+              What ON Is
             </p>
             <h2 className="heading-display text-4xl md:text-5xl text-navy mb-10">
               This is not another program.
             </h2>
             <p className="font-body text-lg md:text-xl text-charcoal/80 leading-relaxed mb-6">
-              Founder ON is a proprietary 4-stage founder development and business execution process — designed to build a fully operational business and the founder required to lead it.
+              ON is a proprietary 4-stage founder development and business execution process — designed to build a fully operational business and the founder required to lead it.
             </p>
             <p className="font-body text-lg md:text-xl font-bold text-charcoal leading-relaxed mb-6">
               Most offers in this space give you one part of what is required.
@@ -475,17 +590,36 @@ const FounderON = () => {
               ))}
             </div>
             <p className="font-body text-lg md:text-xl font-bold text-charcoal leading-relaxed">
-              Founder ON was created to solve that.
+              ON was created to solve that.
             </p>
           </div>
         </div>
       </section>
 
       {/* Premium partnership statement */}
-      <section className="section-navy py-24 md:py-32 px-6">
-        <div className="max-w-4xl mx-auto text-center">
-          <p className="font-body text-xl md:text-2xl text-primary-foreground leading-relaxed">
-            Founder ON is a premium, integrated experience for qualified professionals who want to build a real business with real support — while becoming the person capable of leading it well.
+      <section
+        className="relative py-20 md:py-24 px-6 overflow-hidden"
+      >
+        <div
+          aria-hidden
+          className="absolute inset-0"
+          style={{
+            backgroundImage: `url(${premiumBgImg})`,
+            backgroundSize: "cover",
+            backgroundPosition: "center 40%",
+          }}
+        />
+        <div
+          aria-hidden
+          className="absolute inset-0"
+          style={{ backgroundColor: "hsl(var(--navy) / 0.75)" }}
+        />
+        <div className="relative max-w-6xl mx-auto text-left">
+          <h3 className="heading-display text-3xl md:text-4xl lg:text-5xl text-primary-foreground max-w-2xl">
+            ON is a premium, integrated experience.
+          </h3>
+          <p className="font-body text-xl md:text-2xl text-primary-foreground/85 leading-relaxed max-w-md ml-auto mt-16 md:mt-32">
+            For qualified professionals who want to build a real business with real support — while becoming the person capable of leading it well.
           </p>
         </div>
       </section>
@@ -493,20 +627,30 @@ const FounderON = () => {
       {/* Why It Is Different */}
       <section className="section-offwhite py-24 md:py-32 px-6">
         <div className="max-w-6xl mx-auto">
-          <div className="max-w-4xl mb-16">
+          <div className="max-w-3xl mb-16">
             <p className="inline-block font-body text-sm tracking-[0.12em] uppercase text-gold border border-gold/60 bg-gold/10 rounded-md px-3 py-1 mb-6">
               Why It Is Different
             </p>
             <h2 className="heading-display text-4xl md:text-5xl text-navy">
               Most paths to entrepreneurship are fragmented.
             </h2>
+            <p className="font-body text-lg md:text-xl text-charcoal/80 leading-relaxed mt-8 max-w-3xl">
+              Inside ON<sup
+                style={{
+                  fontSize: "0.55em",
+                  position: "relative",
+                  top: "-0.55em",
+                  marginLeft: "0.08em",
+                  verticalAlign: "baseline",
+                  lineHeight: 1,
+                  fontWeight: 500,
+                  letterSpacing: 0,
+                }}
+              >™</sup>, strategy, identity, execution, and outcomes are not treated as separate projects. We work across the parts that actually have to fit together.
+            </p>
           </div>
 
           <BraceIntegrated />
-
-          <p className="font-body text-lg md:text-xl text-charcoal/80 leading-relaxed max-w-4xl mt-16">
-            Inside Founder ON, strategy, identity, execution, and outcomes are not treated as separate projects. We work across the parts that actually have to fit together.
-          </p>
         </div>
       </section>
 
@@ -535,7 +679,7 @@ const FounderON = () => {
               A fundamentally different position than where you started.
             </h2>
             <p className="font-body text-lg md:text-xl text-charcoal/80 leading-relaxed">
-              Founder ON is designed to leave you with more than a plan and more than clarity. You leave with a business that has real structure, real credibility, and real forward motion — and a founder who has the confidence and capability to lead it.
+              ON is designed to leave you with more than a plan and more than clarity. You leave with a business that has real structure, real credibility, and real forward motion — and a founder who has the confidence and capability to lead it.
             </p>
           </div>
           <div className="order-1 md:order-2 w-full">
@@ -578,78 +722,37 @@ const FounderON = () => {
 
       {/* How the Experience Works */}
       <section className="section-offwhite py-24 md:py-32 px-6">
-        <div className="max-w-6xl mx-auto">
-          <p className="inline-block font-body text-sm tracking-[0.12em] uppercase text-gold border border-gold/60 bg-gold/10 rounded-md px-3 py-1 mb-6">
-            How the Experience Works
-          </p>
-          <h2 className="heading-display text-4xl md:text-5xl text-navy mb-8">
-            A 24-week build, not a loose container.
-          </h2>
-          <p className="font-body text-lg md:text-xl text-charcoal/80 leading-relaxed max-w-3xl mb-16">
-            Founder ON follows a structured progression that moves from truth to design to execution to readiness.
-          </p>
+        <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-12 md:gap-16 items-start">
+          {/* Sticky left column */}
+          <div className="md:sticky md:top-28 self-start">
+            <p className="inline-block font-body text-sm tracking-[0.12em] uppercase text-gold border border-gold/60 bg-gold/10 rounded-md px-3 py-1 mb-6">
+              How the Experience Works
+            </p>
+            <h2 className="heading-display text-4xl md:text-5xl text-navy mb-8">
+              A 24-week build, not a loose container.
+            </h2>
+            <p className="font-body text-lg md:text-xl text-charcoal/80 leading-relaxed">
+              ON follows a structured progression that moves from truth to design to execution to readiness. This is not about rushing you through a template. It is about building at a level that matches the weight of your next chapter.
+            </p>
+          </div>
 
-          <div
-            className="fo-timeline-grid relative"
-            style={{
-              display: "grid",
-              gridTemplateColumns: "repeat(4, 1fr)",
-              gap: "2rem",
-            }}
-          >
-            <div
-              className="fo-timeline-line"
-              style={{
-                position: "absolute",
-                top: "1.25rem",
-                left: 0,
-                right: 0,
-                height: "2px",
-                background: "hsl(var(--gold))",
-              }}
-            />
+          {/* Phases on the right */}
+          <div className="flex flex-col gap-12 md:gap-16">
             {phases.map((p, i) => (
-              <div key={i} style={{ position: "relative", paddingTop: "3rem" }}>
-                <div
-                  className="fo-timeline-dot"
-                  style={{
-                    position: "absolute",
-                    top: "0.75rem",
-                    left: 0,
-                    width: "1rem",
-                    height: "1rem",
-                    borderRadius: "9999px",
-                    backgroundColor: "hsl(var(--gold))",
-                  }}
-                />
-                <p className="font-body text-xs tracking-[0.2em] uppercase text-gold mb-2">
+              <div key={i}>
+                <p className="font-body text-xs tracking-[0.3em] uppercase text-gold mb-3">
                   {p.label}
                 </p>
-                <h3 className="heading-display text-2xl md:text-3xl text-navy mb-3">
+                <h3 className="heading-display text-3xl md:text-4xl text-navy mb-3">
                   {p.name}
                 </h3>
-                <p className="font-body text-base text-charcoal/70 leading-relaxed">
+                <p className="font-body text-lg md:text-xl text-charcoal/75 leading-relaxed">
                   {p.body}
                 </p>
               </div>
             ))}
           </div>
-
-          <p className="font-body text-lg md:text-xl text-charcoal/80 leading-relaxed max-w-3xl mt-16">
-            This is not about rushing you through a template. It is about building at a level that matches the weight of your next chapter.
-          </p>
         </div>
-
-        <style>{`
-          @media (max-width: 768px) {
-            .fo-timeline-grid {
-              grid-template-columns: 1fr !important;
-            }
-            .fo-timeline-line {
-              display: none !important;
-            }
-          }
-        `}</style>
       </section>
 
       {/* Outcomes */}
@@ -662,7 +765,7 @@ const FounderON = () => {
             A more powerful relationship with your work and your life.
           </h2>
           <p className="font-body text-lg md:text-xl text-charcoal/80 leading-relaxed mb-12">
-            Clients come to Founder ON for different reasons. But the deeper shift is usually the same:
+            Clients come to ON for different reasons. But the deeper shift is usually the same:
           </p>
 
           <div className="grid md:grid-cols-2 gap-8 md:gap-12 mb-12">
@@ -731,7 +834,7 @@ const FounderON = () => {
               Who This Is Not For
             </p>
             <h3 className="heading-display text-3xl md:text-4xl text-navy mb-6">
-              Founder ON is not for everyone.
+              ON is not for everyone.
             </h3>
             <p className="font-body text-lg md:text-xl text-charcoal/80 leading-relaxed mb-8">
               It is likely not for you if:
@@ -775,7 +878,7 @@ const FounderON = () => {
             Investment
           </p>
           <h2 className="heading-display text-4xl md:text-5xl text-navy mb-10">
-            Founder ON is a premium partnership.
+            ON is a premium partnership.
           </h2>
           <p className="font-body text-lg md:text-xl text-charcoal/80 leading-relaxed mb-6">
             This experience is designed for people who understand the cost of delay, fragmentation, and under-building. The real cost is not the investment — it is another year of building without the right support.
@@ -788,8 +891,8 @@ const FounderON = () => {
 
       <BottomCTASection
         heading="Ready to build with real support?"
-        paragraph="Apply for Founder ON, or begin with the Founder Freedom Score if you want a lower-friction first step."
-        ctaText="Apply for Founder ON →"
+        paragraph="Apply for ON, or begin with the Founder Freedom Score if you want a lower-friction first step."
+        ctaText="Apply for ON →"
         ctaHref="https://founderfreedomscore.netlify.app/assessment"
       />
 

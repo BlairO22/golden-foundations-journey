@@ -21,7 +21,7 @@ const FounderONCreatesSection = () => {
         />
         <RevealText>
           <h2 className="heading-display text-4xl md:text-5xl text-navy mb-8">
-            Founder ON is designed to create:
+            ON is designed to create:
           </h2>
           <div className="flex flex-col gap-5">
             {outcomes.map((text, i) => (

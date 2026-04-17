@@ -113,9 +113,13 @@
   }
 
   .btn-outline-light {
-    @apply inline-flex items-center justify-center px-8 py-4 font-body font-semibold text-sm tracking-widest uppercase border transition-all duration-300;
-    border-color: hsl(var(--primary-foreground) / 0.4);
+    @apply inline-flex items-center justify-center font-body font-semibold text-sm uppercase transition-all duration-300;
+    letter-spacing: 1.1px;
     color: hsl(var(--primary-foreground));
+    border-radius: 4px;
+    border: 1px solid hsl(var(--primary-foreground));
+    background-color: transparent;
+    padding: calc(0.625rem + 1px) calc(1.5rem + 1px);
   }
 
   .btn-outline-light:hover {

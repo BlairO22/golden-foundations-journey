@@ -1,6 +1,5 @@
 import { useEffect, useRef, useState } from "react";
 import skyBg from "@/assets/natalia-blauth-QJWcEnP9x10-unsplash.webp";
-import onLogo from "@/assets/on-logo.webp";
 import phase1Img from "@/assets/angelina-sarycheva-a_DSYLkr9tc-unsplash.webp";
 import phase2Img from "@/assets/paolo-resteghini-ZTooTRx5B_k-unsplash.webp";
 import phase3Img from "@/assets/brooke-cagle-Ffh5_aiqUT0-unsplash.webp";
@@ -28,17 +27,37 @@ function OnLogoReveal() {
   }, []);
 
   return (
-    <div ref={ref} className="absolute select-none" style={{ bottom: "2rem", right: "0.5rem" }}>
-      <img loading="lazy"         src={onLogo}
-        alt="ON™"
+    <span
+      ref={ref}
+      className="absolute select-none leading-none"
+      style={{
+        bottom: 0,
+        right: "0.5rem",
+        display: "block",
+        fontFamily: "'Rubik', sans-serif",
+        fontWeight: 700,
+        fontSize: "clamp(7rem, 16vw, 14rem)",
+        color: "#8EBBE3",
+        letterSpacing: "-0.04em",
+        opacity: revealed ? 1 : 0,
+        transition: "opacity 0.5s ease",
+      }}
+    >
+      ON
+      <sup
         style={{
-          height: "clamp(6rem, 12vw, 10rem)",
-          width: "auto",
-          opacity: revealed ? 1 : 0,
-          transition: "opacity 0.5s ease",
+          fontSize: "0.18em",
+          fontWeight: 500,
+          position: "relative",
+          top: "-2.8em",
+          marginLeft: "0.1em",
+          letterSpacing: 0,
+          color: "#8EBBE3",
         }}
-      />
-    </div>
+      >
+        ™
+      </sup>
+    </span>
   );
 }
 
@@ -213,7 +232,7 @@ const FounderONProcessSection = () => {
 
   return (
     <>
-      {/* Big Founder ON introduction */}
+      {/* Big ON introduction */}
       <section
         ref={introRef}
         className="pt-24 md:pt-32 pb-16 md:pb-20 px-6 overflow-hidden"
@@ -231,17 +250,34 @@ const FounderONProcessSection = () => {
           >
             Meet
           </p>
-          <img loading="lazy"             src={onLogo}
-            alt="Founder ON™"
-            className="mx-auto mb-0"
+          <h2
+            className="leading-[1.05] mb-0"
             style={{
-              height: "clamp(10rem, 18vw, 16rem)",
+              fontFamily: "'Rubik', sans-serif",
+              fontWeight: 700,
+              fontSize: "clamp(8rem, 18vw, 16rem)",
+              letterSpacing: "-0.04em",
+              color: "#8EBBE3",
               opacity: introVisible ? 1 : 0,
               transform: `translate3d(0, ${introProgress * 25}px, 0)`,
               transition: "opacity 1s ease 0.4s",
               willChange: "transform, opacity",
             }}
-          />
+          >
+            ON
+            <sup
+              className="text-2xl md:text-3xl"
+              style={{
+                position: "relative",
+                top: "-4.5em",
+                marginLeft: "0.05em",
+                letterSpacing: 0,
+                fontWeight: 500,
+              }}
+            >
+              ™
+            </sup>
+          </h2>
         </div>
       </section>
 

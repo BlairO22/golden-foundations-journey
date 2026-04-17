@@ -179,7 +179,7 @@ const ScoreAssessmentSection = () => {
                   <p className="font-body text-sm text-primary-foreground/70 mb-8 leading-relaxed">
                     Check your inbox for a follow-up series with targeted insights to help strengthen your weakest Foundation.
                   </p>
-                  <a href="/program" className="btn-gold">Learn About Founder ON™ →</a>
+                  <a href="/program" className="btn-gold">Learn About ON™ →</a>
                 </div>
               )}
               {getLevel() === "low" && (
