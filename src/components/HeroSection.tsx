@@ -89,7 +89,7 @@ const HeroSection = () => {
           >
             <div className="text-center px-[4%]">
               <div
-                className="h-[3rem] md:h-[5.5rem]"
+                className="h-[4rem] md:h-[5.5rem]"
                 style={{
                   overflow: "hidden",
                   display: "flex",
@@ -99,7 +99,7 @@ const HeroSection = () => {
               >
                 <h1
                   key={`${currentSlide}-${phase}`}
-                  className="text-[2.2rem] md:text-[4.5rem]"
+                  className="text-[3.5rem] md:text-[5.5rem]"
                   style={{
                     lineHeight: 1.2,
                     color: "hsl(0, 0%, 100%)",
@@ -124,7 +124,7 @@ const HeroSection = () => {
                   color: "hsl(0, 0%, 100%, 0.9)",
                 }}
               >
-                ON™ is a proprietary 24-week process for capable professionals ready to turn their expertise into a thriving business, and become the founder required to lead it.
+                Thriving Founder™ is a proprietary 24-week process for capable professionals ready to turn their expertise into a thriving business, and become the founder required to lead it.
               </p>
               <a
                 href="https://founderfreedomscore.netlify.app/assessment"
@@ -132,7 +132,8 @@ const HeroSection = () => {
                 rel="noopener noreferrer"
                 className="btn-gold mt-8"
               >
-                Discover Your Founder Freedom Score
+                <span className="md:hidden">Take the Founder Freedom Score</span>
+                <span className="hidden md:inline">Discover Your Founder Freedom Score</span>
               </a>
             </div>
           </div>

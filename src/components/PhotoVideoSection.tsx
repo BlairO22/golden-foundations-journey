@@ -9,9 +9,9 @@ const PhotoVideoSection = () => {
         <RevealImage
           src={section3Img}
           alt="A founder reflecting"
-          className="aspect-square"
+          className="aspect-square order-2 md:order-1"
         />
-        <RevealText>
+        <RevealText className="order-1 md:order-2">
           <h2 className="heading-display text-4xl md:text-5xl text-navy mb-8">
             You've built a career.
           </h2>
