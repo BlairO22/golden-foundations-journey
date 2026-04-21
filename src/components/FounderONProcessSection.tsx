@@ -276,10 +276,10 @@ const FounderONProcessSection = () => {
           >
             ON
             <sup
-              className="text-2xl md:text-3xl"
+              className="text-base md:text-3xl"
               style={{
                 position: "relative",
-                top: "-4.5em",
+                top: "-4.5rem",
                 marginLeft: "0.05em",
                 letterSpacing: 0,
                 fontFamily: "'Figtree', sans-serif",

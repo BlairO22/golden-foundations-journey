@@ -35,7 +35,7 @@ const Footer = () => {
     <footer
       ref={footerRef}
       className="sticky bottom-0 pt-20 pb-4 px-6"
-      style={{ backgroundColor: "#1F3F78", zIndex: -1 }}
+      style={{ backgroundColor: "#1F3F78" }}
     >
       <div
         className="max-w-6xl mx-auto text-center"

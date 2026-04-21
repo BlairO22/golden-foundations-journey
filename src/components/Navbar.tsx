@@ -67,30 +67,36 @@ const Navbar = ({ variant = "dark", bg }: { variant?: "dark" | "light"; bg?: str
           Take the Founder Freedom Score →
         </a>
 
-        {/* Mobile hamburger */}
+        {/* Mobile hamburger / close */}
         <button
-          className="md:hidden flex flex-col justify-center items-center w-10 h-10"
+          className="md:hidden relative flex items-center justify-center w-10 h-10"
           onClick={() => setMenuOpen(!menuOpen)}
           aria-label="Toggle menu"
         >
-          <span
-            className="block w-6 h-0.5 bg-[hsl(43,50%,54%)] transition-all duration-300 origin-center"
-            style={{
-              transform: menuOpen ? "rotate(45deg) translate(0, 7px)" : "none",
-            }}
-          />
-          <span
-            className="block w-6 h-0.5 bg-[hsl(43,50%,54%)] mt-1.5 transition-all duration-300"
-            style={{
-              opacity: menuOpen ? 0 : 1,
-            }}
-          />
-          <span
-            className="block w-6 h-0.5 bg-[hsl(43,50%,54%)] mt-1.5 transition-all duration-300 origin-center"
-            style={{
-              transform: menuOpen ? "rotate(-45deg) translate(0, -7px)" : "none",
-            }}
-          />
+          {/* Hamburger icon */}
+          <div
+            className="absolute flex flex-col justify-center items-center transition-opacity duration-300"
+            style={{ opacity: menuOpen ? 0 : 1 }}
+          >
+            <span className="block w-6 h-0.5 bg-[hsl(43,50%,54%)]" />
+            <span className="block w-6 h-0.5 bg-[hsl(43,50%,54%)] mt-1.5" />
+            <span className="block w-6 h-0.5 bg-[hsl(43,50%,54%)] mt-1.5" />
+          </div>
+          {/* X icon */}
+          <svg
+            className="absolute transition-opacity duration-300"
+            style={{ opacity: menuOpen ? 1 : 0 }}
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="hsl(43,50%,54%)"
+            strokeWidth="1.5"
+            strokeLinecap="round"
+          >
+            <line x1="4" y1="4" x2="20" y2="20" />
+            <line x1="20" y1="4" x2="4" y2="20" />
+          </svg>
         </button>
       </nav>
 
