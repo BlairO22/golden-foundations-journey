@@ -118,7 +118,7 @@ const HeroSection = () => {
                 </h1>
               </div>
               <p
-                className="mt-10 mx-auto font-body text-xl md:text-2xl leading-snug"
+                className="mt-4 md:mt-10 mx-auto font-body text-xl md:text-2xl leading-snug"
                 style={{
                   maxWidth: "45rem",
                   color: "hsl(0, 0%, 100%, 0.9)",
