@@ -1,8 +1,8 @@
 import { useEffect, useRef, useState } from "react";
 import skyBg from "@/assets/natalia-blauth-QJWcEnP9x10-unsplash.webp";
-import phase1Img from "@/assets/angelina-sarycheva-a_DSYLkr9tc-unsplash.webp";
-import phase2Img from "@/assets/paolo-resteghini-ZTooTRx5B_k-unsplash.webp";
-import phase3Img from "@/assets/brooke-cagle-Ffh5_aiqUT0-unsplash.webp";
+import phase1Img from "@/assets/getty-images-DAv799uV1HA-unsplash.jpg";
+import phase2Img from "@/assets/michael-t-_1Pmhe5ozNA-unsplash.jpg";
+import phase3Img from "@/assets/yanhao-fang-RT1MiKWx840-unsplash.jpg";
 import phase4Img from "@/assets/spenser-sembrat-BBtlAlhUeT4-unsplash.webp";
 
 function OnLogoReveal() {
@@ -70,18 +70,21 @@ const phases = [
     name: "Empower",
     body: "Clarify the vision, truth, and foundations.",
     image: phase1Img,
+    imagePosition: "center 35%",
   },
   {
     label: "Phase 2",
     name: "Build",
     body: "Shape the business, offer, brand, and strategic architecture.",
     image: phase2Img,
+    imagePosition: "center 35%",
   },
   {
     label: "Phase 3",
     name: "Operate",
     body: "Develop the systems, structure, and leadership required to run well.",
     image: phase3Img,
+    imagePosition: "center 60%",
   },
   {
     label: "Phase 4",
@@ -113,7 +116,7 @@ function PhaseRow({
         style={{
           backgroundImage: `url(${p.image})`,
           backgroundSize: "cover",
-          backgroundPosition: "center",
+          backgroundPosition: p.imagePosition || "center",
           opacity: hovered ? 1 : 0,
         }}
       />
