@@ -74,9 +74,9 @@ const Navbar = ({ variant = "dark", bg }: { variant?: "dark" | "light"; bg?: str
           aria-label="Toggle menu"
         >
           <span
-            className="block w-6 h-0.5 bg-[hsl(43,50%,54%)] transition-all duration-300"
+            className="block w-6 h-0.5 bg-[hsl(43,50%,54%)] transition-all duration-300 origin-center"
             style={{
-              transform: menuOpen ? "rotate(45deg) translateY(4px)" : "none",
+              transform: menuOpen ? "rotate(45deg) translate(0, 7px)" : "none",
             }}
           />
           <span
@@ -86,9 +86,9 @@ const Navbar = ({ variant = "dark", bg }: { variant?: "dark" | "light"; bg?: str
             }}
           />
           <span
-            className="block w-6 h-0.5 bg-[hsl(43,50%,54%)] mt-1.5 transition-all duration-300"
+            className="block w-6 h-0.5 bg-[hsl(43,50%,54%)] mt-1.5 transition-all duration-300 origin-center"
             style={{
-              transform: menuOpen ? "rotate(-45deg) translateY(-4px)" : "none",
+              transform: menuOpen ? "rotate(-45deg) translate(0, -7px)" : "none",
             }}
           />
         </button>
