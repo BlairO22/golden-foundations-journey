@@ -89,7 +89,7 @@ const HeroSection = () => {
           >
             <div className="text-center px-[4%]">
               <div
-                className="h-[4rem] md:h-[5.5rem]"
+                className="h-[2.5rem] md:h-[5.5rem]"
                 style={{
                   overflow: "hidden",
                   display: "flex",
@@ -99,7 +99,7 @@ const HeroSection = () => {
               >
                 <h1
                   key={`${currentSlide}-${phase}`}
-                  className="text-[3.5rem] md:text-[5.5rem]"
+                  className="text-[2rem] md:text-[5.5rem]"
                   style={{
                     lineHeight: 1.2,
                     color: "hsl(0, 0%, 100%)",

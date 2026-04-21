@@ -356,77 +356,128 @@ const pillars = [
 
 const PillarCard = ({ p }: { p: typeof pillars[0] }) => {
   const [hovered, setHovered] = useState(false);
+  const mobileRef = useRef<HTMLDivElement>(null);
+  const [visible, setVisible] = useState(false);
+
+  useEffect(() => {
+    const el = mobileRef.current;
+    if (!el) return;
+    const obs = new IntersectionObserver(
+      ([entry]) => setVisible(entry.isIntersecting),
+      { threshold: 0.3 }
+    );
+    obs.observe(el);
+    return () => obs.disconnect();
+  }, []);
 
   return (
-    <div
-      onMouseEnter={() => setHovered(true)}
-      onMouseLeave={() => setHovered(false)}
-      className="relative overflow-hidden border-t-2 border-gold bg-card"
-      style={{ minHeight: "420px" }}
-    >
-      {/* Photo */}
-      <img
-        src={p.image}
-        alt={p.title}
-        loading="lazy"
-        className="absolute inset-0 w-full h-full object-cover"
-        style={{
-          opacity: hovered ? 0 : 1,
-          transition: "opacity 0.5s ease",
-        }}
-      />
-
-      {/* Dark overlay on photo for legibility */}
-      <div
-        aria-hidden
-        className="absolute inset-0"
-        style={{
-          backgroundColor: "rgba(0, 0, 0, 0.35)",
-          opacity: hovered ? 0 : 1,
-          transition: "opacity 0.5s ease",
-        }}
-      />
-
-      {/* Title + subtitle — stay at top; color transitions on hover */}
-      <div className="absolute inset-x-0 top-0 px-6 md:px-8 pt-6 md:pt-8">
-        <h3
-          className="heading-display text-2xl md:text-3xl mb-2"
+    <>
+      {/* Mobile: image + text below, revealed on scroll */}
+      <div ref={mobileRef} className="md:hidden border-t-2 border-gold">
+        <div className="relative" style={{ aspectRatio: "4 / 3" }}>
+          <img
+            src={p.image}
+            alt={p.title}
+            loading="lazy"
+            className="absolute inset-0 w-full h-full object-cover"
+          />
+          <div
+            aria-hidden
+            className="absolute inset-0"
+            style={{ backgroundColor: "rgba(0, 0, 0, 0.35)" }}
+          />
+          <div className="absolute inset-x-0 bottom-0 px-6 pb-6">
+            <h3 className="heading-display text-2xl text-white mb-1">
+              {p.title}
+            </h3>
+            <p className="font-body text-sm tracking-[0.15em] uppercase text-white/90">
+              {p.subtitle}
+            </p>
+          </div>
+        </div>
+        <div
+          className="bg-card px-6 pt-5 pb-6"
           style={{
-            color: hovered ? "hsl(var(--navy))" : "#FFFFFF",
-            transition: "color 0.45s ease",
+            opacity: visible ? 1 : 0,
+            transform: visible ? "translateY(0)" : "translateY(16px)",
+            transition: "opacity 0.5s ease, transform 0.5s ease",
           }}
         >
-          {p.title}
-        </h3>
-        <p
-          className="font-body text-sm tracking-[0.15em] uppercase"
-          style={{
-            color: hovered ? "hsl(var(--gold))" : "rgba(255,255,255,0.9)",
-            transition: "color 0.45s ease",
-          }}
-        >
-          {p.subtitle}
-        </p>
+          {p.body.map((line, j) => (
+            <p
+              key={j}
+              className="font-body text-base text-charcoal/80 leading-relaxed mb-4 last:mb-0"
+            >
+              {line}
+            </p>
+          ))}
+        </div>
       </div>
 
-      {/* Body paragraphs — fade in below the title on hover */}
+      {/* Desktop: hover reveal */}
       <div
-        className="absolute inset-x-0 bottom-0 px-6 md:px-8 pb-6 md:pb-8"
-        style={{
-          opacity: hovered ? 1 : 0,
-          transition: "opacity 0.45s ease 0.1s",
-        }}
+        onMouseEnter={() => setHovered(true)}
+        onMouseLeave={() => setHovered(false)}
+        className="relative overflow-hidden border-t-2 border-gold bg-card hidden md:block"
+        style={{ minHeight: "420px" }}
       >
-        {p.body.map((line, j) => (
-          <p
-            key={j}
-            className="font-body text-base text-charcoal/80 leading-relaxed mb-4 last:mb-0"
+        <img
+          src={p.image}
+          alt={p.title}
+          loading="lazy"
+          className="absolute inset-0 w-full h-full object-cover"
+          style={{
+            opacity: hovered ? 0 : 1,
+            transition: "opacity 0.5s ease",
+          }}
+        />
+        <div
+          aria-hidden
+          className="absolute inset-0"
+          style={{
+            backgroundColor: "rgba(0, 0, 0, 0.35)",
+            opacity: hovered ? 0 : 1,
+            transition: "opacity 0.5s ease",
+          }}
+        />
+        <div className="absolute inset-x-0 top-0 px-8 pt-8">
+          <h3
+            className="heading-display text-3xl mb-2"
+            style={{
+              color: hovered ? "hsl(var(--navy))" : "#FFFFFF",
+              transition: "color 0.45s ease",
+            }}
           >
-            {line}
+            {p.title}
+          </h3>
+          <p
+            className="font-body text-sm tracking-[0.15em] uppercase"
+            style={{
+              color: hovered ? "hsl(var(--gold))" : "rgba(255,255,255,0.9)",
+              transition: "color 0.45s ease",
+            }}
+          >
+            {p.subtitle}
           </p>
-        ))}
+        </div>
+        <div
+          className="absolute inset-x-0 bottom-0 px-8 pb-8"
+          style={{
+            opacity: hovered ? 1 : 0,
+            transition: "opacity 0.45s ease 0.1s",
+          }}
+        >
+          {p.body.map((line, j) => (
+            <p
+              key={j}
+              className="font-body text-base text-charcoal/80 leading-relaxed mb-4 last:mb-0"
+            >
+              {line}
+            </p>
+          ))}
+        </div>
       </div>
-    </div>
+    </>
   );
 };
 
@@ -485,7 +536,7 @@ const FounderON = () => {
       <Navbar />
 
       {/* Hero */}
-      <section className="section-navy pt-40 pb-24 md:pt-48 md:pb-32 px-6">
+      <section className="section-navy pt-40 pb-12 md:pt-48 md:pb-32 px-6">
         <div className="max-w-5xl mx-auto text-center">
           <h1
             className="leading-[1.05] mb-4 select-none"
@@ -500,10 +551,10 @@ const FounderON = () => {
           >
             ON
             <sup
-              className="text-2xl md:text-3xl"
+              className="text-base md:text-3xl"
               style={{
                 position: "relative",
-                top: "-3.5em",
+                top: "-2.8rem",
                 marginLeft: "0.05em",
                 letterSpacing: 0,
                 fontFamily: "'Figtree', sans-serif",
@@ -659,7 +710,7 @@ const FounderON = () => {
       </section>
 
       {/* Three-Pillar Model */}
-      <section className="bg-card py-24 md:py-32 px-6">
+      <section className="bg-card pt-24 pb-12 md:py-32 px-6">
         <div className="max-w-6xl mx-auto">
           <h2 className="heading-display text-4xl md:text-5xl text-navy mb-16 text-center">
             The Three-Pillar Model
