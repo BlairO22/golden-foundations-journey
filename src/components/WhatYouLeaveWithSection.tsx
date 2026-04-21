@@ -4,7 +4,7 @@ import RevealText from "@/components/RevealText";
 
 const WhatYouLeaveWithSection = () => {
   return (
-    <section className="bg-card py-24 md:py-32 px-6">
+    <section className="bg-card pt-12 pb-24 md:py-32 px-6">
       <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-16 items-center">
         <RevealText>
           <h2 className="heading-display text-4xl md:text-5xl text-navy mb-8">

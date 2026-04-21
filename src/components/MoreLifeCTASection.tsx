@@ -57,7 +57,7 @@ const MoreLifeCTASection = () => {
             rel="noopener noreferrer"
             className="btn-gold self-start"
           >
-            Discover Your Founder Freedom Score →
+            Take the Founder Freedom Score →
           </a>
         </div>
       </div>

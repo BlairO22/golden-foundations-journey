@@ -106,10 +106,10 @@ function PhaseRow({
       onMouseLeave={() => setHovered(false)}
       className="relative border-t border-gold/30 last:border-b overflow-hidden transition-colors duration-500"
     >
-      {/* Full-width photo background (fades in on hover) */}
+      {/* Full-width photo background (fades in on hover — desktop only) */}
       <div
         aria-hidden
-        className="absolute inset-0 transition-opacity duration-500 pointer-events-none"
+        className="absolute inset-0 transition-opacity duration-500 pointer-events-none hidden md:block"
         style={{
           backgroundImage: `url(${p.image})`,
           backgroundSize: "cover",
@@ -119,7 +119,7 @@ function PhaseRow({
       />
       <div
         aria-hidden
-        className="absolute inset-0 transition-opacity duration-500 pointer-events-none"
+        className="absolute inset-0 transition-opacity duration-500 pointer-events-none hidden md:block"
         style={{
           backgroundColor: "rgba(12, 26, 49, 0.7)",
           opacity: hovered ? 1 : 0,
@@ -143,18 +143,24 @@ function PhaseRow({
           {String(index + 1).padStart(2, "0")}
         </span>
 
-        {/* Label + body */}
+        {/* Mobile: name on top, body below / Desktop: body on top, name in right col */}
         <div className="pt-2 md:pt-4">
-          <p className="font-body text-xs tracking-[0.3em] uppercase text-gold mb-3">
+          <h3 className="heading-display text-3xl text-primary-foreground mb-3 md:hidden">
+            {p.name}
+          </h3>
+          <p className="font-body text-xs tracking-[0.3em] uppercase text-gold mb-3 hidden md:block">
             {p.label}
           </p>
-          <p className="font-body text-lg md:text-xl text-primary-foreground/80 leading-relaxed" style={{ maxWidth: "22rem" }}>
+          <p className="font-body text-sm md:text-xl text-primary-foreground/80 leading-relaxed md:hidden">
+            {p.body}
+          </p>
+          <p className="font-body text-lg md:text-xl text-primary-foreground/80 leading-relaxed hidden md:block" style={{ maxWidth: "22rem" }}>
             {p.body}
           </p>
         </div>
 
-        {/* Phase name (right column, left-aligned) */}
-        <h3 className="heading-display text-3xl md:text-4xl text-primary-foreground text-left md:min-w-[12rem]">
+        {/* Phase name — desktop only (right column) */}
+        <h3 className="heading-display text-3xl md:text-4xl text-primary-foreground text-left md:min-w-[12rem] hidden md:block">
           {p.name}
         </h3>
       </div>

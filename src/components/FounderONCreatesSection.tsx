@@ -17,9 +17,9 @@ const FounderONCreatesSection = () => {
         <RevealImage
           src={createsImg}
           alt="A founder built to lead"
-          className="aspect-square"
+          className="aspect-square order-2 md:order-1"
         />
-        <RevealText>
+        <RevealText className="order-1 md:order-2">
           <h2 className="heading-display text-4xl md:text-5xl text-navy mb-8">
             ON is designed to create:
           </h2>

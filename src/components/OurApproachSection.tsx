@@ -15,7 +15,7 @@ const approach = [
 
 const OurApproachSection = () => {
   return (
-    <section className="bg-card py-24 md:py-32 px-6">
+    <section className="bg-card pt-24 pb-12 md:py-32 px-6">
       <div className="max-w-6xl mx-auto">
         <div className="max-w-3xl mb-16">
           <h2 className="heading-display text-4xl md:text-5xl text-navy mb-6">
