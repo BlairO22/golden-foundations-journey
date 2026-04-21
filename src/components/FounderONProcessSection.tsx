@@ -284,20 +284,21 @@ const FounderONProcessSection = () => {
               ™
             </sup>
           </h2>
-        </div>
-      </section>
-
-      {/* Tagline section */}
-      <section className="section-offwhite py-4 px-6">
-        <div className="max-w-6xl mx-auto">
-          <h5 className="heading-display text-2xl md:text-3xl text-navy leading-snug max-w-3xl mx-auto text-center">
-            Thriving Founder's proprietary 4-stage founder development and business execution process.
-          </h5>
+          <p
+            className="font-body text-xl md:text-2xl leading-snug max-w-3xl mx-auto"
+            style={{
+              color: "hsl(0, 0%, 100%, 0.9)",
+              opacity: introVisible ? 1 : 0,
+              transition: "opacity 1s ease 0.6s",
+            }}
+          >
+            Thriving Founder's proprietary 4-stage<br />founder development and business execution process.
+          </p>
         </div>
       </section>
 
       {/* "Designed for capable..." — 2-column section */}
-      <section style={{ backgroundColor: "#2D2D2D" }}>
+      <section style={{ backgroundColor: "#FFFFFF" }}>
         <div className="grid md:grid-cols-2 items-stretch">
           <div ref={photoRef} className="relative overflow-hidden" style={{ minHeight: "55vh" }}>
             <img loading="lazy"               src={skyBg}
@@ -314,7 +315,7 @@ const FounderONProcessSection = () => {
             {/* <OnLogoReveal /> */}
           </div>
           <div className="flex items-end pt-16 md:pt-24 pb-6 md:pb-8 px-8 md:px-16">
-            <p className="font-body text-2xl md:text-3xl text-primary-foreground/90 leading-relaxed max-w-xl">
+            <p className="font-body text-2xl md:text-3xl leading-relaxed max-w-xl" style={{ color: "#2D2D2D" }}>
               Designed for capable professionals who want more than advice, coaching, or disconnected services. ON<span className="text-xs" style={{ verticalAlign: "top", lineHeight: 1 }}>™</span> helps you build a fully operational business and become the founder required to lead it.
             </p>
           </div>

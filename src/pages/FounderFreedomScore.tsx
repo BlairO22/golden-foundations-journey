@@ -215,7 +215,7 @@ const FounderFreedomScore = () => {
       </section>
 
       {/* Intro statement + radar */}
-      <section className="bg-card py-24 md:py-32 px-6">
+      <section className="bg-card pt-24 md:pt-32 pb-12 md:pb-16 px-6">
         <div className="max-w-5xl mx-auto">
           <h2 className="heading-display text-4xl md:text-5xl text-navy text-center mb-16">
             Assess your readiness<br />across four core foundations.
@@ -238,7 +238,7 @@ const FounderFreedomScore = () => {
       </section>
 
       {/* What It Measures */}
-      <section className="bg-card py-24 md:py-32 px-6">
+      <section className="bg-card pt-12 md:pt-16 pb-24 md:pb-32 px-6">
         <div className="max-w-5xl mx-auto">
           <div className="max-w-3xl mb-16">
             <p className="inline-block font-body text-sm tracking-[0.12em] uppercase text-gold border border-gold/60 bg-gold/10 rounded-md px-3 py-1 mb-6">

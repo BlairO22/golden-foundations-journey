@@ -83,7 +83,7 @@ const Footer = () => {
           </a>
         </div>
 
-        <div className="border-t border-primary-foreground/10 pt-4 pb-4 flex flex-col md:flex-row items-center justify-between gap-3">
+        <div className="border-t border-primary-foreground/10 pt-4 pb-0 flex flex-col md:flex-row items-center justify-between gap-3">
           <p className="font-body text-xs text-primary-foreground/40">
             © 2026 Thriving Founder™. All rights reserved.
           </p>
