@@ -24,6 +24,7 @@ import TestimonialsSection from "@/components/TestimonialsSection";
 import GuaranteeSection from "@/components/GuaranteeSection";
 import CTASection from "@/components/CTASection";
 import Footer from "@/components/Footer";
+import joshImg from "@/assets/josh-reichmann.jpeg";
 
 const Index = () => {
   return (
@@ -37,6 +38,22 @@ const Index = () => {
       <FounderONProcessSection />
       <OurGoalSection />
       <OurApproachSection />
+      {/* Testimonial */}
+      <section className="section-offwhite py-20 md:py-16 px-6">
+        <div className="max-w-5xl mx-auto grid md:grid-cols-[auto_1fr] gap-10 md:gap-16 items-center">
+          <div className="w-40 md:w-56 aspect-square rounded-full overflow-hidden flex-shrink-0 mx-auto md:mx-0">
+            <img src={joshImg} alt="Josh Reichmann" className="w-full h-full object-cover" />
+          </div>
+          <div className="border-l-2 border-gold pl-6 md:pl-8">
+            <p className="font-body text-lg md:text-xl text-charcoal/85 leading-relaxed italic mb-6">
+              "Aaron is much more than a dedicated business strategist and management expert. His unique blend of creativity, artistic ability, and grounded approach stands out. Even more impressive is his emotional intelligence and spiritual depth, which allow him to hold space while offering practical, no-nonsense guidance."
+            </p>
+            <p className="font-body text-sm font-semibold text-charcoal">Josh Reichmann</p>
+            <p className="font-body text-xs text-charcoal/60">Founder, Luxara Tech Solutions</p>
+          </div>
+        </div>
+      </section>
+
       <WhatYouLeaveWithSection />
       <FounderONCreatesSection />
       <WhereYouStandCTASection />

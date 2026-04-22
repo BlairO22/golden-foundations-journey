@@ -33,6 +33,7 @@ const Navbar = ({ variant = "dark", bg }: { variant?: "dark" | "light"; bg?: str
     },
     { href: "/founder-freedom-score", label: "Founder Freedom Score" },
     { href: "/results", label: "Results" },
+    { href: "/testimonials", label: "Testimonials" },
   ];
 
   return (

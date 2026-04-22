@@ -11,6 +11,7 @@ const About = lazy(() => import("./pages/About.tsx"));
 const FounderFreedomScore = lazy(() => import("./pages/FounderFreedomScore.tsx"));
 const Results = lazy(() => import("./pages/Results.tsx"));
 const Book = lazy(() => import("./pages/Book.tsx"));
+const Testimonials = lazy(() => import("./pages/Testimonials.tsx"));
 const NotFound = lazy(() => import("./pages/NotFound.tsx"));
 
 const queryClient = new QueryClient();
@@ -30,6 +31,7 @@ const App = () => (
             <Route path="/founder-freedom-score" element={<FounderFreedomScore />} />
             <Route path="/results" element={<Results />} />
             <Route path="/book" element={<Book />} />
+            <Route path="/testimonials" element={<Testimonials />} />
             {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
             <Route path="*" element={<NotFound />} />
           </Routes>
