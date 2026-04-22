@@ -2,6 +2,8 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import BottomCTASection from "@/components/BottomCTASection";
 import whyImg from "@/assets/spenser-sembrat-BBtlAlhUeT4-unsplash.webp";
+import heroImg from "@/assets/derek-coleman-EvZOXp8os5s-unsplash.jpg";
+import believeImg from "@/assets/adhd-creative-co-ltd-7ImP-qO93RY-unsplash.jpg";
 
 const Bullet = ({ children }: { children: React.ReactNode }) => (
   <div className="flex items-start gap-4">
@@ -43,18 +45,43 @@ const About = () => {
   return (
     <>
     <div className="min-h-screen relative z-10 bg-background">
-      <Navbar />
+      <Navbar bg="#1F3F78" />
 
       {/* Hero */}
-      <section className="section-navy pt-40 pb-24 md:pt-48 md:pb-32 px-6">
-        <div className="max-w-5xl mx-auto text-center">
-          <h1 className="heading-display text-6xl md:text-8xl lg:text-9xl text-primary-foreground leading-[1.05] mb-8">
-            Thriving Founder
-            <span className="align-super text-2xl md:text-3xl">™</span>
-          </h1>
-          <p className="font-body text-lg md:text-xl text-primary-foreground/85 leading-relaxed max-w-3xl mx-auto">
-            A brand built on the belief that business should create more life, not less.
-          </p>
+      <section className="section-navy">
+        <div className="grid md:grid-cols-2 items-stretch">
+          {/* Left content */}
+          <div className="flex flex-col justify-center pt-40 pb-24 md:pt-48 md:pb-32 px-8 md:px-16">
+            <h1 className="heading-display text-5xl md:text-6xl lg:text-7xl text-primary-foreground leading-[1.1] mb-8">
+              Thriving Founder
+              <sup
+                style={{
+                  fontSize: "0.2em",
+                  position: "relative",
+                  top: "-2.5em",
+                  marginLeft: "0.1em",
+                  verticalAlign: "baseline",
+                  fontWeight: 500,
+                }}
+              >
+                ™
+              </sup>
+            </h1>
+            <p className="font-body text-xl md:text-2xl text-primary-foreground/90 leading-snug">
+              A brand built on the belief that business should create more life, not less.
+            </p>
+          </div>
+
+          {/* Right photo */}
+          <div className="hidden md:block relative min-h-[600px]">
+            <img
+              src={heroImg}
+              alt="Founders collaborating"
+              loading="lazy"
+              className="absolute inset-0 w-full h-full object-cover"
+              style={{ borderRadius: 0 }}
+            />
+          </div>
         </div>
       </section>
 
@@ -156,17 +183,27 @@ const About = () => {
 
       {/* What We Believe */}
       <section className="bg-card py-24 md:py-32 px-6">
-        <div className="max-w-4xl mx-auto">
-          <p className="inline-block font-body text-sm tracking-[0.12em] uppercase text-gold border border-gold/60 bg-gold/10 rounded-md px-3 py-1 mb-6">
-            What We Believe
-          </p>
-          <h2 className="heading-display text-4xl md:text-5xl text-navy mb-12">
-            We believe:
-          </h2>
-          <div className="flex flex-col gap-5">
-            {beliefs.map((t, i) => (
-              <Bullet key={i}>{t}</Bullet>
-            ))}
+        <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-12 md:gap-16 items-center">
+          <div>
+            <p className="inline-block font-body text-sm tracking-[0.12em] uppercase text-gold border border-gold/60 bg-gold/10 rounded-md px-3 py-1 mb-6">
+              What We Believe
+            </p>
+            <h2 className="heading-display text-4xl md:text-5xl text-navy mb-12">
+              We believe:
+            </h2>
+            <div className="flex flex-col gap-5">
+              {beliefs.map((t, i) => (
+                <Bullet key={i}>{t}</Bullet>
+              ))}
+            </div>
+          </div>
+          <div className="w-full">
+            <img
+              src={believeImg}
+              alt="Founders connecting"
+              loading="lazy"
+              className="w-full object-cover aspect-[3/4]"
+            />
           </div>
         </div>
       </section>

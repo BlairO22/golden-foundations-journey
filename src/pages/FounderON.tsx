@@ -5,10 +5,10 @@ import BottomCTASection from "@/components/BottomCTASection";
 import aaronWorkingImg from "@/assets/angelina-sarycheva-a_DSYLkr9tc-unsplash.webp";
 import gridPhoto1 from "@/assets/natalia-blauth-QJWcEnP9x10-unsplash.webp";
 import gridPhoto2 from "@/assets/getty-images-dXR_QCJtQII-unsplash.webp";
-import gridPhoto3 from "@/assets/samsung-memory-wz8HHE9kBgo-unsplash.webp";
-import gridPhoto4 from "@/assets/paolo-resteghini-kj_tU5-qcz4-unsplash.webp";
-import gridPhoto5 from "@/assets/getty-images-VMDKeRO351c-unsplash.webp";
-import gridPhoto6 from "@/assets/paolo-resteghini-ZTooTRx5B_k-unsplash.webp";
+import gridPhoto3 from "@/assets/molly-the-cat-TS4TIXJHmtc-unsplash.jpg";
+import gridPhoto4 from "@/assets/Daylight studio Amsterdam for female entrepreneurs, coaches and creatives_.jpeg";
+import gridPhoto5 from "@/assets/molly-the-cat-qP_ezdWEQEs-unsplash.jpg";
+import gridPhoto6 from "@/assets/curated-lifestyle-d8FV5wLz8x4-unsplash.jpg";
 import gridPhoto7 from "@/assets/getty-images--Z4GFAQ1HvA-unsplash.webp";
 import gridPhoto8 from "@/assets/a-c-9jHHifbZlvg-unsplash.webp";
 import premiumBgImg from "@/assets/tuvalum-kwlcKkMoPZU-unsplash.webp";
@@ -84,14 +84,14 @@ const radialItems = [
 ];
 
 const gridPhotos = [
-  gridPhoto1,
-  gridPhoto2,
   gridPhoto3,
-  gridPhoto4,
+  gridPhoto1,
   gridPhoto5,
-  gridPhoto6,
   gridPhoto7,
+  gridPhoto4,
+  gridPhoto2,
   gridPhoto8,
+  gridPhoto6,
 ];
 
 function PhaseScrollItem({

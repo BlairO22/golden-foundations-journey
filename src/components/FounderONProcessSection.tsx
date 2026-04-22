@@ -3,7 +3,7 @@ import skyBg from "@/assets/natalia-blauth-QJWcEnP9x10-unsplash.webp";
 import phase1Img from "@/assets/getty-images-DAv799uV1HA-unsplash.jpg";
 import phase2Img from "@/assets/michael-t-_1Pmhe5ozNA-unsplash.jpg";
 import phase3Img from "@/assets/yanhao-fang-RT1MiKWx840-unsplash.jpg";
-import phase4Img from "@/assets/spenser-sembrat-BBtlAlhUeT4-unsplash.webp";
+import phase4Img from "@/assets/getty-images-CPbs-poV1hs-unsplash.jpg";
 
 function OnLogoReveal() {
   const ref = useRef<HTMLDivElement>(null);
@@ -91,6 +91,7 @@ const phases = [
     name: "Thrive",
     body: "Refine for growth, freedom, sustainability, and long-term success.",
     image: phase4Img,
+    imagePosition: "center 48%",
   },
 ];
 

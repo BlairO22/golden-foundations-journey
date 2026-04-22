@@ -1,6 +1,8 @@
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import BottomCTASection from "@/components/BottomCTASection";
+import resultsHeroImg from "@/assets/molly-the-cat-qP_ezdWEQEs-unsplash.jpg";
+import statementBgImg from "@/assets/curated-lifestyle-d8FV5wLz8x4-unsplash.jpg";
 
 const Bullet = ({ children }: { children: React.ReactNode }) => (
   <div className="flex items-start gap-4">
@@ -85,17 +87,31 @@ const Results = () => {
   return (
     <>
     <div className="min-h-screen relative z-10 bg-background">
-      <Navbar />
+      <Navbar bg="#1F3F78" />
 
       {/* Hero */}
-      <section className="section-navy pt-40 pb-24 md:pt-48 md:pb-32 px-6">
-        <div className="max-w-5xl mx-auto text-center">
-          <h1 className="heading-display text-6xl md:text-8xl lg:text-9xl text-primary-foreground leading-[1.05] mb-8">
-            Results
-          </h1>
-          <p className="font-body text-lg md:text-xl text-primary-foreground/85 leading-relaxed max-w-3xl mx-auto">
-            What the work actually produces — in business, leadership, and the life that surrounds both.
-          </p>
+      <section className="section-navy">
+        <div className="grid md:grid-cols-2 items-stretch">
+          {/* Left content */}
+          <div className="flex flex-col justify-center pt-40 pb-24 md:pt-48 md:pb-32 px-8 md:px-16">
+            <h1 className="heading-display text-5xl md:text-6xl lg:text-7xl text-primary-foreground leading-[1.1] mb-8">
+              Results
+            </h1>
+            <p className="font-body text-xl md:text-2xl text-primary-foreground/90 leading-snug">
+              What the work actually produces — in business, leadership, and the life that surrounds both.
+            </p>
+          </div>
+
+          {/* Right photo */}
+          <div className="hidden md:block relative min-h-[600px]">
+            <img
+              src={resultsHeroImg}
+              alt="Founder working"
+              loading="lazy"
+              className="absolute inset-0 w-full h-full object-cover"
+              style={{ borderRadius: 0, transform: "scaleX(-1)" }}
+            />
+          </div>
         </div>
       </section>
 
@@ -109,16 +125,27 @@ const Results = () => {
       </section>
 
       {/* Page Intro */}
-      <section className="bg-card py-24 md:py-32 px-6">
-        <div className="max-w-4xl mx-auto">
-          <h2 className="heading-display text-4xl md:text-5xl text-navy mb-10">
+      <section className="relative py-20 md:py-24 px-6 overflow-hidden">
+        <div
+          aria-hidden
+          className="absolute inset-0"
+          style={{
+            backgroundImage: `url(${statementBgImg})`,
+            backgroundSize: "cover",
+            backgroundPosition: "center 40%",
+          }}
+        />
+        <div
+          aria-hidden
+          className="absolute inset-0"
+          style={{ backgroundColor: "hsl(var(--navy) / 0.75)" }}
+        />
+        <div className="relative max-w-6xl mx-auto text-left">
+          <h3 className="heading-display text-3xl md:text-4xl lg:text-5xl text-primary-foreground max-w-2xl">
             The work is designed to produce change that is visible and lasting.
-          </h2>
-          <p className="font-body text-lg md:text-xl text-charcoal/80 leading-relaxed mb-6">
-            That may mean a sharper market position, a stronger offer, a credible premium brand, a more professional presence, clearer commercial direction, or a more grounded and capable founder.
-          </p>
-          <p className="font-body text-lg md:text-xl font-bold text-charcoal leading-relaxed">
-            The point is not surface change. The point is building something more real.
+          </h3>
+          <p className="font-body text-xl md:text-2xl text-primary-foreground/85 leading-relaxed max-w-lg ml-auto mt-16 md:mt-32">
+            That may mean a sharper market position, a stronger offer, a credible premium brand, a more professional presence, clearer commercial direction, or a more grounded and capable founder. The point is not surface change. The point is building something more real.
           </p>
         </div>
       </section>
