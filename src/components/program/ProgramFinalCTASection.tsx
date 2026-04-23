@@ -7,7 +7,7 @@ const ProgramFinalCTASection = () => (
       <p className="font-body text-lg md:text-xl text-primary-foreground/70 max-w-xl mx-auto leading-relaxed mb-12">
         Schedule a strategy call to discuss your transition into building a Freedom Business™. No pressure. No pitch. Just a honest conversation about where you are and where you want to go.
       </p>
-      <a href="#" className="btn-gold">Book Your Strategy Call →</a>
+      <a href="/book" className="btn-gold">Book Your Strategy Call →</a>
     </div>
   </section>
 );

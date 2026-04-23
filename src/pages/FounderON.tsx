@@ -577,7 +577,7 @@ const FounderON = () => {
             >
               Apply for ON →
             </a>
-            <a href="#" className="btn-outline-light">Book a Strategy Call →</a>
+            <a href="/book" className="btn-outline-light">Book a Strategy Call →</a>
           </div>
         </div>
       </section>

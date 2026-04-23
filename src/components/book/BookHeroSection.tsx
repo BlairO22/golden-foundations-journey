@@ -18,16 +18,12 @@ const BookHeroSection = () => (
         </div>
       </div>
       <div className="flex justify-center">
-        {/* Calendly embed placeholder */}
-        <div className="w-full bg-primary-foreground/5 border border-primary-foreground/10 p-8 md:p-12 flex flex-col items-center justify-center min-h-[500px]">
-          <p className="font-body text-sm text-primary-foreground/40 mb-6 text-center">
-            Calendar loading...
-          </p>
-          <p className="font-body text-xs text-primary-foreground/30 text-center">
-            Calendly embed will appear here.
-          </p>
-          {/* Replace with: <iframe src="your-calendly-url" className="w-full h-full min-h-[500px] border-0" /> */}
-        </div>
+        <iframe
+          src="https://calendly.com/aaron-thrivingfounder/30min"
+          className="w-full border-0"
+          style={{ minHeight: "650px" }}
+          title="Book a Strategy Call"
+        />
       </div>
     </div>
   </section>

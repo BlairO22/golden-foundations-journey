@@ -62,7 +62,7 @@ const InvestmentSection = () => {
         </p>
 
         <div className="text-center">
-          <a href="#" className="btn-gold">Book a Strategy Call →</a>
+          <a href="/book" className="btn-gold">Book a Strategy Call →</a>
         </div>
       </div>
     </section>
