@@ -4,8 +4,8 @@ import BottomCTASection from "@/components/BottomCTASection";
 import whyImg from "@/assets/spenser-sembrat-BBtlAlhUeT4-unsplash.webp";
 import heroImg from "@/assets/derek-coleman-EvZOXp8os5s-unsplash.jpg";
 import believeImg from "@/assets/adhd-creative-co-ltd-7ImP-qO93RY-unsplash.jpg";
-import aaronImg from "@/assets/aaron-working.webp";
-import blairImg from "@/assets/blair-portrait.webp";
+import aaronImg from "@/assets/DK8A4000.jpg";
+import blairImg from "@/assets/Headshot2022-2.jpg";
 
 const About = () => {
   return (
