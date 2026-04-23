@@ -52,7 +52,7 @@ const Navbar = ({ variant = "dark", bg }: { variant?: "dark" | "light"; bg?: str
         </a>
 
         {/* Desktop nav */}
-        <div className={`hidden md:flex items-center gap-10 font-body text-sm tracking-wide ${textColor}`}>
+        <div className={`hidden md:flex items-center gap-6 font-body text-sm tracking-wide ${textColor}`}>
           {links.map((link) => (
             <a key={link.href} href={link.href} className={`${hoverColor} transition-colors`}>
               {link.label}
