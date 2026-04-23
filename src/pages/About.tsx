@@ -83,7 +83,8 @@ const About = () => {
                 src={whyImg}
                 alt="A different standard for building"
                 loading="lazy"
-                className="w-full h-full object-cover object-top"
+                className="w-full h-full object-cover"
+                style={{ objectPosition: "center 75%" }}
               />
             </div>
             <p className="font-body text-lg md:text-xl text-charcoal/80 leading-relaxed mb-6">
