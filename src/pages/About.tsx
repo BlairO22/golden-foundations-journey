@@ -101,6 +101,12 @@ const About = () => {
           <h2 className="heading-display text-4xl md:text-5xl text-navy mb-10">
             Meet the founder behind Thriving Founder.
           </h2>
+          <img
+            src={aaronImg}
+            alt="Aaron McLean"
+            loading="lazy"
+            className="w-full max-w-sm object-cover aspect-[3/4] mb-10 md:hidden"
+          />
           <p className="font-body text-lg md:text-xl text-charcoal/80 leading-relaxed mb-6">
             Aaron McLean has spent over two decades building products, companies, and people. He has led product strategy and creative development for work connected to brands like Nintendo, Tim Hortons, Boston Pizza, and HeartMath, reaching millions of users globally. He also helped build a platform later acquired by Box (NYSE: BOX). Over the years, he has advised startups, innovation teams, and creative businesses through high-stakes decisions around growth, positioning, product, and reinvention.
           </p>
@@ -148,7 +154,7 @@ const About = () => {
               src={blairImg}
               alt="Blair Owens"
               loading="lazy"
-              className="w-full object-cover aspect-[3/4] sticky top-28"
+              className="w-full object-cover aspect-[3/4]"
             />
           </div>
           <div>
@@ -158,6 +164,12 @@ const About = () => {
             <h2 className="heading-display text-4xl md:text-5xl text-navy mb-10">
               The team behind the build.
             </h2>
+            <img
+              src={blairImg}
+              alt="Blair Owens"
+              loading="lazy"
+              className="w-full max-w-sm object-cover aspect-[3/4] mb-10 md:hidden"
+            />
             <p className="font-body text-lg md:text-xl text-charcoal/80 leading-relaxed mb-6">
               Blair Owens is Thriving Founder's Creative Director and Brand Strategist, and the founder of Origin Creative. He leads brand development, website design and build, social media strategy, and marketing asset production — both for Thriving Founder itself and for clients inside Founder ON.
             </p>
