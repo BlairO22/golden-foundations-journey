@@ -2,6 +2,7 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import BottomCTASection from "@/components/BottomCTASection";
 import joshImg from "@/assets/josh-reichmann.jpeg";
+import antoineImg from "@/assets/antoine-vaillant.jpeg";
 
 const testimonials = [
   {
@@ -9,6 +10,12 @@ const testimonials = [
     name: "Josh Reichmann",
     role: "Founder, Luxara Tech Solutions",
     image: joshImg,
+  },
+  {
+    quote: "When I first started working with Aaron, I was rebuilding my life from a very low point. His insight, presence, and guidance became a constant through that process. From overcoming addiction and time in a shelter, to returning to the professional bodybuilding stage and competing at Mr. Olympia twice, and now stepping into life as a husband, father, and entrepreneur. Aaron played an important role in that transformation, and he's someone I trust to support me through whatever comes next.",
+    name: "Antoine Vaillant",
+    role: "IFBB Professional Bodybuilder, Entrepreneur, and Social Influencer",
+    image: antoineImg,
   },
 ];
 
