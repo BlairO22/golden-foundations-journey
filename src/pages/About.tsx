@@ -142,13 +142,13 @@ const About = () => {
 
       {/* The Team Behind the Build */}
       <section className="bg-card py-24 md:py-32 px-6">
-        <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-12 md:gap-16 items-center">
-          <div className="w-full">
+        <div className="max-w-6xl mx-auto grid md:grid-cols-[auto_1fr] gap-12 md:gap-16">
+          <div className="hidden md:block w-full max-w-sm">
             <img
               src={blairImg}
               alt="Blair Owens"
               loading="lazy"
-              className="w-full object-cover aspect-[4/5]"
+              className="w-full object-cover aspect-[3/4] sticky top-28"
             />
           </div>
           <div>
