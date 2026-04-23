@@ -12,7 +12,7 @@ const outcomes = [
 
 const FounderONCreatesSection = () => {
   return (
-    <section className="bg-card pt-12 md:pt-16 pb-24 md:pb-32 px-6">
+    <section className="bg-card pt-12 md:pt-16 pb-12 md:pb-16 px-6">
       <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-16 items-center">
         <RevealImage
           src={createsImg}

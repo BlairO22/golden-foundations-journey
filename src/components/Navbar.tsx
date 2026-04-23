@@ -52,7 +52,7 @@ const Navbar = ({ variant = "dark", bg }: { variant?: "dark" | "light"; bg?: str
         </a>
 
         {/* Desktop nav */}
-        <div className={`hidden md:flex items-center gap-6 font-body text-sm tracking-wide ${textColor}`}>
+        <div className={`hidden lg:flex items-center gap-6 font-body text-sm tracking-wide ${textColor}`}>
           {links.map((link) => (
             <a key={link.href} href={link.href} className={`${hoverColor} transition-colors`}>
               {link.label}
@@ -63,14 +63,14 @@ const Navbar = ({ variant = "dark", bg }: { variant?: "dark" | "light"; bg?: str
           href="https://founderfreedomscore.netlify.app/assessment"
           target="_blank"
           rel="noopener noreferrer"
-          className="btn-gold text-xs px-6 py-3 hidden md:inline-block"
+          className="btn-gold text-xs px-6 py-3 hidden lg:inline-block"
         >
           Take the Founder Freedom Score →
         </a>
 
         {/* Mobile hamburger / close */}
         <button
-          className="md:hidden relative flex items-center justify-center w-10 h-10"
+          className="lg:hidden relative flex items-center justify-center w-10 h-10"
           onClick={() => setMenuOpen(!menuOpen)}
           aria-label="Toggle menu"
         >
@@ -103,9 +103,9 @@ const Navbar = ({ variant = "dark", bg }: { variant?: "dark" | "light"; bg?: str
 
       {/* Mobile menu overlay */}
       <div
-        className="fixed inset-0 z-40 flex flex-col items-center justify-center md:hidden transition-all duration-300"
+        className="fixed inset-0 z-40 flex flex-col items-center pt-32 lg:hidden transition-all duration-300"
         style={{
-          backgroundColor: "hsl(220, 16%, 12%)",
+          backgroundColor: "#1F3F78",
           opacity: menuOpen ? 1 : 0,
           pointerEvents: menuOpen ? "auto" : "none",
         }}

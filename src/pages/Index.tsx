@@ -40,8 +40,8 @@ const Index = () => {
       <OurApproachSection />
       {/* Testimonial */}
       <section className="section-offwhite py-20 md:py-16 px-6">
-        <div className="max-w-5xl mx-auto grid md:grid-cols-[auto_1fr] gap-10 md:gap-16 items-center">
-          <div className="w-40 md:w-56 aspect-square rounded-full overflow-hidden flex-shrink-0 mx-auto md:mx-0">
+        <div className="max-w-5xl mx-auto grid md:grid-cols-[auto_1fr] gap-10 md:gap-8 items-center">
+          <div className="w-32 md:w-40 aspect-square rounded-full overflow-hidden flex-shrink-0 mx-auto md:mx-0">
             <img src={joshImg} alt="Josh Reichmann" className="w-full h-full object-cover" />
           </div>
           <div className="border-l-2 border-gold pl-6 md:pl-8">

@@ -52,7 +52,7 @@ const About = () => {
       </section>
 
       {/* Intro statement */}
-      <section className="bg-card pt-24 md:pt-32 pb-12 md:pb-16 px-6">
+      <section className="bg-card pt-24 md:pt-20 lg:pt-32 pb-12 md:pb-12 lg:pb-16 px-6">
         <div className="max-w-3xl mx-auto text-center">
           <p className="font-body text-xl md:text-2xl text-charcoal leading-relaxed">
             Thriving Founder exists for professionals who want to build with ambition, integrity, and greater freedom — without recreating the pressure, fragmentation, or emptiness they wanted to leave behind.
@@ -61,9 +61,9 @@ const About = () => {
       </section>
 
       {/* Why Thriving Founder Exists */}
-      <section className="bg-card pt-12 md:pt-16 pb-24 md:pb-32 px-6">
-        <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-12 md:gap-16 items-center">
-          <div className="w-full">
+      <section className="bg-card pt-12 md:pt-12 lg:pt-16 pb-24 md:pb-20 lg:pb-32 px-6">
+        <div className="max-w-6xl mx-auto grid lg:grid-cols-2 gap-12 md:gap-16 items-center">
+          <div className="w-full hidden lg:block">
             <img
               src={whyImg}
               alt="A different standard for building"
@@ -78,6 +78,14 @@ const About = () => {
             <h2 className="heading-display text-4xl md:text-5xl text-navy mb-10">
               There are many ways to build a business.
             </h2>
+            <div className="w-full overflow-hidden mb-10 lg:hidden" style={{ height: "50vh" }}>
+              <img
+                src={whyImg}
+                alt="A different standard for building"
+                loading="lazy"
+                className="w-full h-full object-cover object-top"
+              />
+            </div>
             <p className="font-body text-lg md:text-xl text-charcoal/80 leading-relaxed mb-6">
               Some produce money but cost people their health. Some create movement without substance. Some sound inspiring but never become real.
             </p>
@@ -92,8 +100,8 @@ const About = () => {
       </section>
 
       {/* Meet the Founder */}
-      <section className="section-offwhite py-24 md:py-32 px-6">
-        <div className="max-w-6xl mx-auto grid md:grid-cols-[1fr_auto] gap-12 md:gap-16">
+      <section className="section-offwhite py-24 md:py-20 lg:py-32 px-6">
+        <div className="max-w-6xl mx-auto grid lg:grid-cols-[1fr_auto] gap-12 md:gap-16">
           <div>
           <p className="inline-block font-body text-sm tracking-[0.12em] uppercase text-gold border border-gold/60 bg-gold/10 rounded-md px-3 py-1 mb-6">
             Meet the Founder
@@ -101,12 +109,15 @@ const About = () => {
           <h2 className="heading-display text-4xl md:text-5xl text-navy mb-10">
             Meet the founder behind Thriving Founder.
           </h2>
-          <img
-            src={aaronImg}
-            alt="Aaron McLean"
-            loading="lazy"
-            className="w-full max-w-sm object-cover aspect-[3/4] mb-10 md:hidden"
-          />
+          <div className="w-full overflow-hidden mb-10 lg:hidden" style={{ height: "50vh" }}>
+            <img
+              src={aaronImg}
+              alt="Aaron McLean"
+              loading="lazy"
+              className="w-full h-full object-cover"
+              style={{ objectPosition: "center 25%" }}
+            />
+          </div>
           <p className="font-body text-lg md:text-xl text-charcoal/80 leading-relaxed mb-6">
             Aaron McLean has spent over two decades building products, companies, and people. He has led product strategy and creative development for work connected to brands like Nintendo, Tim Hortons, Boston Pizza, and HeartMath, reaching millions of users globally. He also helped build a platform later acquired by Box (NYSE: BOX). Over the years, he has advised startups, innovation teams, and creative businesses through high-stakes decisions around growth, positioning, product, and reinvention.
           </p>
@@ -135,21 +146,21 @@ const About = () => {
             This is not just about building a business. It is about becoming the founder capable of leading one.
           </p>
           </div>
-          <div className="hidden md:block w-full max-w-sm">
+          <div className="hidden lg:block w-full max-w-sm">
             <img
               src={aaronImg}
               alt="Aaron McLean"
               loading="lazy"
-              className="w-full object-cover aspect-[3/4] sticky top-28"
+              className="w-full object-cover aspect-[3/4]"
             />
           </div>
         </div>
       </section>
 
       {/* The Team Behind the Build */}
-      <section className="bg-card py-24 md:py-32 px-6">
-        <div className="max-w-6xl mx-auto grid md:grid-cols-[auto_1fr] gap-12 md:gap-16">
-          <div className="hidden md:block w-full max-w-sm">
+      <section className="bg-card py-24 md:py-20 lg:py-32 px-6">
+        <div className="max-w-6xl mx-auto grid lg:grid-cols-[auto_1fr] gap-12 md:gap-16">
+          <div className="hidden lg:block w-full max-w-sm">
             <img
               src={blairImg}
               alt="Blair Owens"
@@ -164,12 +175,15 @@ const About = () => {
             <h2 className="heading-display text-4xl md:text-5xl text-navy mb-10">
               The team behind the build.
             </h2>
-            <img
-              src={blairImg}
-              alt="Blair Owens"
-              loading="lazy"
-              className="w-full max-w-sm object-cover aspect-[3/4] mb-10 md:hidden"
-            />
+            <div className="w-full overflow-hidden mb-10 lg:hidden" style={{ height: "50vh" }}>
+              <img
+                src={blairImg}
+                alt="Blair Owens"
+                loading="lazy"
+                className="w-full h-full object-cover"
+                style={{ objectPosition: "center top" }}
+              />
+            </div>
             <p className="font-body text-lg md:text-xl text-charcoal/80 leading-relaxed mb-6">
               Blair Owens is Thriving Founder's Creative Director and Brand Strategist, and the founder of Origin Creative. He leads brand development, website design and build, social media strategy, and marketing asset production — both for Thriving Founder itself and for clients inside Founder ON.
             </p>
@@ -184,7 +198,7 @@ const About = () => {
       </section>
 
       {/* Why This Matters in Practice */}
-      <section className="section-offwhite py-24 md:py-32 px-6">
+      <section className="section-offwhite py-24 md:py-20 lg:py-32 px-6">
         <div className="max-w-4xl mx-auto">
           <p className="inline-block font-body text-sm tracking-[0.12em] uppercase text-gold border border-gold/60 bg-gold/10 rounded-md px-3 py-1 mb-6">
             Why This Matters in Practice
@@ -202,7 +216,7 @@ const About = () => {
       </section>
 
       {/* The Experience Behind the Method */}
-      <section className="bg-card py-24 md:py-32 px-6">
+      <section className="bg-card py-24 md:py-20 lg:py-32 px-6">
         <div className="max-w-6xl mx-auto">
           <p className="inline-block font-body text-sm tracking-[0.12em] uppercase text-gold border border-gold/60 bg-gold/10 rounded-md px-3 py-1 mb-6">
             The Experience Behind the Method
@@ -241,7 +255,7 @@ const About = () => {
       </section>
 
       {/* Freedom and Mastery */}
-      <section className="section-navy py-24 md:py-32 px-6">
+      <section className="section-navy py-24 md:py-20 lg:py-32 px-6">
         <div className="max-w-5xl mx-auto">
           <p className="inline-block font-body text-sm tracking-[0.12em] uppercase text-gold border border-gold/60 bg-gold/10 rounded-md px-3 py-1 mb-6">
             Freedom and Mastery

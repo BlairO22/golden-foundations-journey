@@ -8,7 +8,7 @@ const outcomes = [
 
 const RealWorldTransformationSection = () => {
   return (
-    <section className="section-offwhite py-24 md:py-32 px-6">
+    <section className="section-offwhite py-16 md:py-20 px-6">
       <div className="max-w-6xl mx-auto">
         <div className="mb-16 max-w-3xl">
           <h2 className="heading-display text-4xl md:text-5xl text-navy mb-8">
@@ -22,7 +22,7 @@ const RealWorldTransformationSection = () => {
           </p>
         </div>
 
-        <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-6 md:gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
           {outcomes.map((text, i) => (
             <div
               key={i}

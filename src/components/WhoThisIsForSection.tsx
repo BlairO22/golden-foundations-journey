@@ -8,7 +8,7 @@ const items = [
 
 const WhoThisIsForSection = () => {
   return (
-    <section className="bg-card py-24 md:py-32 px-6">
+    <section className="bg-card py-16 md:py-20 px-6">
       <div className="max-w-4xl mx-auto">
         <p className="inline-block font-body text-sm tracking-[0.12em] uppercase text-gold border border-gold/60 bg-gold/10 rounded-md px-3 py-1 mb-6">
           Who This Is For

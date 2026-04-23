@@ -131,7 +131,7 @@ function PhaseRow({
       />
 
       {/* Inner constrained content */}
-      <div className="relative z-10 max-w-5xl mx-auto grid md:grid-cols-[10rem_1fr_auto] grid-cols-[6rem_1fr] gap-8 md:gap-16 items-center py-10 md:py-14 px-6">
+      <div className="relative z-10 max-w-5xl mx-auto grid md:grid-cols-[10rem_1fr_auto] grid-cols-[6rem_1fr] gap-8 md:gap-10 lg:gap-16 items-center py-10 md:py-14 px-6">
         {/* Number */}
         <span
           className="block leading-none select-none"
@@ -309,7 +309,7 @@ const FounderONProcessSection = () => {
 
       {/* "Designed for capable..." — 2-column section */}
       <section style={{ backgroundColor: "#FFFFFF" }}>
-        <div className="grid md:grid-cols-2 items-stretch">
+        <div className="grid lg:grid-cols-2 items-stretch">
           <div ref={photoRef} className="relative overflow-hidden" style={{ minHeight: "55vh" }}>
             <img loading="lazy"               src={skyBg}
               alt="A thriving founder at ease"
@@ -324,8 +324,8 @@ const FounderONProcessSection = () => {
 
             {/* <OnLogoReveal /> */}
           </div>
-          <div className="flex items-end pt-16 md:pt-24 pb-6 md:pb-8 px-8 md:px-16">
-            <p className="font-body text-2xl md:text-3xl leading-relaxed max-w-xl" style={{ color: "#2D2D2D" }}>
+          <div className="flex items-end py-10 md:py-16 px-8 md:px-16">
+            <p className="font-body text-2xl md:text-[1.5rem] lg:text-3xl leading-relaxed" style={{ color: "#2D2D2D" }}>
               Designed for capable professionals who want more than advice, coaching, or disconnected services. ON<span className="text-xs" style={{ verticalAlign: "top", lineHeight: 1 }}>™</span> helps you build a fully operational business and become the founder required to lead it.
             </p>
           </div>
@@ -342,7 +342,7 @@ const FounderONProcessSection = () => {
         ))}
       </div>
 
-      <div className="mt-20 mx-6 max-w-3xl md:mx-auto border-2 border-gold/40 bg-gold/10 rounded-lg p-8 md:p-10 relative">
+      <div className="mt-20 mx-6 md:mx-12 lg:mx-auto max-w-3xl border-2 border-gold/40 bg-gold/10 rounded-lg p-8 md:p-10 relative">
           <span
             aria-hidden
             className="absolute -top-3 left-6 px-3 font-body text-xs tracking-[0.25em] uppercase text-gold"

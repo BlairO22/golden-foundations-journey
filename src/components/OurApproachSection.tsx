@@ -30,7 +30,7 @@ const OurApproachSection = () => {
           Our Approach
         </p>
 
-        <div className="grid md:grid-cols-3 gap-8 md:gap-8">
+        <div className="grid md:grid-cols-3 gap-8">
           {approach.map((item, i) => (
             <div
               key={i}
