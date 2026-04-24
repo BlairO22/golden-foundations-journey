@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { useScrollReveal } from "@/hooks/useScrollReveal";
 import { Progress } from "@/components/ui/progress";
+import { trackFormSubmission, trackEvent, trackCTA } from "@/lib/gtag";
 
 const questions = [
   // Clarity
@@ -40,7 +41,10 @@ const ScoreAssessmentSection = () => {
 
   const handleEmailSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    if (email.trim()) setPhase("assessment");
+    if (email.trim()) {
+      trackFormSubmission("founder_freedom_score", "email_submitted");
+      setPhase("assessment");
+    }
   };
 
   const handleAnswer = (value: number) => {
@@ -49,6 +53,9 @@ const ScoreAssessmentSection = () => {
     if (current < questions.length - 1) {
       setCurrent(current + 1);
     } else {
+      const total = newAnswers.reduce((a, b) => a + b, 0);
+      const finalPct = Math.round((total / maxScore) * 100);
+      trackFormSubmission("founder_freedom_score", `assessment_completed_score_${finalPct}`);
       setPhase("results");
     }
   };
@@ -168,7 +175,7 @@ const ScoreAssessmentSection = () => {
                   <p className="font-body text-sm text-primary-foreground/70 mb-8 leading-relaxed">
                     Your score suggests you have the foundations in place. A strategy call will help you turn that readiness into action.
                   </p>
-                  <a href="/book" className="btn-gold">Book a Strategy Call →</a>
+                  <a href="/book" className="btn-gold" onClick={() => trackCTA("Book a Strategy Call", "score_results_high", "/book")}>Book a Strategy Call →</a>
                 </div>
               )}
               {getLevel() === "mid" && (
@@ -179,7 +186,7 @@ const ScoreAssessmentSection = () => {
                   <p className="font-body text-sm text-primary-foreground/70 mb-8 leading-relaxed">
                     Check your inbox for a follow-up series with targeted insights to help strengthen your weakest Foundation.
                   </p>
-                  <a href="/program" className="btn-gold">Learn About ON™ →</a>
+                  <a href="/program" className="btn-gold" onClick={() => trackCTA("Learn About ON", "score_results_mid", "/program")}>Learn About ON™ →</a>
                 </div>
               )}
               {getLevel() === "low" && (
@@ -190,7 +197,7 @@ const ScoreAssessmentSection = () => {
                   <p className="font-body text-sm text-primary-foreground/70 mb-8 leading-relaxed">
                     We've sent you resources tailored to your current stage. Start with Clarity — it changes everything else.
                   </p>
-                  <a href="/about" className="btn-outline-light">Learn About Thriving Founder™ →</a>
+                  <a href="/about" className="btn-outline-light" onClick={() => trackCTA("Learn About Thriving Founder", "score_results_low", "/about")}>Learn About Thriving Founder™ →</a>
                 </div>
               )}
             </div>

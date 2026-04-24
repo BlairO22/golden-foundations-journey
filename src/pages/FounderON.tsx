@@ -2,6 +2,7 @@ import { useEffect, useRef, useState } from "react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import BottomCTASection from "@/components/BottomCTASection";
+import { trackCTA } from "@/lib/gtag";
 import aaronWorkingImg from "@/assets/angelina-sarycheva-a_DSYLkr9tc-unsplash.webp";
 import gridPhoto1 from "@/assets/natalia-blauth-QJWcEnP9x10-unsplash.webp";
 import gridPhoto2 from "@/assets/getty-images-dXR_QCJtQII-unsplash.webp";
@@ -577,7 +578,7 @@ const FounderON = () => {
             >
               Apply for ON →
             </a>
-            <a href="/book" className="btn-outline-light">Book a Strategy Call →</a>
+            <a href="/book" className="btn-outline-light" onClick={() => trackCTA("Book a Strategy Call", "founder_on_cta", "/book")}>Book a Strategy Call →</a>
           </div>
         </div>
       </section>

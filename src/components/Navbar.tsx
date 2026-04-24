@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import logo from "@/assets/logo.webp";
+import { trackCTA } from "@/lib/gtag";
 
 const Navbar = ({ variant = "dark", bg }: { variant?: "dark" | "light"; bg?: string }) => {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -71,6 +72,7 @@ const Navbar = ({ variant = "dark", bg }: { variant?: "dark" | "light"; bg?: str
           target="_blank"
           rel="noopener noreferrer"
           className="btn-gold text-xs px-6 py-3 hidden lg:inline-block"
+          onClick={() => trackCTA("Take the Founder Freedom Score", "navbar")}
         >
           Take the Founder Freedom Score →
         </a>

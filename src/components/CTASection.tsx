@@ -1,3 +1,5 @@
+import { trackCTA } from "@/lib/gtag";
+
 const CTASection = () => {
   return (
     <section className="section-navy py-24 md:py-32 px-6 text-center">
@@ -6,8 +8,8 @@ const CTASection = () => {
           Ready to thrive?
         </h2>
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-          <a href="#" className="btn-gold">Take the Founder Freedom Score →</a>
-          <a href="#" className="btn-outline-light">Learn About the Program →</a>
+          <a href="#" className="btn-gold" onClick={() => trackCTA("Take the Founder Freedom Score", "cta_section")}>Take the Founder Freedom Score →</a>
+          <a href="#" className="btn-outline-light" onClick={() => trackCTA("Learn About the Program", "cta_section")}>Learn About the Program →</a>
         </div>
       </div>
     </section>

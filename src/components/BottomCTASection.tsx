@@ -1,5 +1,6 @@
 import { useEffect, useRef, useState } from "react";
 import defaultImg from "@/assets/samsung-memory-wz8HHE9kBgo-unsplash.webp";
+import { trackCTA } from "@/lib/gtag";
 
 interface BottomCTASectionProps {
   heading: string;
@@ -69,7 +70,7 @@ const BottomCTASection = ({
           <p className="font-body text-lg md:text-xl text-charcoal/80 leading-relaxed mb-10 max-w-xl">
             {paragraph}
           </p>
-          <a href={ctaHref} className="btn-gold self-start">
+          <a href={ctaHref} className="btn-gold self-start" onClick={() => trackCTA(ctaText, "bottom_cta", ctaHref)}>
             {ctaText}
           </a>
         </div>

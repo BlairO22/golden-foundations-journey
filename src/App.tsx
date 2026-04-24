@@ -4,6 +4,7 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { Toaster } from "@/components/ui/toaster";
 import { TooltipProvider } from "@/components/ui/tooltip";
+import { useScrollDepth, useRouteTracking } from "@/hooks/useGATracking";
 import Index from "./pages/Index.tsx";
 
 const FounderON = lazy(() => import("./pages/FounderON.tsx"));
@@ -16,12 +17,19 @@ const NotFound = lazy(() => import("./pages/NotFound.tsx"));
 
 const queryClient = new QueryClient();
 
+function GATracker() {
+  useScrollDepth();
+  useRouteTracking();
+  return null;
+}
+
 const App = () => (
   <QueryClientProvider client={queryClient}>
     <TooltipProvider>
       <Toaster />
       <Sonner />
       <BrowserRouter>
+        <GATracker />
         <Suspense fallback={<div className="min-h-screen bg-background" />}>
           <Routes>
             <Route path="/" element={<Index />} />
