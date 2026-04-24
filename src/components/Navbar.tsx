@@ -53,7 +53,7 @@ const Navbar = ({ variant = "dark", bg }: { variant?: "dark" | "light"; bg?: str
           <img
             src={logo}
             alt="Thriving Founder"
-            className="h-14 md:h-12"
+            className="h-14 md:h-16"
             style={isDark ? undefined : { filter: "brightness(0) saturate(100%)" }}
           />
         </a>

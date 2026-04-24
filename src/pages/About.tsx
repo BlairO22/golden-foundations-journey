@@ -152,7 +152,7 @@ const About = () => {
               src={aaronImg}
               alt="Aaron McLean"
               loading="lazy"
-              className="w-full object-cover aspect-[3/4]"
+              className="w-full object-cover aspect-[3/4] sticky top-28"
             />
           </div>
         </div>
