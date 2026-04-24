@@ -8,7 +8,7 @@ const outcomes = [
 
 const RealWorldTransformationSection = () => {
   return (
-    <section className="section-offwhite py-16 md:py-20 px-6">
+    <section className="bg-card py-16 md:py-20 px-6">
       <div className="max-w-6xl mx-auto">
         <div className="mb-16 max-w-3xl">
           <h2 className="heading-display text-4xl md:text-5xl text-navy mb-8">
