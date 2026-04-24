@@ -125,7 +125,7 @@ const HeroSection = () => {
                   color: "hsl(0, 0%, 100%, 0.9)",
                 }}
               >
-                Thriving Founder™ is a proprietary 24-week process for capable professionals ready to turn their expertise into a thriving business, and become the founder required to lead it.
+                Thriving Founder<sup style={{ fontSize: "0.5em", verticalAlign: "top", lineHeight: 1 }}>™</sup> is a proprietary 24-week process for capable professionals ready to turn their expertise into a thriving business, and become the founder required to lead it.
               </p>
               <a
                 href="https://founderfreedomscore.netlify.app/assessment"
