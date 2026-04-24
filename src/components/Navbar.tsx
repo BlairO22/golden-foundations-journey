@@ -1,8 +1,15 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import logo from "@/assets/logo.webp";
 
 const Navbar = ({ variant = "dark", bg }: { variant?: "dark" | "light"; bg?: string }) => {
   const [menuOpen, setMenuOpen] = useState(false);
+  const [showScrollTop, setShowScrollTop] = useState(false);
+
+  useEffect(() => {
+    const onScroll = () => setShowScrollTop(window.scrollY > window.innerHeight);
+    window.addEventListener("scroll", onScroll, { passive: true });
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
   const isDark = variant === "dark";
   const textColor = isDark
     ? "text-primary-foreground/80"
@@ -132,6 +139,23 @@ const Navbar = ({ variant = "dark", bg }: { variant?: "dark" | "light"; bg?: str
           </a>
         </div>
       </div>
+
+      {/* Scroll to top button */}
+      <button
+        onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+        className="fixed bottom-6 right-6 z-50 w-10 h-10 rounded-full flex items-center justify-center transition-all duration-300 lg:hidden"
+        style={{
+          backgroundColor: "hsl(var(--gold) / 0.5)",
+          opacity: showScrollTop ? 1 : 0,
+          pointerEvents: showScrollTop ? "auto" : "none",
+          transform: showScrollTop ? "translateY(0)" : "translateY(16px)",
+        }}
+        aria-label="Scroll to top"
+      >
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#1F3F78" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round">
+          <polyline points="18 15 12 9 6 15" />
+        </svg>
+      </button>
     </>
   );
 };

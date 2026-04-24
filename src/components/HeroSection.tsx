@@ -99,9 +99,9 @@ const HeroSection = () => {
               >
                 <h1
                   key={`${currentSlide}-${phase}`}
-                  className="md:text-[5.5rem]"
-                  style={{ fontSize: "clamp(2rem, 11vw, 5.5rem)" }}
+                  className=""
                   style={{
+                    fontSize: "clamp(2rem, 11vw, 5.5rem)",
                     lineHeight: 1.2,
                     color: "hsl(0, 0%, 100%)",
                     fontFamily: "'Jost', sans-serif",
