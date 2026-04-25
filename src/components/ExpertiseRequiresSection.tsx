@@ -10,7 +10,7 @@ const ExpertiseRequiresSection = () => {
             But the path is often fragmented, leaving you to piece together strategy, growth, and direction on your own. <span className="font-bold text-charcoal">The result is not freedom.</span>
           </p>
           <p className="font-body text-lg md:text-xl text-charcoal/80 leading-relaxed mt-6">
-            It is hesitation, second-guessing, and the fear of building a business that either fails — or costs you the life you are trying to create.
+            It is hesitation, second-guessing, and the fear of building a business that either fails, or costs you the life you are trying to create.
           </p>
         </div>
       </div>

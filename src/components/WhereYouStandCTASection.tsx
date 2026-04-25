@@ -6,7 +6,7 @@ const WhereYouStandCTASection = () => {
           Know where you stand before you step fully into entrepreneurship.
         </h2>
         <p className="font-body text-lg md:text-xl text-primary-foreground/80 leading-relaxed mb-12">
-          In about 3 minutes, you will get an honest view of what is supporting your next chapter as an entrepreneur — and what still needs to be strengthened.
+          In about 3 minutes, you will get an honest view of what is supporting your next chapter as an entrepreneur, and what still needs to be strengthened.
         </p>
         <a
           href="https://founderfreedomscore.netlify.app/assessment"

@@ -5,7 +5,7 @@ const foundations = [
   {
     icon: "clarity" as const,
     title: "Clarity",
-    description: "Do you know exactly what you're building, who it's for, and why it matters? Clarity isn't just about vision — it's about alignment between what you want and what you're actually doing every day.",
+    description: "Do you know exactly what you're building, who it's for, and why it matters? Clarity isn't just about vision, it's about alignment between what you want and what you're actually doing every day.",
   },
   {
     icon: "capacity" as const,

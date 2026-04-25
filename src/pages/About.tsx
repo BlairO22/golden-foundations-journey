@@ -55,7 +55,7 @@ const About = () => {
       <section className="bg-card pt-24 md:pt-20 lg:pt-32 pb-12 md:pb-12 lg:pb-16 px-6">
         <div className="max-w-3xl mx-auto text-center">
           <p className="font-body text-xl md:text-2xl text-charcoal leading-relaxed">
-            Thriving Founder exists for professionals who want to build with ambition, integrity, and greater freedom — without recreating the pressure, fragmentation, or emptiness they wanted to leave behind.
+            Thriving Founder exists for professionals who want to build with ambition, integrity, and greater freedom, without recreating the pressure, fragmentation, or emptiness they wanted to leave behind.
           </p>
         </div>
       </section>
@@ -135,13 +135,13 @@ const About = () => {
             That integration is what Thriving Founder is built on.
           </p>
           <p className="font-body text-lg md:text-xl text-charcoal/80 leading-relaxed mb-6">
-            Alongside his business career, Aaron has spent more than twenty years supporting people through pivotal personal and professional transitions. He has worked with entrepreneurs, executives, restaurateurs, athletes, and creatives — people who may look successful from the outside, but know that something deeper needs to change for the next chapter to work.
+            Alongside his business career, Aaron has spent more than twenty years supporting people through pivotal personal and professional transitions. He has worked with entrepreneurs, executives, restaurateurs, athletes, and creatives, people who may look successful from the outside, but know that something deeper needs to change for the next chapter to work.
           </p>
           <p className="font-body text-lg md:text-xl font-bold text-charcoal leading-relaxed mb-6">
             Thriving Founder is where both sides of that experience come together.
           </p>
           <p className="font-body text-lg md:text-xl text-charcoal/80 leading-relaxed mb-6">
-            The business depth means your brand, website, positioning, and core systems get built to a professional standard, on a real timeline. The coaching depth means the internal work — the leadership, clarity, resilience, and self-trust required to sustain a business — does not get ignored.
+            The business depth means your brand, website, positioning, and core systems get built to a professional standard, on a real timeline. The coaching depth means the internal work, the leadership, clarity, resilience, and self-trust required to sustain a business, does not get ignored.
           </p>
           <p className="font-body text-lg md:text-xl font-bold text-charcoal leading-relaxed">
             This is not just about building a business. It is about becoming the founder capable of leading one.
@@ -186,10 +186,10 @@ const About = () => {
               />
             </div>
             <p className="font-body text-lg md:text-xl text-charcoal/80 leading-relaxed mb-6">
-              Blair Owens is Thriving Founder's Creative Director and Brand Strategist, and the founder of Origin Creative. He leads brand development, website design and build, social media strategy, and marketing asset production — both for Thriving Founder itself and for clients inside Founder ON.
+              Blair Owens is Thriving Founder's Creative Director and Brand Strategist, and the founder of Origin Creative. He leads brand development, website design and build, social media strategy, and marketing asset production, both for Thriving Founder itself and for clients inside Founder ON.
             </p>
             <p className="font-body text-lg md:text-xl text-charcoal/80 leading-relaxed mb-6">
-              Blair's connection to the work is personal as well as professional. As a former coaching client of Aaron's, he experienced the transformation firsthand before bringing his creative expertise into the business. That gives him an unusual perspective: he does not just understand the brand visually — he understands the work from the inside.
+              Blair's connection to the work is personal as well as professional. As a former coaching client of Aaron's, he experienced the transformation firsthand before bringing his creative expertise into the business. That gives him an unusual perspective: he does not just understand the brand visually, he understands the work from the inside.
             </p>
             <p className="font-body text-lg md:text-xl font-bold text-charcoal leading-relaxed">
               When you join Founder ON, Blair and the production team help co-build the business with you. Your brand identity, website, social media system, and marketing assets are not off-the-shelf templates. They are custom-built by a team that understands your vision because they helped you clarify it.
@@ -240,7 +240,7 @@ const About = () => {
                 Coaching
               </h3>
               <p className="font-body text-base md:text-lg text-charcoal/80 leading-relaxed">
-                20+ years of transformational coaching, personal development, and addiction recovery support, working with a diverse range of people — from those rebuilding their lives to entrepreneurs, athletes, and high-performing professionals — through career transitions, business launches, and meaningful personal transformation.
+                20+ years of transformational coaching, personal development, and addiction recovery support, working with a diverse range of people, from those rebuilding their lives to entrepreneurs, athletes, and high-performing professionals, through career transitions, business launches, and meaningful personal transformation.
               </p>
             </div>
             <div className="border-t-2 border-gold pt-6">
@@ -248,7 +248,7 @@ const About = () => {
                 Creative
               </h3>
               <p className="font-body text-base md:text-lg text-charcoal/80 leading-relaxed">
-                Musician, visual artist, and award-winning creative director. Aaron's creative practice informs the work — bringing an unusual ability to see patterns, hold complexity, and support the whole person behind the business.
+                Musician, visual artist, and award-winning creative director. Aaron's creative practice informs the work, bringing an unusual ability to see patterns, hold complexity, and support the whole person behind the business.
               </p>
             </div>
           </div>
@@ -288,14 +288,14 @@ const About = () => {
           </div>
 
           <p className="font-body text-lg md:text-xl text-primary-foreground/80 leading-relaxed mt-12 max-w-3xl">
-            Together, they describe the kind of founder we believe is worth becoming — and the kind of business we believe is worth building.
+            Together, they describe the kind of founder we believe is worth becoming, and the kind of business we believe is worth building.
           </p>
         </div>
       </section>
 
       <BottomCTASection
         heading="If this feels aligned, begin with the Founder Freedom Score."
-        paragraph="A short, honest diagnostic to help you see where you stand — in about 3 minutes."
+        paragraph="A short, honest diagnostic to help you see where you stand, in about 3 minutes."
         ctaText="Discover Your Founder Freedom Score →"
         ctaHref="https://founderfreedomscore.netlify.app/assessment"
       /></div>

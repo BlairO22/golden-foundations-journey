@@ -40,9 +40,9 @@ const caseStudies = [
   },
   {
     title: "From overthinking to operational momentum.",
-    body: "A founder in the wellness and professional development space had been circling the same decisions for over a year — unable to commit to a direction, a price point, or a brand identity. The structured progression of ON gave them the strategic clarity and accountability to stop deliberating and start building.",
+    body: "A founder in the wellness and professional development space had been circling the same decisions for over a year, unable to commit to a direction, a price point, or a brand identity. The structured progression of ON gave them the strategic clarity and accountability to stop deliberating and start building.",
     outcome:
-      "By Week 16, they had a launched brand, a functioning website, and their first paying clients — after more than a year of stalling.",
+      "By Week 16, they had a launched brand, a functioning website, and their first paying clients, after more than a year of stalling.",
   },
   {
     title: "From fragmented effort to an integrated business.",
@@ -80,7 +80,7 @@ const tangibleOutcomes = [
   "Market positioning that earns attention without chasing it",
   "A brand presence that builds trust before the first conversation",
   "Improved decision-making and the confidence to act on it",
-  "A deeper sense that the business is serving the founder's freedom — not replacing it",
+  "A deeper sense that the business is serving the founder's freedom, not replacing it",
 ];
 
 const Results = () => {
@@ -98,7 +98,7 @@ const Results = () => {
               Results
             </h1>
             <p className="font-body text-xl md:text-2xl text-primary-foreground/90 leading-snug">
-              What the work actually produces — in business, leadership, and the life that surrounds both.
+              What the work actually produces, in business, leadership, and the life that surrounds both.
             </p>
           </div>
 
@@ -253,7 +253,7 @@ const Results = () => {
 
       <BottomCTASection
         heading="See where you stand before you decide what to build next."
-        paragraph="A clear diagnostic of where you stand as an entrepreneur — in about 3 minutes."
+        paragraph="A clear diagnostic of where you stand as an entrepreneur, in about 3 minutes."
         ctaText="Discover Your Founder Freedom Score →"
         ctaHref="https://founderfreedomscore.netlify.app/assessment"
       /></div>

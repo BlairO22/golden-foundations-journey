@@ -2,7 +2,7 @@ const FreedomMasterySection = () => {
   return (
     <section className="section-navy py-24 md:py-32 px-6">
       <div className="max-w-4xl mx-auto text-center">
-        {/* Dramatic pull quote — grid */}
+        {/* Dramatic pull quote, grid */}
         <div className="grid md:grid-cols-2 gap-6 md:gap-8 mb-16 text-left">
           <h3 className="heading-display text-2xl md:text-3xl text-primary-foreground leading-snug border border-primary-foreground/15 bg-primary-foreground/5 rounded-lg p-6 md:p-8">
             <span className="text-gold">Freedom</span> without mastery collapses.
@@ -40,7 +40,7 @@ const FreedomMasterySection = () => {
         {/* Closing line */}
         <div className="h-px w-16 bg-gold mx-auto mb-8" />
         <p className="font-body text-lg md:text-xl text-primary-foreground/85 leading-relaxed">
-          Together, they create a different standard of success — one that includes prosperity, leadership, and a life that still feels like your own.
+          Together, they create a different standard of success, one that includes prosperity, leadership, and a life that still feels like your own.
         </p>
       </div>
     </section>

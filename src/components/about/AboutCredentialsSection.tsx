@@ -18,7 +18,7 @@ const credentials = [
     icon: "thrive" as const,
     title: "Creative",
     description:
-      "Musician, visual artist, and creative director. The creative practice informs the coaching — Aaron brings an unusual ability to see patterns, hold complexity, and work with the whole person.",
+      "Musician, visual artist, and creative director. The creative practice informs the coaching, Aaron brings an unusual ability to see patterns, hold complexity, and work with the whole person.",
   },
 ];
 

@@ -103,7 +103,7 @@ const CenterImageScrollAnimation = () => {
                 margin: 0,
               }}
             >
-              What is missing is the path to turn it into a business that actually works — without having to figure it all out alone.
+              What is missing is the path to turn it into a business that actually works, without having to figure it all out alone.
             </p>
           </div>
 

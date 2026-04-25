@@ -11,7 +11,7 @@ const KnowingSection = () => {
             You have the expertise.
           </h2>
           <p className="font-body text-lg md:text-xl text-charcoal/80 leading-relaxed">
-            What is missing is the path to turn it into a business that actually works — without having to figure it all out alone.
+            What is missing is the path to turn it into a business that actually works, without having to figure it all out alone.
           </p>
         </RevealText>
         <RevealImage

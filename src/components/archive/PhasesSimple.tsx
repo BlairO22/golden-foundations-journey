@@ -1,5 +1,5 @@
 /*
- * Archived earlier version of the phases layout — plain vertical rows,
+ * Archived earlier version of the phases layout, plain vertical rows,
  * no hover photo reveal. Kept so we can restore if needed.
  * Drop-in replacement for the phases block inside FounderONProcessSection.
  */

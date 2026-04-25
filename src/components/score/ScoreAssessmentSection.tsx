@@ -5,9 +5,9 @@ import { trackFormSubmission, trackEvent, trackCTA } from "@/lib/gtag";
 
 const questions = [
   // Clarity
-  { foundation: "Clarity", q: "I can clearly articulate what my business does, who it's for, and why it matters — in one sentence." },
+  { foundation: "Clarity", q: "I can clearly articulate what my business does, who it's for, and why it matters, in one sentence." },
   { foundation: "Clarity", q: "I know exactly what I need to build in the next 90 days and why." },
-  { foundation: "Clarity", q: "My daily actions are aligned with my long-term vision — not just reactive tasks." },
+  { foundation: "Clarity", q: "My daily actions are aligned with my long-term vision, not just reactive tasks." },
   // Capacity
   { foundation: "Capacity", q: "I have enough energy and focus at the end of each week to sustain this pace long-term." },
   { foundation: "Capacity", q: "I have systems in place to manage my time, energy, and priorities effectively." },
@@ -19,7 +19,7 @@ const questions = [
   // Confidence
   { foundation: "Confidence", q: "I trust myself to make the hard calls, even when the outcome is uncertain." },
   { foundation: "Confidence", q: "I can handle setbacks without spiraling or losing momentum." },
-  { foundation: "Confidence", q: "I feel confident asking for what I'm worth — in pricing, partnerships, and negotiations." },
+  { foundation: "Confidence", q: "I feel confident asking for what I'm worth, in pricing, partnerships, and negotiations." },
 ];
 
 const options = [
@@ -195,7 +195,7 @@ const ScoreAssessmentSection = () => {
                     Every founder starts somewhere.
                   </h3>
                   <p className="font-body text-sm text-primary-foreground/70 mb-8 leading-relaxed">
-                    We've sent you resources tailored to your current stage. Start with Clarity — it changes everything else.
+                    We've sent you resources tailored to your current stage. Start with Clarity, it changes everything else.
                   </p>
                   <a href="/about" className="btn-outline-light" onClick={() => trackCTA("Learn About Thriving Founder", "score_results_low", "/about")}>Learn About Thriving Founder™ →</a>
                 </div>

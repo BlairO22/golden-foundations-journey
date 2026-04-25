@@ -27,6 +27,7 @@ import Footer from "@/components/Footer";
 import danImg from "@/assets/dan-fox.png";
 import antoineImg from "@/assets/antoine-vaillant.jpeg";
 import michaelImg from "@/assets/michael-sanders.png";
+import jamesImg from "@/assets/james-mcmillen.png";
 
 const TestimonialCard = ({ quote, name, role, image }: { quote: string; name: string; role: string; image: string }) => (
   <div>
@@ -71,7 +72,13 @@ const Index = () => {
             image={danImg}
           />
           <TestimonialCard
-            quote="When I first started working with Aaron, I was rebuilding my life from a very low point. His insight, presence, and guidance became a constant through that process. Aaron played an important role in that transformation, and he's someone I trust to support me through whatever comes next."
+            quote="Working with Aaron helped me turn the vision for The Vital Man into a clear, structured business and brand. I had the ideas, experience, and desire to serve, but needed help shaping them into a functioning business. Aaron helped me clarify the offer, define the audience, develop the brand, organize the growth strategy, and build the foundations to move forward with confidence. What stood out most was his ability to support both the practical side of business building and me as a founder. The process gave me structure, direction, and momentum, and helped me step more fully into the next stage of my entrepreneurial journey."
+            name="James McMillen"
+            role="Author and Founder of The Vital Man & Landscapes in Bloom"
+            image={jamesImg}
+          />
+          <TestimonialCard
+            quote="When I started working with Aaron, I was rebuilding. His expertise, presence and mentorship became a constant through that process. I overcame addiction, rebuilt myself and my career, returned to professional bodybuilding, competed at Mr. Olympia twice, and am now stepping into a new chapter as a husband, father, and entrepreneur."
             name="Antoine Vaillant"
             role="IFBB Professional Bodybuilder, Entrepreneur"
             image={antoineImg}
@@ -79,7 +86,7 @@ const Index = () => {
           <TestimonialCard
             quote="Aaron supported me through an important season as a founder, helping me navigate the immense pressures of leadership, scaling, transition, and the deeper process of coming into greater personal alignment. He brings a rare ability to hold both the strategic and deeply human sides of entrepreneurship, while understanding that how we build is inseparable from how we live."
             name="Michael Sanders"
-            role="Co-Founder of Sequence — Acquired by Polygon"
+            role="Co-Founder of Sequence, Acquired by Polygon"
             image={michaelImg}
           />
         </div>
@@ -93,7 +100,7 @@ const Index = () => {
       <FreedomMasterySection />
       <WhoThisIsForSection />
       <MoreLifeCTASection />
-      {/* Hidden sections below — restore by uncommenting
+      {/* Hidden sections below, restore by uncommenting
       <BuildingMoreSection />
       <NoMoreInfoSection />
       <TwoPillarsSection />

@@ -82,7 +82,7 @@ const MilestonesSection = () => {
         </div>
 
         <p className="font-body text-sm text-charcoal/60 text-center max-w-xl mx-auto leading-relaxed">
-          All milestones are tracked inside ON Platform™ — your personal dashboard for monitoring progress, completing playbooks, and reviewing your Transformation Scorecard.
+          All milestones are tracked inside ON Platform™, your personal dashboard for monitoring progress, completing playbooks, and reviewing your Transformation Scorecard.
         </p>
       </div>
     </section>

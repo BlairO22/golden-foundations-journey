@@ -6,7 +6,7 @@ const phases = [
   icon: "empower" as const,
   name: "EMPOWER",
   weeks: "Weeks 1–4",
-  question: "Who am I as a founder — and what does freedom actually look like?",
+  question: "Who am I as a founder, and what does freedom actually look like?",
   description:
   "The first phase is about clarity. Before building anything, you need to understand who you are, what you want, and what's been holding you back.",
   happens: [
@@ -25,7 +25,7 @@ const phases = [
   icon: "build" as const,
   name: "BUILD",
   weeks: "Weeks 5–10",
-  question: "What am I offering — and how do I present it to the world?",
+  question: "What am I offering, and how do I present it to the world?",
   description:
   "With your foundation set, we design and validate your offer, then co-build the brand and digital presence that brings it to life.",
   happens: [
@@ -44,7 +44,7 @@ const phases = [
   icon: "operate" as const,
   name: "OPERATE",
   weeks: "Weeks 11–18",
-  question: "How do I get clients — and deliver consistently?",
+  question: "How do I get clients, and deliver consistently?",
   description:
   "This is where you go live. We build your acquisition engine, launch your marketing, and help you enroll your first client.",
   happens: [
@@ -67,7 +67,7 @@ const phases = [
   icon: "thrive" as const,
   name: "THRIVE",
   weeks: "Weeks 19–24",
-  question: "How do I scale — without losing myself?",
+  question: "How do I scale, without losing myself?",
   description:
   "With your business running, we optimize, document, and build the growth plan that lets you scale sustainably.",
   happens: [

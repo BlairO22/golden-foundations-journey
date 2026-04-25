@@ -110,7 +110,7 @@ function PhaseRow({
       onMouseLeave={() => setHovered(false)}
       className="relative border-t border-gold/30 last:border-b overflow-hidden transition-colors duration-500"
     >
-      {/* Full-width photo background (fades in on hover — desktop only) */}
+      {/* Full-width photo background (fades in on hover, desktop only) */}
       <div
         aria-hidden
         className="absolute inset-0 transition-opacity duration-500 pointer-events-none hidden md:block"
@@ -163,7 +163,7 @@ function PhaseRow({
           </p>
         </div>
 
-        {/* Phase name — desktop only (right column) */}
+        {/* Phase name, desktop only (right column) */}
         <h3 className="heading-display text-3xl md:text-4xl text-primary-foreground text-left md:min-w-[12rem] hidden md:block">
           {p.name}
         </h3>
@@ -307,7 +307,7 @@ const FounderONProcessSection = () => {
         </div>
       </section>
 
-      {/* "Designed for capable..." — 2-column section */}
+      {/* "Designed for capable...", 2-column section */}
       <section style={{ backgroundColor: "#FFFFFF" }}>
         <div className="grid lg:grid-cols-2 items-stretch">
           <div ref={photoRef} className="relative overflow-hidden" style={{ minHeight: "55vh" }}>

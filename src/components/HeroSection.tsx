@@ -125,7 +125,7 @@ const HeroSection = () => {
                   color: "hsl(0, 0%, 100%, 0.9)",
                 }}
               >
-                Thriving Founder<sup style={{ fontSize: "0.5em", verticalAlign: "top", lineHeight: 1 }}>™</sup> is a proprietary 24-week process for capable professionals ready to turn their expertise into a thriving business, and become the founder required to lead it.
+                Founder ON<sup style={{ fontSize: "0.5em", verticalAlign: "super", lineHeight: 1 }}>™</sup> is a 24-week build partnership designed to turn your expertise into a thriving business, while helping you grow into the founder who can sustain it.
               </p>
               <a
                 href="https://founderfreedomscore.netlify.app/assessment"

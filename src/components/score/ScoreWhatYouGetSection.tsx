@@ -5,7 +5,7 @@ const items = [
   {
     icon: "clarity" as const,
     title: "Your Founder Freedom Score",
-    description: "Your score across all 4 Foundations — Clarity, Capacity, Cashflow, and Confidence.",
+    description: "Your score across all 4 Foundations, Clarity, Capacity, Cashflow, and Confidence.",
   },
   {
     icon: "capacity" as const,

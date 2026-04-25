@@ -11,7 +11,7 @@ const WhatYouLeaveWithSection = () => {
             What you leave with is not just inspiration.
           </h2>
           <p className="font-body text-lg md:text-xl text-charcoal/80 leading-relaxed mb-6">
-            It is a business — and a different relationship with your work, your leadership, and your life.
+            It is a business, and a different relationship with your work, your leadership, and your life.
           </p>
           <p className="font-body text-lg md:text-xl text-charcoal/80 leading-relaxed">
             Imagine opening your laptop on a Tuesday morning and choosing what to work on. Not because nothing is urgent, but because the business now has the structure, direction, and momentum to move without depending on you in every conversation.

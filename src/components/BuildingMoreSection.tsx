@@ -1,15 +1,15 @@
 const items = [
   {
     text: "Online courses give you frameworks",
-    sub: "— but no accountability.",
+    sub: ",  but no accountability.",
   },
   {
     text: "Executive coaches help with mindset",
-    sub: "— but don't build anything with you.",
+    sub: ",  but don't build anything with you.",
   },
   {
     text: "Agencies will build your website",
-    sub: "— but rarely understand the vision behind it.",
+    sub: ",  but rarely understand the vision behind it.",
   },
 ];
 
@@ -32,7 +32,7 @@ const BuildingMoreSection = () => {
             </div>
           ))}
           <p className="font-body text-base text-charcoal/70 leading-relaxed pt-4">
-            None of them treat you as a whole person navigating more than a business launch — but an identity shift.
+            None of them treat you as a whole person navigating more than a business launch, but an identity shift.
           </p>
         </div>
       </div>

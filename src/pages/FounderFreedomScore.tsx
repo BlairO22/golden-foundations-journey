@@ -54,7 +54,7 @@ const foundations = [
 const receives = [
   "Your overall readiness score and tier placement",
   "Individual scores across all four foundations, displayed as a visual radar chart",
-  "Insight into which foundation is your strongest — and which is most limiting your progress",
+  "Insight into which foundation is your strongest, and which is most limiting your progress",
   "A clearer sense of what your next move may need to be",
   "A pathway toward deeper support through ON, if the fit is right",
 ];
@@ -189,7 +189,7 @@ const FounderFreedomScore = () => {
               </sup>
             </h1>
             <p className="font-body text-xl md:text-2xl text-primary-foreground/90 leading-snug mb-12">
-              A clear diagnostic of where you stand as an entrepreneur — in about 3 minutes.
+              A clear diagnostic of where you stand as an entrepreneur, in about 3 minutes.
             </p>
             <a
               href="https://founderfreedomscore.netlify.app/assessment"
@@ -230,7 +230,7 @@ const FounderFreedomScore = () => {
             {/* Text */}
             <div>
               <p className="font-body text-xl md:text-2xl text-charcoal/80 leading-relaxed">
-                This is not a gimmicky quiz. It is a practical diagnostic designed to help you see what is supporting your next chapter — and what may still be limiting it.
+                This is not a gimmicky quiz. It is a practical diagnostic designed to help you see what is supporting your next chapter, and what may still be limiting it.
               </p>
             </div>
           </div>
@@ -293,7 +293,7 @@ const FounderFreedomScore = () => {
             ))}
           </div>
           <p className="font-body text-lg md:text-xl text-charcoal/80 leading-relaxed">
-            The results are immediate, on-screen, and designed to be genuinely useful — not a teaser for a sales pitch.
+            The results are immediate, on-screen, and designed to be genuinely useful, not a teaser for a sales pitch.
           </p>
         </div>
       </section>
@@ -311,7 +311,7 @@ const FounderFreedomScore = () => {
             For some people, the score will simply create clarity.
           </p>
           <p className="font-body text-lg md:text-xl text-primary-foreground/80 leading-relaxed mb-6">
-            For others, it will reveal that they are ready for a deeper build — one that requires strategy, execution, and support at a higher level.
+            For others, it will reveal that they are ready for a deeper build, one that requires strategy, execution, and support at a higher level.
           </p>
           <p className="font-body text-lg md:text-xl font-bold text-primary-foreground leading-relaxed">
             That is where ON begins.

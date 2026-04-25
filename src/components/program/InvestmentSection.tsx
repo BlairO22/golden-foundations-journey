@@ -58,7 +58,7 @@ const InvestmentSection = () => {
         </p>
 
         <p className="font-body text-sm text-charcoal/60 text-center max-w-xl mx-auto leading-relaxed mb-12">
-          The investment reflects the depth and scope of a partnership that includes strategic coaching, professional production, and a full business infrastructure — built alongside you.
+          The investment reflects the depth and scope of a partnership that includes strategic coaching, professional production, and a full business infrastructure, built alongside you.
         </p>
 
         <div className="text-center">

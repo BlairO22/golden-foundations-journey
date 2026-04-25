@@ -10,7 +10,7 @@ const ProgramHeroSection = () => (
       Reclaim your freedom.
     </h2>
     <p className="font-body text-lg md:text-xl text-primary-foreground/70 max-w-2xl mb-12 leading-relaxed">
-      A 24-week partnership that combines deep founder coaching with done-with-you production — so you don't just plan your business, you launch it.
+      A 24-week partnership that combines deep founder coaching with done-with-you production, so you don't just plan your business, you launch it.
     </p>
     <p className="font-body text-xs font-medium tracking-[0.4em] text-gold/80 uppercase">
       Empower &bull; Build &bull; Operate &bull; Thrive

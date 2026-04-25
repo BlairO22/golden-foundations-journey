@@ -53,7 +53,7 @@ const RealWorldTransformationSection = () => {
             </div>
           ))}
 
-          {/* 6th cell — CTA */}
+          {/* 6th cell, CTA */}
           <div className="flex items-center justify-center p-6 md:p-8">
             <a href="/results" className="btn-gold">
               View Results →

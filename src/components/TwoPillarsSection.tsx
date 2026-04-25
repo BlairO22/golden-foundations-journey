@@ -15,7 +15,7 @@ const TwoPillarsSection = () => {
             <h3 className="heading-display text-2xl text-navy mb-2">Strategic Advisory + Transformational Coaching</h3>
             <p className="font-body text-sm font-semibold text-gold mb-4 tracking-wide">Led by Aaron McLean</p>
             <p className="font-body text-base text-charcoal/80 leading-relaxed">
-              Weekly 90-minute one-on-one sessions that go beyond business strategy. Aaron works with you on the decisions, the doubts, the identity shift, and the vision — building the internal operating system that determines whether your business thrives or stalls.
+              Weekly 90-minute one-on-one sessions that go beyond business strategy. Aaron works with you on the decisions, the doubts, the identity shift, and the vision, building the internal operating system that determines whether your business thrives or stalls.
             </p>
           </div>
           {/* Production */}
@@ -24,7 +24,7 @@ const TwoPillarsSection = () => {
             <h3 className="heading-display text-2xl text-navy mb-2">Business Production</h3>
             <p className="font-body text-sm font-semibold text-gold mb-4 tracking-wide">Led by Blair Owens, Creative Director</p>
             <p className="font-body text-base text-charcoal/80 leading-relaxed">
-              Done-with-you production of everything your business needs to launch: brand identity, professional website, social media strategy, marketing systems, sales infrastructure, and operational tools. You don't just plan your business — the Thriving Founder team builds it alongside you.
+              Done-with-you production of everything your business needs to launch: brand identity, professional website, social media strategy, marketing systems, sales infrastructure, and operational tools. You don't just plan your business, the Thriving Founder team builds it alongside you.
             </p>
           </div>
         </div>

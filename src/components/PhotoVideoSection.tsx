@@ -16,7 +16,7 @@ const PhotoVideoSection = () => {
             You've built a career.
           </h2>
           <p className="font-body text-lg md:text-xl text-charcoal/80 leading-relaxed">
-            What's missing is the freedom to live your day to day how you want — without trading quality of life.
+            What's missing is the freedom to live your day to day how you want, without trading quality of life.
           </p>
         </RevealText>
       </div>

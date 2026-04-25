@@ -3,7 +3,7 @@ import { useScrollReveal } from "@/hooks/useScrollReveal";
 const forList = [
   "Experienced professionals ready to build a consulting or advisory business.",
   "Corporate leaders planning a transition into entrepreneurship.",
-  "Founders who need structure, strategy, and accountability — not just inspiration.",
+  "Founders who need structure, strategy, and accountability, not just inspiration.",
   "People willing to invest the time and effort required to build something real.",
   "Individuals who value partnership over passive learning.",
 ];

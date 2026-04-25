@@ -626,7 +626,7 @@ const FounderON = () => {
               This is not another program.
             </h2>
             <p className="font-body text-lg md:text-xl text-charcoal/80 leading-relaxed mb-6">
-              ON is a proprietary 4-stage founder development and business execution process — designed to build a fully operational business and the founder required to lead it.
+              ON is a proprietary 4-stage founder development and business execution process, designed to build a fully operational business and the founder required to lead it.
             </p>
             <p className="font-body text-lg md:text-xl font-bold text-charcoal leading-relaxed mb-6">
               Most offers in this space give you one part of what is required.
@@ -675,7 +675,7 @@ const FounderON = () => {
             ON is a premium, integrated experience.
           </h3>
           <p className="font-body text-xl md:text-2xl text-primary-foreground/85 leading-relaxed max-w-md ml-auto mt-16 md:mt-32">
-            For qualified professionals who want to build a real business with real support — while becoming the person capable of leading it well.
+            For qualified professionals who want to build a real business with real support, while becoming the person capable of leading it well.
           </p>
         </div>
       </section>
@@ -724,7 +724,7 @@ const FounderON = () => {
         </div>
       </section>
 
-      {/* What the Work Creates — photo right */}
+      {/* What the Work Creates, photo right */}
       <section className="bg-card py-24 md:py-32 px-6">
         <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-12 md:gap-16 items-center">
           <div className="order-2 md:order-1">
@@ -735,7 +735,7 @@ const FounderON = () => {
               A fundamentally different position than where you started.
             </h2>
             <p className="font-body text-lg md:text-xl text-charcoal/80 leading-relaxed">
-              ON is designed to leave you with more than a plan and more than clarity. You leave with a business that has real structure, real credibility, and real forward motion — and a founder who has the confidence and capability to lead it.
+              ON is designed to leave you with more than a plan and more than clarity. You leave with a business that has real structure, real credibility, and real forward motion, and a founder who has the confidence and capability to lead it.
             </p>
           </div>
           <div className="order-1 md:order-2 w-full">
@@ -749,7 +749,7 @@ const FounderON = () => {
         </div>
       </section>
 
-      {/* What the Work Creates — photo left with outcomes */}
+      {/* What the Work Creates, photo left with outcomes */}
       <section className="bg-card pb-24 md:pb-32 px-6">
         <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-12 md:gap-16 items-center">
           <div className="w-full">
@@ -861,7 +861,7 @@ const FounderON = () => {
           </div>
 
           <p className="font-body text-lg md:text-xl text-charcoal/80 leading-relaxed">
-            The business becomes stronger. The founder becomes stronger. And the future becomes something you are building toward — not something you are bracing for.
+            The business becomes stronger. The founder becomes stronger. And the future becomes something you are building toward, not something you are bracing for.
           </p>
         </div>
       </section>
@@ -937,7 +937,7 @@ const FounderON = () => {
             ON is a premium partnership.
           </h2>
           <p className="font-body text-lg md:text-xl text-charcoal/80 leading-relaxed mb-6">
-            This experience is designed for people who understand the cost of delay, fragmentation, and under-building. The real cost is not the investment — it is another year of building without the right support.
+            This experience is designed for people who understand the cost of delay, fragmentation, and under-building. The real cost is not the investment, it is another year of building without the right support.
           </p>
           <p className="font-body text-lg md:text-xl text-charcoal/80 leading-relaxed">
             Investment details are shared during the strategy call so they can be discussed in the context of your goals, stage, and fit.
