@@ -123,14 +123,13 @@ const HeroSection = () => {
                 style={{
                   maxWidth: "45rem",
                   color: "hsl(0, 0%, 100%, 0.9)",
+                  textWrap: "balance",
                 }}
               >
                 Founder ON<sup style={{ fontSize: "0.5em", verticalAlign: "super", lineHeight: 1 }}>™</sup> is a 24-week build partnership designed to turn your expertise into a thriving business, while helping you grow into the founder who can sustain it.
               </p>
               <a
-                href="https://founderfreedomscore.netlify.app/assessment"
-                target="_blank"
-                rel="noopener noreferrer"
+                href="/founder-freedom-score"
                 className="btn-gold mt-8"
               >
                 <span className="md:hidden">Take the Founder Freedom Score</span>

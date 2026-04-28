@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from "react";
-import skyBg from "@/assets/natalia-blauth-QJWcEnP9x10-unsplash.webp";
+import skyBg from "@/assets/getty-images-Xo2lHF3TIJg-unsplash.jpg";
 import phase1Img from "@/assets/getty-images-DAv799uV1HA-unsplash.jpg";
 import phase2Img from "@/assets/michael-t-_1Pmhe5ozNA-unsplash.jpg";
 import phase3Img from "@/assets/yanhao-fang-RT1MiKWx840-unsplash.jpg";
@@ -300,9 +300,10 @@ const FounderONProcessSection = () => {
               color: "hsl(0, 0%, 100%, 0.9)",
               opacity: introVisible ? 1 : 0,
               transition: "opacity 1s ease 0.6s",
+              textWrap: "balance",
             }}
           >
-            Thriving Founder's proprietary 4-stage<br />founder development and business execution process.
+            Thriving Founder's proprietary 4-stage founder development and business execution process.
           </p>
         </div>
       </section>
@@ -316,8 +317,8 @@ const FounderONProcessSection = () => {
               className="absolute inset-0 w-full h-full object-cover"
               style={{
                 borderRadius: 0,
-                objectPosition: "center 40%",
-                transform: `translate3d(0, ${progress * 60}px, 0) scale(-1.12, 1.12)`,
+                objectPosition: "center 5%",
+                transform: `translate3d(0, ${progress * 60}px, 0) scale(1.12, 1.12)`,
                 willChange: "transform",
               }}
             />
@@ -325,8 +326,8 @@ const FounderONProcessSection = () => {
             {/* <OnLogoReveal /> */}
           </div>
           <div className="flex items-end py-10 md:py-16 px-8 md:px-16">
-            <p className="font-body text-2xl md:text-[1.5rem] lg:text-3xl leading-relaxed" style={{ color: "#2D2D2D" }}>
-              Designed for capable professionals who want more than advice, coaching, or disconnected services. ON<span className="text-xs" style={{ verticalAlign: "top", lineHeight: 1 }}>™</span> helps you build a fully operational business and become the founder required to lead it.
+            <p className="font-body text-lg md:text-xl lg:text-2xl leading-relaxed" style={{ color: "#2D2D2D" }}>
+              Designed for capable professionals who want more than advice, coaching, or disconnected services. Founder ON<span className="text-xs" style={{ verticalAlign: "top", lineHeight: 1 }}>™</span> helps you build a fully operational business, and become the founder required to lead it. Through four stages, Empower, Build, Operate, and Thrive, the process integrates strategy, founder development, and expert-led production into one coherent path.
             </p>
           </div>
         </div>
@@ -342,17 +343,18 @@ const FounderONProcessSection = () => {
         ))}
       </div>
 
-      <div className="mt-20 mx-6 md:mx-12 lg:mx-auto max-w-3xl border-2 border-gold/40 bg-gold/10 rounded-lg p-8 md:p-10 relative">
+      <div className="mt-20 mx-6 md:mx-12 lg:mx-auto max-w-3xl border-2 border-gold/40 bg-gold/10 rounded-lg p-8 md:p-10 relative text-center">
           <span
             aria-hidden
-            className="absolute -top-3 left-6 px-3 font-body text-xs tracking-[0.25em] uppercase text-gold"
+            className="absolute -top-3 left-1/2 -translate-x-1/2 px-3 font-body text-xs tracking-[0.25em] uppercase text-gold"
             style={{ backgroundColor: "#1F3F78" }}
           >
             In other words
           </span>
-          <p className="font-body text-lg md:text-xl text-primary-foreground/90 leading-relaxed">
+          <p className="font-body text-lg md:text-xl text-primary-foreground/90 leading-relaxed mb-6" style={{ textWrap: "balance" }}>
             This is not a course or a stack of separate services. It is a proprietary process for building the business, developing the founder, and creating a stronger path to freedom, mastery, and a more fully lived life.
           </p>
+          <a href="/founder-on" className="btn-gold">Explore Founder ON →</a>
         </div>
     </section>
     </>
