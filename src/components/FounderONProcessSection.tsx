@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from "react";
-import skyBg from "@/assets/getty-images-Xo2lHF3TIJg-unsplash.jpg";
+import skyBg from "@/assets/getty-images-peZDxwZ1ZDI-unsplash.jpg";
 import phase1Img from "@/assets/getty-images-DAv799uV1HA-unsplash.jpg";
 import phase2Img from "@/assets/michael-t-_1Pmhe5ozNA-unsplash.jpg";
 import phase3Img from "@/assets/yanhao-fang-RT1MiKWx840-unsplash.jpg";
@@ -317,7 +317,7 @@ const FounderONProcessSection = () => {
               className="absolute inset-0 w-full h-full object-cover"
               style={{
                 borderRadius: 0,
-                objectPosition: "center 5%",
+                objectPosition: "center top",
                 transform: `translate3d(0, ${progress * 60}px, 0) scale(1.12, 1.12)`,
                 willChange: "transform",
               }}
