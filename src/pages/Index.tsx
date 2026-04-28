@@ -71,6 +71,37 @@ const transformations = [
   { name: "Integration", from: "fragmented", to: "whole", body: "The business and the founder stop feeling separate. The work becomes more aligned with who you are, how you lead, and the life you are trying to create." },
 ];
 
+function RevealBox({ children, className, delay = 0, style }: { children: React.ReactNode; className?: string; delay?: number; style?: React.CSSProperties }) {
+  const ref = useRef<HTMLDivElement>(null);
+  const [visible, setVisible] = useState(false);
+
+  useEffect(() => {
+    const el = ref.current;
+    if (!el) return;
+    const obs = new IntersectionObserver(
+      ([entry]) => { if (entry.isIntersecting) { setVisible(true); obs.unobserve(el); } },
+      { threshold: 0.2 }
+    );
+    obs.observe(el);
+    return () => obs.disconnect();
+  }, []);
+
+  return (
+    <div
+      ref={ref}
+      className={className}
+      style={{
+        opacity: visible ? 1 : 0,
+        transform: visible ? "translateY(0)" : "translateY(20px)",
+        transition: `opacity 0.6s ease ${delay}s, transform 0.6s ease ${delay}s`,
+        ...style,
+      }}
+    >
+      {children}
+    </div>
+  );
+}
+
 function DeliverableScrollItem({ item, index }: { item: { name: string; body: string }; index: number }) {
   const ref = useRef<HTMLDivElement>(null);
   const [visible, setVisible] = useState(false);
@@ -140,7 +171,7 @@ const Index = () => {
               { name: "Founder Development", body: "We strengthen the leadership, self-trust, resilience, decision-making, and internal standards required to sustain what you are building.", img: pillarFounderImg },
               { name: "Expert-Led Production", body: "We help turn strategy into tangible assets, brand, website, messaging, and foundational systems, so the business is not left at the idea stage.", img: pillarExecutionImg },
             ].map((p, i) => (
-              <div key={i} className="group relative overflow-hidden rounded-lg" style={{ minHeight: "420px" }}>
+              <RevealBox key={i} className="group relative overflow-hidden rounded-lg" delay={i * 0.15} style={{ minHeight: "420px" }}>
                 <img src={p.img} alt="" loading="lazy" className="absolute inset-0 w-full h-full object-cover transition-opacity duration-500 group-hover:opacity-0" />
                 <div className="absolute inset-0 bg-navy/40 transition-opacity duration-500 group-hover:opacity-0" />
                 <div className="absolute bottom-0 left-0 right-0 p-6 md:p-8 z-10 transition-opacity duration-500 group-hover:opacity-0">
@@ -150,7 +181,7 @@ const Index = () => {
                   <h3 className="heading-display text-2xl md:text-3xl text-navy mb-4" dangerouslySetInnerHTML={{ __html: p.name.replace(" ", "<br />") }} />
                   <p className="font-body text-base md:text-lg text-charcoal/80 leading-relaxed">{p.body}</p>
                 </div>
-              </div>
+              </RevealBox>
             ))}
           </div>
         </div>
@@ -207,33 +238,33 @@ const Index = () => {
           {/* Bento grid */}
           <div className="grid md:grid-cols-2 gap-5">
             {/* Row 1: Clarity + Capacity */}
-            <div className="rounded-xl p-8 md:p-10 border border-border bg-off-white">
+            <RevealBox className="rounded-xl p-8 md:p-10 border border-border bg-off-white" delay={0}>
               <h3 className="heading-display text-2xl md:text-3xl text-navy mb-2">{transformations[0].name}</h3>
               <p className="font-body text-sm text-charcoal/50 mb-3">From {transformations[0].from} to {transformations[0].to}.</p>
               <p className="font-body text-base text-charcoal/80 leading-relaxed">{transformations[0].body}</p>
-            </div>
-            <div className="rounded-xl p-8 md:p-10 border border-border bg-off-white">
+            </RevealBox>
+            <RevealBox className="rounded-xl p-8 md:p-10 border border-border bg-off-white" delay={0.15}>
               <h3 className="heading-display text-2xl md:text-3xl text-navy mb-2">{transformations[1].name}</h3>
               <p className="font-body text-sm text-charcoal/50 mb-3">From {transformations[1].from} to {transformations[1].to}.</p>
               <p className="font-body text-base text-charcoal/80 leading-relaxed">{transformations[1].body}</p>
-            </div>
+            </RevealBox>
             {/* Row 2: Confidence + Cashflow */}
-            <div className="rounded-xl p-8 md:p-10 border border-border bg-off-white">
+            <RevealBox className="rounded-xl p-8 md:p-10 border border-border bg-off-white" delay={0.1}>
               <h3 className="heading-display text-2xl md:text-3xl text-navy mb-2">{transformations[2].name}</h3>
               <p className="font-body text-sm text-charcoal/50 mb-3">From {transformations[2].from} to {transformations[2].to}.</p>
               <p className="font-body text-base text-charcoal/80 leading-relaxed">{transformations[2].body}</p>
-            </div>
-            <div className="rounded-xl p-8 md:p-10 border border-border bg-off-white">
+            </RevealBox>
+            <RevealBox className="rounded-xl p-8 md:p-10 border border-border bg-off-white" delay={0.25}>
               <h3 className="heading-display text-2xl md:text-3xl text-navy mb-2">{transformations[3].name}</h3>
               <p className="font-body text-sm text-charcoal/50 mb-3">From {transformations[3].from} to {transformations[3].to}.</p>
               <p className="font-body text-base text-charcoal/80 leading-relaxed">{transformations[3].body}</p>
-            </div>
+            </RevealBox>
             {/* Row 3: Integration — full width */}
-            <div className="md:col-span-2 rounded-xl p-8 md:p-10 text-center bg-off-white border-4 border-gold">
+            <RevealBox className="md:col-span-2 rounded-xl p-8 md:p-10 text-center bg-off-white border-4 border-gold" delay={0.2}>
               <h3 className="heading-display text-2xl md:text-3xl text-navy mb-2">{transformations[4].name}</h3>
               <p className="font-body text-sm text-charcoal/50 mb-3">From {transformations[4].from} to {transformations[4].to}.</p>
               <p className="font-body text-base text-charcoal/80 leading-relaxed max-w-2xl mx-auto">{transformations[4].body}</p>
-            </div>
+            </RevealBox>
           </div>
 
           <div className="mt-12 text-center">
@@ -249,25 +280,25 @@ const Index = () => {
         </h2>
         <div className="max-w-4xl mx-auto flex flex-col gap-16 md:gap-20">
           <TestimonialCard
-            quote="Aaron helped me see that the business I was building wasn't just about strategy, it was about who I needed to become. The clarity, structure, and confidence I gained transformed not just my business, but my entire approach to leadership."
+            quote="Aaron has supported me through building Dan Fox Coaching, helping me grow the business while also developing as a coach, entrepreneur, and leader. What I value most is that Aaron understands the business and the founder grow together. Our work has helped me move forward with greater clarity, confidence, and direction as a business owner."
             name="Dan Fox"
-            role="Founder, Dan Fox Coaching"
+            role="Canadian Actor & Founder, Dan Fox Coaching"
             image={danImg}
           />
           <TestimonialCard
-            quote="Working with Aaron was like having a strategic partner who also understands the deeper work. He didn't just help me build a business; he helped me build a life that actually feels aligned to my values."
+            quote="Working with Aaron helped me turn the vision for The Vital Man into a clear, structured business and brand. I had the ideas, experience, and desire to serve, but needed help shaping them into a functioning business. Aaron helped me clarify the offer, define the audience, develop the brand, organize the growth strategy, and build the foundations to move forward with confidence. What stood out most was his ability to support both the practical side of business building and me as a founder. The process gave me structure, direction, and momentum, and helped me step more fully into the next stage of my entrepreneurial journey."
             name="James McMillen"
             role="Author and Founder of The Vital Man & Landscapes in Bloom"
             image={jamesImg}
           />
           <TestimonialCard
-            quote="The combination of strategic rigor and human depth is rare. Aaron brought both. My business went from scattered to structured, and I went from overwhelmed to confident."
+            quote="When I started working with Aaron, I was rebuilding. His expertise, presence and mentorship became a constant through that process. I overcame addiction, rebuilt myself and my career, returned to professional bodybuilding, competed at Mr. Olympia twice, and am now stepping into a new chapter as a husband, father, and entrepreneur."
             name="Antoine Vaillant"
             role="IFBB Professional Bodybuilder, Entrepreneur"
             image={antoineImg}
           />
           <TestimonialCard
-            quote="What impressed me most was how Aaron integrated brand development, website strategy, and the coaching work. It all felt connected, not fragmented. That's what made the difference."
+            quote="Aaron supported me through an important season as a founder, helping me navigate the immense pressures of leadership, scaling, transition, and the deeper process of coming into greater personal alignment. He brings a rare ability to hold both the strategic and deeply human sides of entrepreneurship, while understanding that how we build is inseparable from how we live. Our work created space for honest reflection, greater clarity, and more grounded, aligned direction for the next chapter of my life and leadership."
             name="Michael Sanders"
             role="Co-Founder of Sequence, Acquired by Polygon"
             image={michaelImg}

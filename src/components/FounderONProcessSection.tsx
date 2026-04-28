@@ -103,9 +103,38 @@ function PhaseRow({
   index: number;
 }) {
   const [hovered, setHovered] = useState(false);
+  const [inView, setInView] = useState(false);
+  const rowRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const el = rowRef.current;
+    if (!el) return;
+    const section = el.closest("section");
+    const handleScroll = () => {
+      const rect = el.getBoundingClientRect();
+      const trigger = window.innerHeight * 0.6;
+      // Turn gold when row reaches 60% vh
+      if (rect.top <= trigger) {
+        setInView(true);
+      }
+      // Reset all when scrolled back above the entire section
+      if (section) {
+        const sectionRect = section.getBoundingClientRect();
+        if (sectionRect.top > window.innerHeight) {
+          setInView(false);
+        }
+      }
+    };
+    window.addEventListener("scroll", handleScroll, { passive: true });
+    handleScroll();
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
+  const nameColor = inView ? "hsl(var(--gold))" : "";
 
   return (
     <div
+      ref={rowRef}
       onMouseEnter={() => setHovered(true)}
       onMouseLeave={() => setHovered(false)}
       className="relative border-t border-gold/30 last:border-b overflow-hidden transition-colors duration-500"
@@ -149,7 +178,7 @@ function PhaseRow({
 
         {/* Mobile: name on top, body below / Desktop: body on top, name in right col */}
         <div className="pt-2 md:pt-4">
-          <h3 className="heading-display text-3xl text-primary-foreground mb-3 md:hidden">
+          <h3 className="heading-display text-3xl mb-3 md:hidden" style={{ color: nameColor || "hsl(var(--primary-foreground))", transition: "color 0.5s ease" }}>
             {p.name}
           </h3>
           <p className="font-body text-xs tracking-[0.3em] uppercase text-gold mb-3 hidden md:block">
@@ -164,7 +193,7 @@ function PhaseRow({
         </div>
 
         {/* Phase name, desktop only (right column) */}
-        <h3 className="heading-display text-3xl md:text-4xl text-primary-foreground text-left md:min-w-[12rem] hidden md:block">
+        <h3 className="heading-display text-3xl md:text-4xl text-left md:min-w-[12rem] hidden md:block" style={{ color: nameColor || "hsl(var(--primary-foreground))", transition: "color 0.5s ease" }}>
           {p.name}
         </h3>
       </div>
