@@ -105,7 +105,7 @@ const Testimonials = () => {
         heading="Ready to start your journey?"
         paragraph="Take the Founder Freedom Score to see where you stand."
         ctaText="Take the Founder Freedom Score →"
-        ctaHref="https://founderfreedomscore.netlify.app/assessment"
+        ctaHref="/founder-freedom-score"
       /></div>
       <Footer />
     </>

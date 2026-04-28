@@ -297,7 +297,7 @@ const About = () => {
         heading="If this feels aligned, begin with the Founder Freedom Score."
         paragraph="A short, honest diagnostic to help you see where you stand, in about 3 minutes."
         ctaText="Discover Your Founder Freedom Score →"
-        ctaHref="https://founderfreedomscore.netlify.app/assessment"
+        ctaHref="/founder-freedom-score"
       /></div>
       <Footer />
       </>

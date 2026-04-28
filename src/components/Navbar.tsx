@@ -55,7 +55,7 @@ const Navbar = ({ variant = "dark", bg }: { variant?: "dark" | "light"; bg?: str
         </a>
 
         {/* Desktop nav */}
-        <div className={`hidden lg:flex items-center gap-6 font-body text-sm tracking-wide ${textColor}`}>
+        <div className={`hidden lg:flex items-center gap-10 font-body text-base tracking-wide uppercase ml-auto mr-6 ${textColor}`}>
           <a href="/" className={`${hoverColor} transition-colors`}>Home</a>
           <a href="/about" className={`${hoverColor} transition-colors`}>About Us</a>
 
@@ -67,7 +67,7 @@ const Navbar = ({ variant = "dark", bg }: { variant?: "dark" | "light"; bg?: str
             onMouseLeave={() => setDropdownOpen(false)}
           >
             <button
-              className={`${hoverColor} transition-colors flex items-center gap-1`}
+              className={`${hoverColor} transition-colors flex items-center gap-1 uppercase`}
             >
               The ON Method
               <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" style={{ transform: dropdownOpen ? "rotate(180deg)" : "rotate(0)", transition: "transform 0.2s" }}>
@@ -84,7 +84,7 @@ const Navbar = ({ variant = "dark", bg }: { variant?: "dark" | "light"; bg?: str
                   <a
                     key={link.href}
                     href={link.href}
-                    className={`block px-5 py-2.5 text-sm ${textColor} ${hoverColor} transition-colors`}
+                    className={`block px-5 py-2.5 text-base uppercase ${textColor} ${hoverColor} transition-colors`}
                     onClick={() => setDropdownOpen(false)}
                   >
                     {link.label}
@@ -95,13 +95,10 @@ const Navbar = ({ variant = "dark", bg }: { variant?: "dark" | "light"; bg?: str
             )}
           </div>
 
-          <a href="/founder-freedom-score" className={`${hoverColor} transition-colors`}>Founder Freedom Score</a>
         </div>
         <a
-          href="https://founderfreedomscore.netlify.app/assessment"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="btn-gold text-xs px-6 py-3 hidden lg:inline-block"
+          href="/founder-freedom-score"
+          className="btn-gold text-sm px-6 py-3 hidden lg:inline-block"
           onClick={() => trackCTA("Take the Founder Freedom Score", "navbar")}
         >
           Take the Founder Freedom Score →
@@ -178,11 +175,8 @@ const Navbar = ({ variant = "dark", bg }: { variant?: "dark" | "light"; bg?: str
             )}
           </div>
 
-          <a href="/founder-freedom-score" className="text-primary-foreground/80 hover:text-primary-foreground transition-colors" onClick={() => setMenuOpen(false)}>Founder Freedom Score</a>
           <a
-            href="https://founderfreedomscore.netlify.app/assessment"
-            target="_blank"
-            rel="noopener noreferrer"
+            href="/founder-freedom-score"
             className="btn-gold text-sm px-8 py-3 mt-4"
             onClick={() => setMenuOpen(false)}
           >

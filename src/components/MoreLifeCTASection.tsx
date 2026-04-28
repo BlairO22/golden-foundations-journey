@@ -52,9 +52,7 @@ const MoreLifeCTASection = () => {
             It takes 3 minutes. It is clear, useful, and designed to help you move forward with greater honesty.
           </p>
           <a
-            href="https://founderfreedomscore.netlify.app/assessment"
-            target="_blank"
-            rel="noopener noreferrer"
+            href="/founder-freedom-score"
             className="btn-gold self-start"
           >
             Take the Founder Freedom Score →

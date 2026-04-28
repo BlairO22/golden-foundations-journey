@@ -9,9 +9,7 @@ const WhereYouStandCTASection = () => {
           In about 3 minutes, you will get an honest view of what is supporting your next chapter as an entrepreneur, and what still needs to be strengthened.
         </p>
         <a
-          href="https://founderfreedomscore.netlify.app/assessment"
-          target="_blank"
-          rel="noopener noreferrer"
+          href="/founder-freedom-score"
           className="btn-gold"
         >
           Discover Your Founder Freedom Score →

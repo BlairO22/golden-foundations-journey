@@ -193,11 +193,9 @@ const FounderFreedomScore = () => {
             </p>
             <a
               href="https://founderfreedomscore.netlify.app/assessment"
-              target="_blank"
-              rel="noopener noreferrer"
               className="btn-gold self-start"
             >
-              Take the Founder Freedom Score →
+              Begin Assessment →
             </a>
           </div>
 
@@ -208,7 +206,7 @@ const FounderFreedomScore = () => {
               alt=""
               loading="lazy"
               className="absolute inset-0 w-full h-full object-cover"
-              style={{ borderRadius: 0, objectPosition: "left top" }}
+              style={{ borderRadius: 0, objectPosition: "center center" }}
             />
           </div>
         </div>
@@ -322,7 +320,7 @@ const FounderFreedomScore = () => {
       <BottomCTASection
         heading="See where you stand. Build from truth."
         paragraph="Your results are immediate, honest, and designed to help you move forward with clarity."
-        ctaText="Take the Founder Freedom Score →"
+        ctaText="Begin Assessment →"
         ctaHref="https://founderfreedomscore.netlify.app/assessment"
       /></div>
       <Footer />
