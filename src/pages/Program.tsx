@@ -10,18 +10,20 @@ import WhoIsForSection from "@/components/program/WhoIsForSection";
 import ProgramFinalCTASection from "@/components/program/ProgramFinalCTASection";
 
 const Program = () => (
-  <div className="min-h-screen relative z-10 bg-background">
-    <Navbar />
-    <ProgramHeroSection />
-    <PartnershipIncludesSection />
-    <ProgramONMethodSection />
-    <MilestonesSection />
-    <ProgramGuaranteeSection />
-    <InvestmentSection />
-    <WhoIsForSection />
-    <ProgramFinalCTASection />
+  <>
+    <div className="min-h-screen relative z-10 bg-background">
+      <Navbar />
+      <ProgramHeroSection />
+      <PartnershipIncludesSection />
+      <ProgramONMethodSection />
+      <MilestonesSection />
+      <ProgramGuaranteeSection />
+      <InvestmentSection />
+      <WhoIsForSection />
+      <ProgramFinalCTASection />
+    </div>
     <Footer />
-  </div>
+  </>
 );
 
 export default Program;

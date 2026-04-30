@@ -33,7 +33,7 @@ const About = () => {
                 ™
               </sup>
             </h1>
-            <p className="font-body text-xl md:text-2xl text-primary-foreground/90 leading-snug">
+            <p className="font-body text-xl md:text-2xl text-primary-foreground/90 leading-snug" style={{ textWrap: "balance" }}>
               A brand built on the belief that business should create more life, not less.
             </p>
           </div>
